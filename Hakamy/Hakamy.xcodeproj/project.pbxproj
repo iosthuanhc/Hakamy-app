@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD01F7EA1818FD4A00EBD3DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01F7E91818FD4A00EBD3DB /* Foundation.framework */; };
+		FD01F7EC1818FD4A00EBD3DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01F7EB1818FD4A00EBD3DB /* CoreGraphics.framework */; };
+		FD01F7EE1818FD4A00EBD3DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01F7ED1818FD4A00EBD3DB /* UIKit.framework */; };
+		FD01F7F41818FD4A00EBD3DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD01F7F21818FD4A00EBD3DB /* InfoPlist.strings */; };
+		FD01F7F61818FD4B00EBD3DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD01F7F51818FD4A00EBD3DB /* main.m */; };
+		FD01F7FA1818FD4B00EBD3DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD01F7F91818FD4B00EBD3DB /* AppDelegate.m */; };
+		FD01F7FC1818FD4B00EBD3DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD01F7FB1818FD4B00EBD3DB /* Images.xcassets */; };
+		FD01F8031818FD4B00EBD3DB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01F8021818FD4B00EBD3DB /* XCTest.framework */; };
+		FD01F8041818FD4B00EBD3DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01F7E91818FD4A00EBD3DB /* Foundation.framework */; };
+		FD01F8051818FD4B00EBD3DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01F7ED1818FD4A00EBD3DB /* UIKit.framework */; };
+		FD01F80D1818FD4B00EBD3DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD01F80B1818FD4B00EBD3DB /* InfoPlist.strings */; };
+		FD01F80F1818FD4B00EBD3DB /* HakamyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD01F80E1818FD4B00EBD3DB /* HakamyTests.m */; };
+		FD37142E18196C8400427858 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37142C18196C8400427858 /* HomeViewController.m */; };
+		FD37142F18196C8400427858 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37142D18196C8400427858 /* HomeViewController.xib */; };
+		FD37143818196D5B00427858 /* RssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37143618196D5B00427858 /* RssViewController.m */; };
+		FD37143918196D5B00427858 /* RssViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37143718196D5B00427858 /* RssViewController.xib */; };
+		FD37143D18196D7200427858 /* MediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37143B18196D7200427858 /* MediaViewController.m */; };
+		FD37143E18196D7200427858 /* MediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37143C18196D7200427858 /* MediaViewController.xib */; };
+		FD37144218196D8E00427858 /* InstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37144018196D8E00427858 /* InstagramViewController.m */; };
+		FD37144318196D8E00427858 /* InstagramViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37144118196D8E00427858 /* InstagramViewController.xib */; };
+		FD37144718196DAD00427858 /* YoutubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37144518196DAD00427858 /* YoutubeViewController.m */; };
+		FD37144818196DAD00427858 /* YoutubeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37144618196DAD00427858 /* YoutubeViewController.xib */; };
+		FD37144C18196DC400427858 /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37144A18196DC400427858 /* FacebookViewController.m */; };
+		FD37144D18196DC400427858 /* FacebookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37144B18196DC400427858 /* FacebookViewController.xib */; };
+		FD37146A1819726600427858 /* FacingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714511819726600427858 /* FacingView.m */; };
+		FD37146B1819726600427858 /* FoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714531819726600427858 /* FoldView.m */; };
+		FD37146C1819726600427858 /* MultiFoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714551819726600427858 /* MultiFoldView.m */; };
+		FD37146D1819726600427858 /* PaperFoldNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714581819726600427858 /* PaperFoldNavigationController.m */; };
+		FD37146E1819726600427858 /* PaperFoldResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FD3714591819726600427858 /* PaperFoldResources.bundle */; };
+		FD37146F1819726600427858 /* PaperFoldSwipeHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37145B1819726600427858 /* PaperFoldSwipeHintView.m */; };
+		FD3714701819726600427858 /* PaperFoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37145D1819726600427858 /* PaperFoldView.m */; };
+		FD3714711819726600427858 /* swipe_guide.psd in Resources */ = {isa = PBXBuildFile; fileRef = FD37145F1819726600427858 /* swipe_guide.psd */; };
+		FD3714721819726600427858 /* swipe_guide2.psd in Resources */ = {isa = PBXBuildFile; fileRef = FD3714601819726600427858 /* swipe_guide2.psd */; };
+		FD3714731819726600427858 /* ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714621819726600427858 /* ShadowView.m */; };
+		FD3714741819726600427858 /* TouchThroughUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714641819726600427858 /* TouchThroughUIView.m */; };
+		FD3714751819726600427858 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714661819726600427858 /* UIView+Screenshot.m */; };
+		FD3714761819726600427858 /* PaperFoldMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714681819726600427858 /* PaperFoldMenuController.m */; };
+		FD37147B181979A100427858 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD371479181979A100427858 /* MenuViewController.m */; };
+		FD37147C181979A100427858 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37147A181979A100427858 /* MenuViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD01F8061818FD4B00EBD3DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD01F7DE1818FD4A00EBD3DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD01F7E51818FD4A00EBD3DB;
+			remoteInfo = Hakamy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD01F7E61818FD4A00EBD3DB /* Hakamy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hakamy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD01F7E91818FD4A00EBD3DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FD01F7EB1818FD4A00EBD3DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FD01F7ED1818FD4A00EBD3DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FD01F7F11818FD4A00EBD3DB /* Hakamy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hakamy-Info.plist"; sourceTree = "<group>"; };
+		FD01F7F31818FD4A00EBD3DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD01F7F51818FD4A00EBD3DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD01F7F71818FD4B00EBD3DB /* Hakamy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hakamy-Prefix.pch"; sourceTree = "<group>"; };
+		FD01F7F81818FD4B00EBD3DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FD01F7F91818FD4B00EBD3DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FD01F7FB1818FD4B00EBD3DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FD01F8011818FD4B00EBD3DB /* HakamyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HakamyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD01F8021818FD4B00EBD3DB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FD01F80A1818FD4B00EBD3DB /* HakamyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HakamyTests-Info.plist"; sourceTree = "<group>"; };
+		FD01F80C1818FD4B00EBD3DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD01F80E1818FD4B00EBD3DB /* HakamyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HakamyTests.m; sourceTree = "<group>"; };
+		FD37142B18196C8400427858 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Home/HomeViewController.h; sourceTree = "<group>"; };
+		FD37142C18196C8400427858 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Home/HomeViewController.m; sourceTree = "<group>"; };
+		FD37142D18196C8400427858 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Home/HomeViewController.xib; sourceTree = "<group>"; };
+		FD37143518196D5B00427858 /* RssViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RssViewController.h; path = Rss/RssViewController.h; sourceTree = "<group>"; };
+		FD37143618196D5B00427858 /* RssViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RssViewController.m; path = Rss/RssViewController.m; sourceTree = "<group>"; };
+		FD37143718196D5B00427858 /* RssViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RssViewController.xib; path = Rss/RssViewController.xib; sourceTree = "<group>"; };
+		FD37143A18196D7200427858 /* MediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaViewController.h; path = Media/MediaViewController.h; sourceTree = "<group>"; };
+		FD37143B18196D7200427858 /* MediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaViewController.m; path = Media/MediaViewController.m; sourceTree = "<group>"; };
+		FD37143C18196D7200427858 /* MediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MediaViewController.xib; path = Media/MediaViewController.xib; sourceTree = "<group>"; };
+		FD37143F18196D8E00427858 /* InstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramViewController.h; path = Instagram/InstagramViewController.h; sourceTree = "<group>"; };
+		FD37144018196D8E00427858 /* InstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramViewController.m; path = Instagram/InstagramViewController.m; sourceTree = "<group>"; };
+		FD37144118196D8E00427858 /* InstagramViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstagramViewController.xib; path = Instagram/InstagramViewController.xib; sourceTree = "<group>"; };
+		FD37144418196DAD00427858 /* YoutubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YoutubeViewController.h; path = Youtube/YoutubeViewController.h; sourceTree = "<group>"; };
+		FD37144518196DAD00427858 /* YoutubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YoutubeViewController.m; path = Youtube/YoutubeViewController.m; sourceTree = "<group>"; };
+		FD37144618196DAD00427858 /* YoutubeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YoutubeViewController.xib; path = Youtube/YoutubeViewController.xib; sourceTree = "<group>"; };
+		FD37144918196DC400427858 /* FacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookViewController.h; sourceTree = "<group>"; };
+		FD37144A18196DC400427858 /* FacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookViewController.m; sourceTree = "<group>"; };
+		FD37144B18196DC400427858 /* FacebookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookViewController.xib; sourceTree = "<group>"; };
+		FD3714501819726600427858 /* FacingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacingView.h; sourceTree = "<group>"; };
+		FD3714511819726600427858 /* FacingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacingView.m; sourceTree = "<group>"; };
+		FD3714521819726600427858 /* FoldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoldView.h; sourceTree = "<group>"; };
+		FD3714531819726600427858 /* FoldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoldView.m; sourceTree = "<group>"; };
+		FD3714541819726600427858 /* MultiFoldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiFoldView.h; sourceTree = "<group>"; };
+		FD3714551819726600427858 /* MultiFoldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiFoldView.m; sourceTree = "<group>"; };
+		FD3714561819726600427858 /* PaperFoldConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldConstants.h; sourceTree = "<group>"; };
+		FD3714571819726600427858 /* PaperFoldNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldNavigationController.h; sourceTree = "<group>"; };
+		FD3714581819726600427858 /* PaperFoldNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaperFoldNavigationController.m; sourceTree = "<group>"; };
+		FD3714591819726600427858 /* PaperFoldResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PaperFoldResources.bundle; sourceTree = "<group>"; };
+		FD37145A1819726600427858 /* PaperFoldSwipeHintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldSwipeHintView.h; sourceTree = "<group>"; };
+		FD37145B1819726600427858 /* PaperFoldSwipeHintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaperFoldSwipeHintView.m; sourceTree = "<group>"; };
+		FD37145C1819726600427858 /* PaperFoldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldView.h; sourceTree = "<group>"; };
+		FD37145D1819726600427858 /* PaperFoldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaperFoldView.m; sourceTree = "<group>"; };
+		FD37145F1819726600427858 /* swipe_guide.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = swipe_guide.psd; sourceTree = "<group>"; };
+		FD3714601819726600427858 /* swipe_guide2.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = swipe_guide2.psd; sourceTree = "<group>"; };
+		FD3714611819726600427858 /* ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowView.h; sourceTree = "<group>"; };
+		FD3714621819726600427858 /* ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowView.m; sourceTree = "<group>"; };
+		FD3714631819726600427858 /* TouchThroughUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchThroughUIView.h; sourceTree = "<group>"; };
+		FD3714641819726600427858 /* TouchThroughUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchThroughUIView.m; sourceTree = "<group>"; };
+		FD3714651819726600427858 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		FD3714661819726600427858 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		FD3714671819726600427858 /* PaperFoldMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldMenuController.h; sourceTree = "<group>"; };
+		FD3714681819726600427858 /* PaperFoldMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaperFoldMenuController.m; sourceTree = "<group>"; };
+		FD3714691819726600427858 /* PaperFoldMenuControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldMenuControllerDelegate.h; sourceTree = "<group>"; };
+		FD371478181979A100427858 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Menu/MenuViewController.h; sourceTree = "<group>"; };
+		FD371479181979A100427858 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Menu/MenuViewController.m; sourceTree = "<group>"; };
+		FD37147A181979A100427858 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuViewController.xib; path = Menu/MenuViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD01F7E31818FD4A00EBD3DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD01F7EC1818FD4A00EBD3DB /* CoreGraphics.framework in Frameworks */,
+				FD01F7EE1818FD4A00EBD3DB /* UIKit.framework in Frameworks */,
+				FD01F7EA1818FD4A00EBD3DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD01F7FE1818FD4B00EBD3DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD01F8031818FD4B00EBD3DB /* XCTest.framework in Frameworks */,
+				FD01F8051818FD4B00EBD3DB /* UIKit.framework in Frameworks */,
+				FD01F8041818FD4B00EBD3DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD01F7DD1818FD4A00EBD3DB = {
+			isa = PBXGroup;
+			children = (
+				FD01F7EF1818FD4A00EBD3DB /* Hakamy */,
+				FD01F8081818FD4B00EBD3DB /* HakamyTests */,
+				FD01F7E81818FD4A00EBD3DB /* Frameworks */,
+				FD01F7E71818FD4A00EBD3DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD01F7E71818FD4A00EBD3DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD01F7E61818FD4A00EBD3DB /* Hakamy.app */,
+				FD01F8011818FD4B00EBD3DB /* HakamyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD01F7E81818FD4A00EBD3DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD01F7E91818FD4A00EBD3DB /* Foundation.framework */,
+				FD01F7EB1818FD4A00EBD3DB /* CoreGraphics.framework */,
+				FD01F7ED1818FD4A00EBD3DB /* UIKit.framework */,
+				FD01F8021818FD4B00EBD3DB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD01F7EF1818FD4A00EBD3DB /* Hakamy */ = {
+			isa = PBXGroup;
+			children = (
+				FD01F81818190F2700EBD3DB /* Images */,
+				FD01F81918190F2700EBD3DB /* Libs */,
+				FD01F81A18190F2700EBD3DB /* Model */,
+				FD01F7F81818FD4B00EBD3DB /* AppDelegate.h */,
+				FD01F7F91818FD4B00EBD3DB /* AppDelegate.m */,
+				FD01F81B18190F2700EBD3DB /* ViewController */,
+				FD01F7FB1818FD4B00EBD3DB /* Images.xcassets */,
+				FD01F7F01818FD4A00EBD3DB /* Supporting Files */,
+			);
+			path = Hakamy;
+			sourceTree = "<group>";
+		};
+		FD01F7F01818FD4A00EBD3DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD01F7F11818FD4A00EBD3DB /* Hakamy-Info.plist */,
+				FD01F7F21818FD4A00EBD3DB /* InfoPlist.strings */,
+				FD01F7F51818FD4A00EBD3DB /* main.m */,
+				FD01F7F71818FD4B00EBD3DB /* Hakamy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD01F8081818FD4B00EBD3DB /* HakamyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD01F80E1818FD4B00EBD3DB /* HakamyTests.m */,
+				FD01F8091818FD4B00EBD3DB /* Supporting Files */,
+			);
+			path = HakamyTests;
+			sourceTree = "<group>";
+		};
+		FD01F8091818FD4B00EBD3DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD01F80A1818FD4B00EBD3DB /* HakamyTests-Info.plist */,
+				FD01F80B1818FD4B00EBD3DB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD01F81818190F2700EBD3DB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		FD01F81918190F2700EBD3DB /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				FD37144E1819726600427858 /* PaperFoldMenuController */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		FD01F81A18190F2700EBD3DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD01F81B18190F2700EBD3DB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD3714771819798300427858 /* Menu */,
+				FD37142A18196C6400427858 /* Home */,
+				FD37143418196D3C00427858 /* Rss */,
+				FD37143318196D2A00427858 /* Media */,
+				FD37143218196D1D00427858 /* Instagram */,
+				FD37143118196D1000427858 /* Youtube */,
+				FD37143018196CEB00427858 /* Facebook */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FD37142A18196C6400427858 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FD37142B18196C8400427858 /* HomeViewController.h */,
+				FD37142C18196C8400427858 /* HomeViewController.m */,
+				FD37142D18196C8400427858 /* HomeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		FD37143018196CEB00427858 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				FD37144918196DC400427858 /* FacebookViewController.h */,
+				FD37144A18196DC400427858 /* FacebookViewController.m */,
+				FD37144B18196DC400427858 /* FacebookViewController.xib */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		FD37143118196D1000427858 /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				FD37144418196DAD00427858 /* YoutubeViewController.h */,
+				FD37144518196DAD00427858 /* YoutubeViewController.m */,
+				FD37144618196DAD00427858 /* YoutubeViewController.xib */,
+			);
+			name = Youtube;
+			sourceTree = "<group>";
+		};
+		FD37143218196D1D00427858 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				FD37143F18196D8E00427858 /* InstagramViewController.h */,
+				FD37144018196D8E00427858 /* InstagramViewController.m */,
+				FD37144118196D8E00427858 /* InstagramViewController.xib */,
+			);
+			name = Instagram;
+			sourceTree = "<group>";
+		};
+		FD37143318196D2A00427858 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				FD37143A18196D7200427858 /* MediaViewController.h */,
+				FD37143B18196D7200427858 /* MediaViewController.m */,
+				FD37143C18196D7200427858 /* MediaViewController.xib */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
+		FD37143418196D3C00427858 /* Rss */ = {
+			isa = PBXGroup;
+			children = (
+				FD37143518196D5B00427858 /* RssViewController.h */,
+				FD37143618196D5B00427858 /* RssViewController.m */,
+				FD37143718196D5B00427858 /* RssViewController.xib */,
+			);
+			name = Rss;
+			sourceTree = "<group>";
+		};
+		FD37144E1819726600427858 /* PaperFoldMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				FD37144F1819726600427858 /* PaperFold */,
+				FD3714671819726600427858 /* PaperFoldMenuController.h */,
+				FD3714681819726600427858 /* PaperFoldMenuController.m */,
+				FD3714691819726600427858 /* PaperFoldMenuControllerDelegate.h */,
+			);
+			path = PaperFoldMenuController;
+			sourceTree = "<group>";
+		};
+		FD37144F1819726600427858 /* PaperFold */ = {
+			isa = PBXGroup;
+			children = (
+				FD3714501819726600427858 /* FacingView.h */,
+				FD3714511819726600427858 /* FacingView.m */,
+				FD3714521819726600427858 /* FoldView.h */,
+				FD3714531819726600427858 /* FoldView.m */,
+				FD3714541819726600427858 /* MultiFoldView.h */,
+				FD3714551819726600427858 /* MultiFoldView.m */,
+				FD3714561819726600427858 /* PaperFoldConstants.h */,
+				FD3714571819726600427858 /* PaperFoldNavigationController.h */,
+				FD3714581819726600427858 /* PaperFoldNavigationController.m */,
+				FD3714591819726600427858 /* PaperFoldResources.bundle */,
+				FD37145A1819726600427858 /* PaperFoldSwipeHintView.h */,
+				FD37145B1819726600427858 /* PaperFoldSwipeHintView.m */,
+				FD37145C1819726600427858 /* PaperFoldView.h */,
+				FD37145D1819726600427858 /* PaperFoldView.m */,
+				FD37145E1819726600427858 /* Resources */,
+				FD3714611819726600427858 /* ShadowView.h */,
+				FD3714621819726600427858 /* ShadowView.m */,
+				FD3714631819726600427858 /* TouchThroughUIView.h */,
+				FD3714641819726600427858 /* TouchThroughUIView.m */,
+				FD3714651819726600427858 /* UIView+Screenshot.h */,
+				FD3714661819726600427858 /* UIView+Screenshot.m */,
+			);
+			path = PaperFold;
+			sourceTree = "<group>";
+		};
+		FD37145E1819726600427858 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD37145F1819726600427858 /* swipe_guide.psd */,
+				FD3714601819726600427858 /* swipe_guide2.psd */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD3714771819798300427858 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				FD371478181979A100427858 /* MenuViewController.h */,
+				FD371479181979A100427858 /* MenuViewController.m */,
+				FD37147A181979A100427858 /* MenuViewController.xib */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD01F7E51818FD4A00EBD3DB /* Hakamy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD01F8121818FD4B00EBD3DB /* Build configuration list for PBXNativeTarget "Hakamy" */;
+			buildPhases = (
+				FD01F7E21818FD4A00EBD3DB /* Sources */,
+				FD01F7E31818FD4A00EBD3DB /* Frameworks */,
+				FD01F7E41818FD4A00EBD3DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hakamy;
+			productName = Hakamy;
+			productReference = FD01F7E61818FD4A00EBD3DB /* Hakamy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD01F8001818FD4B00EBD3DB /* HakamyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD01F8151818FD4B00EBD3DB /* Build configuration list for PBXNativeTarget "HakamyTests" */;
+			buildPhases = (
+				FD01F7FD1818FD4B00EBD3DB /* Sources */,
+				FD01F7FE1818FD4B00EBD3DB /* Frameworks */,
+				FD01F7FF1818FD4B00EBD3DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD01F8071818FD4B00EBD3DB /* PBXTargetDependency */,
+			);
+			name = HakamyTests;
+			productName = HakamyTests;
+			productReference = FD01F8011818FD4B00EBD3DB /* HakamyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD01F7DE1818FD4A00EBD3DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Ha Cong Thuan";
+				TargetAttributes = {
+					FD01F8001818FD4B00EBD3DB = {
+						TestTargetID = FD01F7E51818FD4A00EBD3DB;
+					};
+				};
+			};
+			buildConfigurationList = FD01F7E11818FD4A00EBD3DB /* Build configuration list for PBXProject "Hakamy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FD01F7DD1818FD4A00EBD3DB;
+			productRefGroup = FD01F7E71818FD4A00EBD3DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD01F7E51818FD4A00EBD3DB /* Hakamy */,
+				FD01F8001818FD4B00EBD3DB /* HakamyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD01F7E41818FD4A00EBD3DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD01F7F41818FD4A00EBD3DB /* InfoPlist.strings in Resources */,
+				FD37144818196DAD00427858 /* YoutubeViewController.xib in Resources */,
+				FD3714711819726600427858 /* swipe_guide.psd in Resources */,
+				FD37143918196D5B00427858 /* RssViewController.xib in Resources */,
+				FD37143E18196D7200427858 /* MediaViewController.xib in Resources */,
+				FD37144D18196DC400427858 /* FacebookViewController.xib in Resources */,
+				FD37144318196D8E00427858 /* InstagramViewController.xib in Resources */,
+				FD37147C181979A100427858 /* MenuViewController.xib in Resources */,
+				FD3714721819726600427858 /* swipe_guide2.psd in Resources */,
+				FD37146E1819726600427858 /* PaperFoldResources.bundle in Resources */,
+				FD37142F18196C8400427858 /* HomeViewController.xib in Resources */,
+				FD01F7FC1818FD4B00EBD3DB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD01F7FF1818FD4B00EBD3DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD01F80D1818FD4B00EBD3DB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD01F7E21818FD4A00EBD3DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3714761819726600427858 /* PaperFoldMenuController.m in Sources */,
+				FD01F7FA1818FD4B00EBD3DB /* AppDelegate.m in Sources */,
+				FD3714751819726600427858 /* UIView+Screenshot.m in Sources */,
+				FD37143D18196D7200427858 /* MediaViewController.m in Sources */,
+				FD37147B181979A100427858 /* MenuViewController.m in Sources */,
+				FD37144C18196DC400427858 /* FacebookViewController.m in Sources */,
+				FD3714731819726600427858 /* ShadowView.m in Sources */,
+				FD37143818196D5B00427858 /* RssViewController.m in Sources */,
+				FD37146C1819726600427858 /* MultiFoldView.m in Sources */,
+				FD37146F1819726600427858 /* PaperFoldSwipeHintView.m in Sources */,
+				FD3714701819726600427858 /* PaperFoldView.m in Sources */,
+				FD37146A1819726600427858 /* FacingView.m in Sources */,
+				FD01F7F61818FD4B00EBD3DB /* main.m in Sources */,
+				FD37142E18196C8400427858 /* HomeViewController.m in Sources */,
+				FD37146B1819726600427858 /* FoldView.m in Sources */,
+				FD3714741819726600427858 /* TouchThroughUIView.m in Sources */,
+				FD37144718196DAD00427858 /* YoutubeViewController.m in Sources */,
+				FD37144218196D8E00427858 /* InstagramViewController.m in Sources */,
+				FD37146D1819726600427858 /* PaperFoldNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD01F7FD1818FD4B00EBD3DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD01F80F1818FD4B00EBD3DB /* HakamyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD01F8071818FD4B00EBD3DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD01F7E51818FD4A00EBD3DB /* Hakamy */;
+			targetProxy = FD01F8061818FD4B00EBD3DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD01F7F21818FD4A00EBD3DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD01F7F31818FD4A00EBD3DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FD01F80B1818FD4B00EBD3DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD01F80C1818FD4B00EBD3DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD01F8101818FD4B00EBD3DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FD01F8111818FD4B00EBD3DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD01F8131818FD4B00EBD3DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hakamy/Hakamy-Prefix.pch";
+				INFOPLIST_FILE = "Hakamy/Hakamy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FD01F8141818FD4B00EBD3DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hakamy/Hakamy-Prefix.pch";
+				INFOPLIST_FILE = "Hakamy/Hakamy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FD01F8161818FD4B00EBD3DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hakamy.app/Hakamy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hakamy/Hakamy-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HakamyTests/HakamyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FD01F8171818FD4B00EBD3DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hakamy.app/Hakamy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hakamy/Hakamy-Prefix.pch";
+				INFOPLIST_FILE = "HakamyTests/HakamyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD01F7E11818FD4A00EBD3DB /* Build configuration list for PBXProject "Hakamy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD01F8101818FD4B00EBD3DB /* Debug */,
+				FD01F8111818FD4B00EBD3DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD01F8121818FD4B00EBD3DB /* Build configuration list for PBXNativeTarget "Hakamy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD01F8131818FD4B00EBD3DB /* Debug */,
+				FD01F8141818FD4B00EBD3DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD01F8151818FD4B00EBD3DB /* Build configuration list for PBXNativeTarget "HakamyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD01F8161818FD4B00EBD3DB /* Debug */,
+				FD01F8171818FD4B00EBD3DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD01F7DE1818FD4A00EBD3DB /* Project object */;
+}
