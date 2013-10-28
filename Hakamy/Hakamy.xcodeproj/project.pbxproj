@@ -62,6 +62,8 @@
 		FD5C649A181E18FA00314C56 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C648E181E18FA00314C56 /* SBJsonWriter.m */; };
 		FD5C649D181E233100314C56 /* RssModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C649C181E233100314C56 /* RssModel.m */; };
 		FD5C64A0181E236300314C56 /* MediaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C649F181E236300314C56 /* MediaModel.m */; };
+		FD5C64A3181E419300314C56 /* IntagramModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64A2181E419300314C56 /* IntagramModel.m */; };
+		FD5C64A6181E41AB00314C56 /* YoutubeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64A5181E41AB00314C56 /* YoutubeModel.m */; };
 		FDDD47F2181AC770004CB48E /* bg_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47E9181AC770004CB48E /* bg_home.png */; };
 		FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EA181AC770004CB48E /* btn_menu.png */; };
 		FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */; };
@@ -208,6 +210,10 @@
 		FD5C649C181E233100314C56 /* RssModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RssModel.m; sourceTree = "<group>"; };
 		FD5C649E181E236300314C56 /* MediaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaModel.h; sourceTree = "<group>"; };
 		FD5C649F181E236300314C56 /* MediaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaModel.m; sourceTree = "<group>"; };
+		FD5C64A1181E419300314C56 /* IntagramModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntagramModel.h; sourceTree = "<group>"; };
+		FD5C64A2181E419300314C56 /* IntagramModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntagramModel.m; sourceTree = "<group>"; };
+		FD5C64A4181E41AB00314C56 /* YoutubeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoutubeModel.h; sourceTree = "<group>"; };
+		FD5C64A5181E41AB00314C56 /* YoutubeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoutubeModel.m; sourceTree = "<group>"; };
 		FDDD47E9181AC770004CB48E /* bg_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_home.png; sourceTree = "<group>"; };
 		FDDD47EA181AC770004CB48E /* btn_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu.png; sourceTree = "<group>"; };
 		FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = btn_social_fb.jpg; sourceTree = "<group>"; };
@@ -371,6 +377,10 @@
 				FD5C649C181E233100314C56 /* RssModel.m */,
 				FD5C649E181E236300314C56 /* MediaModel.h */,
 				FD5C649F181E236300314C56 /* MediaModel.m */,
+				FD5C64A1181E419300314C56 /* IntagramModel.h */,
+				FD5C64A2181E419300314C56 /* IntagramModel.m */,
+				FD5C64A4181E41AB00314C56 /* YoutubeModel.h */,
+				FD5C64A5181E41AB00314C56 /* YoutubeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -732,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3714761819726600427858 /* PaperFoldMenuController.m in Sources */,
+				FD5C64A3181E419300314C56 /* IntagramModel.m in Sources */,
 				FD5C6493181E18FA00314C56 /* SBJsonStreamParserAdapter.m in Sources */,
 				FD5C6472181E0F6300314C56 /* CellRssCustom.m in Sources */,
 				FD5C6492181E18FA00314C56 /* SBJsonStreamParserAccumulator.m in Sources */,
@@ -765,6 +776,7 @@
 				FD37144718196DAD00427858 /* YoutubeViewController.m in Sources */,
 				FD37144218196D8E00427858 /* InstagramViewController.m in Sources */,
 				FD37146D1819726600427858 /* PaperFoldNavigationController.m in Sources */,
+				FD5C64A6181E41AB00314C56 /* YoutubeModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
