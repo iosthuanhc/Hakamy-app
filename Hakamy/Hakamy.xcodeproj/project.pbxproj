@@ -60,6 +60,8 @@
 		FD5C6498181E18FA00314C56 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C648A181E18FA00314C56 /* SBJsonTokeniser.m */; };
 		FD5C6499181E18FA00314C56 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C648C181E18FA00314C56 /* SBJsonUTF8Stream.m */; };
 		FD5C649A181E18FA00314C56 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C648E181E18FA00314C56 /* SBJsonWriter.m */; };
+		FD5C649D181E233100314C56 /* RssModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C649C181E233100314C56 /* RssModel.m */; };
+		FD5C64A0181E236300314C56 /* MediaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C649F181E236300314C56 /* MediaModel.m */; };
 		FDDD47F2181AC770004CB48E /* bg_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47E9181AC770004CB48E /* bg_home.png */; };
 		FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EA181AC770004CB48E /* btn_menu.png */; };
 		FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */; };
@@ -202,6 +204,10 @@
 		FD5C648C181E18FA00314C56 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		FD5C648D181E18FA00314C56 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		FD5C648E181E18FA00314C56 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		FD5C649B181E233100314C56 /* RssModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RssModel.h; sourceTree = "<group>"; };
+		FD5C649C181E233100314C56 /* RssModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RssModel.m; sourceTree = "<group>"; };
+		FD5C649E181E236300314C56 /* MediaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaModel.h; sourceTree = "<group>"; };
+		FD5C649F181E236300314C56 /* MediaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaModel.m; sourceTree = "<group>"; };
 		FDDD47E9181AC770004CB48E /* bg_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_home.png; sourceTree = "<group>"; };
 		FDDD47EA181AC770004CB48E /* btn_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu.png; sourceTree = "<group>"; };
 		FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = btn_social_fb.jpg; sourceTree = "<group>"; };
@@ -361,6 +367,10 @@
 		FD01F81A18190F2700EBD3DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FD5C649B181E233100314C56 /* RssModel.h */,
+				FD5C649C181E233100314C56 /* RssModel.m */,
+				FD5C649E181E236300314C56 /* MediaModel.h */,
+				FD5C649F181E236300314C56 /* MediaModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -745,11 +755,13 @@
 				FD5C649A181E18FA00314C56 /* SBJsonWriter.m in Sources */,
 				FD5C648F181E18FA00314C56 /* NSObject+SBJson.m in Sources */,
 				FD01F7F61818FD4B00EBD3DB /* main.m in Sources */,
+				FD5C649D181E233100314C56 /* RssModel.m in Sources */,
 				FD5C6490181E18FA00314C56 /* SBJsonParser.m in Sources */,
 				FD37142E18196C8400427858 /* HomeViewController.m in Sources */,
 				FD37146B1819726600427858 /* FoldView.m in Sources */,
 				FD5C6499181E18FA00314C56 /* SBJsonUTF8Stream.m in Sources */,
 				FD3714741819726600427858 /* TouchThroughUIView.m in Sources */,
+				FD5C64A0181E236300314C56 /* MediaModel.m in Sources */,
 				FD37144718196DAD00427858 /* YoutubeViewController.m in Sources */,
 				FD37144218196D8E00427858 /* InstagramViewController.m in Sources */,
 				FD37146D1819726600427858 /* PaperFoldNavigationController.m in Sources */,
