@@ -139,7 +139,7 @@
             [self addChildViewController:theNewViewController];
             [self.contentView addSubview:theNewViewController.view];
             [theNewViewController didMoveToParentViewController:self];
-            
+            [self leftButtonForCenterPanel];
             [self.menuTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:theNewSelectedIndex inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
         }
         
@@ -190,6 +190,7 @@
     [super viewDidLoad];
     
     PaperFoldView *paperFoldView = [[PaperFoldView alloc] initWithFrame:CGRectMake(0, 0, [self.view bounds].size.width, [self.view bounds].size.height)];
+    paperFoldView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_menu.png"]];
     [paperFoldView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
     [paperFoldView setDelegate:self];
     [paperFoldView setUseOptimizedScreenshot:NO];
@@ -202,6 +203,8 @@
     self.contentView = contentView;
     
     UITableView *menuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.menuWidth, [self.view bounds].size.height)];
+    menuTableView.backgroundColor=[UIColor clearColor];
+    menuTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.paperFoldView setLeftFoldContentView:menuTableView foldCount:self.numberOfFolds pullFactor:0.9];
     [menuTableView setDelegate:self];
     [menuTableView setDataSource:self];
@@ -214,6 +217,8 @@
      * added to the leftFoldView instead of leftFoldView.contentView bec
      * so that the shadow does not appear while folding
      */
+    
+    
     [self.paperFoldView.leftFoldView addSubview:menuTableViewSideShadowView];
     self.menuTableViewSideShadowView = menuTableViewSideShadowView;
     
@@ -222,7 +227,12 @@
     }
     self.viewDidLoadBlocks = nil;
 }
-
+- (void)leftButtonForCenterPanel {
+    
+}
+- (void)toggleLeftPanel:(__unused id)sender {
+    
+}
 - (void)setViewControllers:(NSMutableArray *)viewControllers
 {
     self.selectedIndex = NSNotFound; // Forces any child view controller to be removed.
@@ -244,6 +254,7 @@
     [self.paperFoldView.leftFoldView.contentViewHolder setHidden:NO];
     [self.paperFoldView.leftFoldView drawScreenshotOnFolds];
     [self.paperFoldView.leftFoldView.contentViewHolder setHidden:YES];
+    [self leftButtonForCenterPanel];
 }
 
 #pragma mark table view delegates and datasource
@@ -266,8 +277,12 @@
         }
         
         UIViewController *viewController = self.viewControllers[indexPath.row];
+//        UIImageView *imageview=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, 35)];
+//        imageview.image=[UIImage imageNamed:@"btn_menu_youtube.png"];
+//        [cell addSubview:imageview];
+        cell.backgroundColor=[UIColor clearColor];
         [cell.textLabel setText:viewController.title];
-        
+//        cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"btn_menu_youtube.png"]];
         if (indexPath.row==self.selectedIndex)
         {
             [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];

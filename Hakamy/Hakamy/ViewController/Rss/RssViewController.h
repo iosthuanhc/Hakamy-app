@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CellRssCustom.h"
+@interface RssViewController : UIViewController{
+    NSMutableArray *lisRss;
+}
 
-@interface RssViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
 @end

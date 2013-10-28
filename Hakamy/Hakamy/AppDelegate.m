@@ -55,10 +55,26 @@
     [viewControllers addObject:fbNav];
     
     [_menuController setViewControllers:viewControllers];
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];;
     return YES;
+}
+- (void)customizedApperance
+{
+    //Customize the look of the UINavBar for iOS 7 devices
+    if ([[UINavigationBar class]respondsToSelector:@selector(appearance)]) {
+//        UIImage *navImage;
+        if (SYSTEM_VERSION_LESS_THAN(@"7.0")){
+            [[UINavigationBar appearance] setBackgroundColor:[UIColor clearColor]];
+//            navImage = [UIImage imageNamed:@"bg_title_bar.png"];
+//            [[UINavigationBar appearance] setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
+        }
+        else {
+            [[UINavigationBar appearance] setBackgroundColor:[UIColor clearColor]];
+//            navImage = [UIImage imageNamed:@"bg_title_bar_ios7.png"];
+//            [[UINavigationBar appearance] setBackgroundImage:navImage forBarPosition:UIBarPositionTop barMetrics:UIBarMetricsDefault];
+        }
+    }
 }
 - (void)paperFoldMenuController:(PaperFoldMenuController *)paperFoldMenuController didSelectViewController:(UIViewController *)viewController
 {

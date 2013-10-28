@@ -46,6 +46,58 @@
 		FD3714761819726600427858 /* PaperFoldMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714681819726600427858 /* PaperFoldMenuController.m */; };
 		FD37147B181979A100427858 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD371479181979A100427858 /* MenuViewController.m */; };
 		FD37147C181979A100427858 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37147A181979A100427858 /* MenuViewController.xib */; };
+		FD5C6472181E0F6300314C56 /* CellRssCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C6471181E0F6300314C56 /* CellRssCustom.m */; };
+		FD5C6474181E0F8700314C56 /* CellRssCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD5C6473181E0F8700314C56 /* CellRssCustom.xib */; };
+		FD5C648F181E18FA00314C56 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C6477181E18FA00314C56 /* NSObject+SBJson.m */; };
+		FD5C6490181E18FA00314C56 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C647A181E18FA00314C56 /* SBJsonParser.m */; };
+		FD5C6491181E18FA00314C56 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C647C181E18FA00314C56 /* SBJsonStreamParser.m */; };
+		FD5C6492181E18FA00314C56 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C647E181E18FA00314C56 /* SBJsonStreamParserAccumulator.m */; };
+		FD5C6493181E18FA00314C56 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C6480181E18FA00314C56 /* SBJsonStreamParserAdapter.m */; };
+		FD5C6494181E18FA00314C56 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C6482181E18FA00314C56 /* SBJsonStreamParserState.m */; };
+		FD5C6495181E18FA00314C56 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C6484181E18FA00314C56 /* SBJsonStreamWriter.m */; };
+		FD5C6496181E18FA00314C56 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C6486181E18FA00314C56 /* SBJsonStreamWriterAccumulator.m */; };
+		FD5C6497181E18FA00314C56 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C6488181E18FA00314C56 /* SBJsonStreamWriterState.m */; };
+		FD5C6498181E18FA00314C56 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C648A181E18FA00314C56 /* SBJsonTokeniser.m */; };
+		FD5C6499181E18FA00314C56 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C648C181E18FA00314C56 /* SBJsonUTF8Stream.m */; };
+		FD5C649A181E18FA00314C56 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C648E181E18FA00314C56 /* SBJsonWriter.m */; };
+		FDDD47F2181AC770004CB48E /* bg_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47E9181AC770004CB48E /* bg_home.png */; };
+		FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EA181AC770004CB48E /* btn_menu.png */; };
+		FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */; };
+		FDDD47F5181AC770004CB48E /* btn_social_fb.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EC181AC770004CB48E /* btn_social_fb.png */; };
+		FDDD47F6181AC770004CB48E /* btn_social_insta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47ED181AC770004CB48E /* btn_social_insta.jpg */; };
+		FDDD47F7181AC770004CB48E /* btn_social_insta.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EE181AC770004CB48E /* btn_social_insta.png */; };
+		FDDD47F8181AC770004CB48E /* btn_social_tw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EF181AC770004CB48E /* btn_social_tw.jpg */; };
+		FDDD47F9181AC770004CB48E /* btn_social_tw.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47F0181AC770004CB48E /* btn_social_tw.png */; };
+		FDDD47FA181AC770004CB48E /* btn_social_youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47F1181AC770004CB48E /* btn_social_youtube.png */; };
+		FDDD4801181ACDFC004CB48E /* bg_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47FB181ACDFC004CB48E /* bg_menu.png */; };
+		FDDD4802181ACDFC004CB48E /* btn_menu_ft.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47FC181ACDFC004CB48E /* btn_menu_ft.png */; };
+		FDDD4803181ACDFC004CB48E /* btn_menu_insta.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47FD181ACDFC004CB48E /* btn_menu_insta.png */; };
+		FDDD4804181ACDFC004CB48E /* btn_menu_music.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47FE181ACDFC004CB48E /* btn_menu_music.png */; };
+		FDDD4805181ACDFC004CB48E /* btn_menu_rss.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47FF181ACDFC004CB48E /* btn_menu_rss.png */; };
+		FDDD4806181ACDFC004CB48E /* btn_menu_youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD4800181ACDFC004CB48E /* btn_menu_youtube.png */; };
+		FDFFB370181B61EF004A8351 /* bg_border_thumbnail_news.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB358181B61EF004A8351 /* bg_border_thumbnail_news.png */; };
+		FDFFB371181B61EF004A8351 /* bg_border_thumbnail_songs.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB359181B61EF004A8351 /* bg_border_thumbnail_songs.png */; };
+		FDFFB372181B61EF004A8351 /* bg_cell_ft_f.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB35A181B61EF004A8351 /* bg_cell_ft_f.png */; };
+		FDFFB373181B61EF004A8351 /* bg_cell_lastestnews.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB35B181B61EF004A8351 /* bg_cell_lastestnews.png */; };
+		FDFFB374181B61EF004A8351 /* bg_cell_songs.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB35C181B61EF004A8351 /* bg_cell_songs.png */; };
+		FDFFB375181B61EF004A8351 /* bg_cell_youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB35D181B61EF004A8351 /* bg_cell_youtube.png */; };
+		FDFFB376181B61EF004A8351 /* bg_inner_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB35E181B61EF004A8351 /* bg_inner_shadow.png */; };
+		FDFFB377181B61EF004A8351 /* bg_others.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB35F181B61EF004A8351 /* bg_others.png */; };
+		FDFFB378181B61EF004A8351 /* bg_page_tittle_ft.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB360181B61EF004A8351 /* bg_page_tittle_ft.png */; };
+		FDFFB379181B61EF004A8351 /* bg_page_tittle_insta.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB361181B61EF004A8351 /* bg_page_tittle_insta.png */; };
+		FDFFB37A181B61EF004A8351 /* bg_page_tittle_news.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB362181B61EF004A8351 /* bg_page_tittle_news.png */; };
+		FDFFB37B181B61EF004A8351 /* bg_page_tittle_songs.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB363181B61EF004A8351 /* bg_page_tittle_songs.png */; };
+		FDFFB37C181B61EF004A8351 /* bg_page_tittle_youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB364181B61EF004A8351 /* bg_page_tittle_youtube.png */; };
+		FDFFB37D181B61EF004A8351 /* bg_thumbnail_insta.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB365181B61EF004A8351 /* bg_thumbnail_insta.png */; };
+		FDFFB37E181B61EF004A8351 /* bg_thumbnail_youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB366181B61EF004A8351 /* bg_thumbnail_youtube.png */; };
+		FDFFB37F181B61EF004A8351 /* bg_webviews.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB367181B61EF004A8351 /* bg_webviews.png */; };
+		FDFFB380181B61EF004A8351 /* btn_comment.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB368181B61EF004A8351 /* btn_comment.png */; };
+		FDFFB381181B61EF004A8351 /* btn_play.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB369181B61EF004A8351 /* btn_play.png */; };
+		FDFFB382181B61EF004A8351 /* btn_readmore.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB36A181B61EF004A8351 /* btn_readmore.png */; };
+		FDFFB383181B61EF004A8351 /* btn_share.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB36B181B61EF004A8351 /* btn_share.png */; };
+		FDFFB385181B61EF004A8351 /* thumbnail_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB36D181B61EF004A8351 /* thumbnail_twitter.png */; };
+		FDFFB386181B61EF004A8351 /* thumbnail1.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB36E181B61EF004A8351 /* thumbnail1.png */; };
+		FDFFB387181B61EF004A8351 /* thumbnail2.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB36F181B61EF004A8351 /* thumbnail2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +173,73 @@
 		FD371478181979A100427858 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Menu/MenuViewController.h; sourceTree = "<group>"; };
 		FD371479181979A100427858 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Menu/MenuViewController.m; sourceTree = "<group>"; };
 		FD37147A181979A100427858 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuViewController.xib; path = Menu/MenuViewController.xib; sourceTree = "<group>"; };
+		FD5C646F181E0CAB00314C56 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Define.h; path = PaperFoldMenuController/Define.h; sourceTree = "<group>"; };
+		FD5C6470181E0F6300314C56 /* CellRssCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellRssCustom.h; path = Rss/CellRssCustom.h; sourceTree = "<group>"; };
+		FD5C6471181E0F6300314C56 /* CellRssCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellRssCustom.m; path = Rss/CellRssCustom.m; sourceTree = "<group>"; };
+		FD5C6473181E0F8700314C56 /* CellRssCustom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellRssCustom.xib; path = Rss/CellRssCustom.xib; sourceTree = "<group>"; };
+		FD5C6476181E18FA00314C56 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		FD5C6477181E18FA00314C56 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		FD5C6478181E18FA00314C56 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		FD5C6479181E18FA00314C56 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		FD5C647A181E18FA00314C56 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		FD5C647B181E18FA00314C56 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		FD5C647C181E18FA00314C56 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		FD5C647D181E18FA00314C56 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		FD5C647E181E18FA00314C56 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		FD5C647F181E18FA00314C56 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		FD5C6480181E18FA00314C56 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		FD5C6481181E18FA00314C56 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		FD5C6482181E18FA00314C56 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		FD5C6483181E18FA00314C56 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		FD5C6484181E18FA00314C56 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		FD5C6485181E18FA00314C56 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		FD5C6486181E18FA00314C56 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		FD5C6487181E18FA00314C56 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		FD5C6488181E18FA00314C56 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		FD5C6489181E18FA00314C56 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		FD5C648A181E18FA00314C56 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		FD5C648B181E18FA00314C56 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		FD5C648C181E18FA00314C56 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		FD5C648D181E18FA00314C56 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		FD5C648E181E18FA00314C56 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		FDDD47E9181AC770004CB48E /* bg_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_home.png; sourceTree = "<group>"; };
+		FDDD47EA181AC770004CB48E /* btn_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu.png; sourceTree = "<group>"; };
+		FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = btn_social_fb.jpg; sourceTree = "<group>"; };
+		FDDD47EC181AC770004CB48E /* btn_social_fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_social_fb.png; sourceTree = "<group>"; };
+		FDDD47ED181AC770004CB48E /* btn_social_insta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = btn_social_insta.jpg; sourceTree = "<group>"; };
+		FDDD47EE181AC770004CB48E /* btn_social_insta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_social_insta.png; sourceTree = "<group>"; };
+		FDDD47EF181AC770004CB48E /* btn_social_tw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = btn_social_tw.jpg; sourceTree = "<group>"; };
+		FDDD47F0181AC770004CB48E /* btn_social_tw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_social_tw.png; sourceTree = "<group>"; };
+		FDDD47F1181AC770004CB48E /* btn_social_youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_social_youtube.png; sourceTree = "<group>"; };
+		FDDD47FB181ACDFC004CB48E /* bg_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_menu.png; sourceTree = "<group>"; };
+		FDDD47FC181ACDFC004CB48E /* btn_menu_ft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_ft.png; sourceTree = "<group>"; };
+		FDDD47FD181ACDFC004CB48E /* btn_menu_insta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_insta.png; sourceTree = "<group>"; };
+		FDDD47FE181ACDFC004CB48E /* btn_menu_music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_music.png; sourceTree = "<group>"; };
+		FDDD47FF181ACDFC004CB48E /* btn_menu_rss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_rss.png; sourceTree = "<group>"; };
+		FDDD4800181ACDFC004CB48E /* btn_menu_youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_youtube.png; sourceTree = "<group>"; };
+		FDFFB358181B61EF004A8351 /* bg_border_thumbnail_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_border_thumbnail_news.png; sourceTree = "<group>"; };
+		FDFFB359181B61EF004A8351 /* bg_border_thumbnail_songs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_border_thumbnail_songs.png; sourceTree = "<group>"; };
+		FDFFB35A181B61EF004A8351 /* bg_cell_ft_f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_cell_ft_f.png; sourceTree = "<group>"; };
+		FDFFB35B181B61EF004A8351 /* bg_cell_lastestnews.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_cell_lastestnews.png; sourceTree = "<group>"; };
+		FDFFB35C181B61EF004A8351 /* bg_cell_songs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_cell_songs.png; sourceTree = "<group>"; };
+		FDFFB35D181B61EF004A8351 /* bg_cell_youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_cell_youtube.png; sourceTree = "<group>"; };
+		FDFFB35E181B61EF004A8351 /* bg_inner_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_inner_shadow.png; sourceTree = "<group>"; };
+		FDFFB35F181B61EF004A8351 /* bg_others.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_others.png; sourceTree = "<group>"; };
+		FDFFB360181B61EF004A8351 /* bg_page_tittle_ft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_page_tittle_ft.png; sourceTree = "<group>"; };
+		FDFFB361181B61EF004A8351 /* bg_page_tittle_insta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_page_tittle_insta.png; sourceTree = "<group>"; };
+		FDFFB362181B61EF004A8351 /* bg_page_tittle_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_page_tittle_news.png; sourceTree = "<group>"; };
+		FDFFB363181B61EF004A8351 /* bg_page_tittle_songs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_page_tittle_songs.png; sourceTree = "<group>"; };
+		FDFFB364181B61EF004A8351 /* bg_page_tittle_youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_page_tittle_youtube.png; sourceTree = "<group>"; };
+		FDFFB365181B61EF004A8351 /* bg_thumbnail_insta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_thumbnail_insta.png; sourceTree = "<group>"; };
+		FDFFB366181B61EF004A8351 /* bg_thumbnail_youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_thumbnail_youtube.png; sourceTree = "<group>"; };
+		FDFFB367181B61EF004A8351 /* bg_webviews.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_webviews.png; sourceTree = "<group>"; };
+		FDFFB368181B61EF004A8351 /* btn_comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_comment.png; sourceTree = "<group>"; };
+		FDFFB369181B61EF004A8351 /* btn_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_play.png; sourceTree = "<group>"; };
+		FDFFB36A181B61EF004A8351 /* btn_readmore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_readmore.png; sourceTree = "<group>"; };
+		FDFFB36B181B61EF004A8351 /* btn_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_share.png; sourceTree = "<group>"; };
+		FDFFB36D181B61EF004A8351 /* thumbnail_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail_twitter.png; sourceTree = "<group>"; };
+		FDFFB36E181B61EF004A8351 /* thumbnail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail1.png; sourceTree = "<group>"; };
+		FDFFB36F181B61EF004A8351 /* thumbnail2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +343,7 @@
 		FD01F81818190F2700EBD3DB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FDDD47E8181AC770004CB48E /* iOS */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -231,6 +351,8 @@
 		FD01F81918190F2700EBD3DB /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				FD5C6475181E18FA00314C56 /* Json */,
+				FD5C646F181E0CAB00314C56 /* Define.h */,
 				FD37144E1819726600427858 /* PaperFoldMenuController */,
 			);
 			path = Libs;
@@ -300,8 +422,8 @@
 		FD37143318196D2A00427858 /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				FD37143A18196D7200427858 /* MediaViewController.h */,
 				FD37143B18196D7200427858 /* MediaViewController.m */,
+				FD37143A18196D7200427858 /* MediaViewController.h */,
 				FD37143C18196D7200427858 /* MediaViewController.xib */,
 			);
 			name = Media;
@@ -313,6 +435,9 @@
 				FD37143518196D5B00427858 /* RssViewController.h */,
 				FD37143618196D5B00427858 /* RssViewController.m */,
 				FD37143718196D5B00427858 /* RssViewController.xib */,
+				FD5C6470181E0F6300314C56 /* CellRssCustom.h */,
+				FD5C6471181E0F6300314C56 /* CellRssCustom.m */,
+				FD5C6473181E0F8700314C56 /* CellRssCustom.xib */,
 			);
 			name = Rss;
 			sourceTree = "<group>";
@@ -373,6 +498,83 @@
 				FD37147A181979A100427858 /* MenuViewController.xib */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		FD5C6475181E18FA00314C56 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				FD5C6476181E18FA00314C56 /* NSObject+SBJson.h */,
+				FD5C6477181E18FA00314C56 /* NSObject+SBJson.m */,
+				FD5C6478181E18FA00314C56 /* SBJson.h */,
+				FD5C6479181E18FA00314C56 /* SBJsonParser.h */,
+				FD5C647A181E18FA00314C56 /* SBJsonParser.m */,
+				FD5C647B181E18FA00314C56 /* SBJsonStreamParser.h */,
+				FD5C647C181E18FA00314C56 /* SBJsonStreamParser.m */,
+				FD5C647D181E18FA00314C56 /* SBJsonStreamParserAccumulator.h */,
+				FD5C647E181E18FA00314C56 /* SBJsonStreamParserAccumulator.m */,
+				FD5C647F181E18FA00314C56 /* SBJsonStreamParserAdapter.h */,
+				FD5C6480181E18FA00314C56 /* SBJsonStreamParserAdapter.m */,
+				FD5C6481181E18FA00314C56 /* SBJsonStreamParserState.h */,
+				FD5C6482181E18FA00314C56 /* SBJsonStreamParserState.m */,
+				FD5C6483181E18FA00314C56 /* SBJsonStreamWriter.h */,
+				FD5C6484181E18FA00314C56 /* SBJsonStreamWriter.m */,
+				FD5C6485181E18FA00314C56 /* SBJsonStreamWriterAccumulator.h */,
+				FD5C6486181E18FA00314C56 /* SBJsonStreamWriterAccumulator.m */,
+				FD5C6487181E18FA00314C56 /* SBJsonStreamWriterState.h */,
+				FD5C6488181E18FA00314C56 /* SBJsonStreamWriterState.m */,
+				FD5C6489181E18FA00314C56 /* SBJsonTokeniser.h */,
+				FD5C648A181E18FA00314C56 /* SBJsonTokeniser.m */,
+				FD5C648B181E18FA00314C56 /* SBJsonUTF8Stream.h */,
+				FD5C648C181E18FA00314C56 /* SBJsonUTF8Stream.m */,
+				FD5C648D181E18FA00314C56 /* SBJsonWriter.h */,
+				FD5C648E181E18FA00314C56 /* SBJsonWriter.m */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		FDDD47E8181AC770004CB48E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FDFFB358181B61EF004A8351 /* bg_border_thumbnail_news.png */,
+				FDFFB359181B61EF004A8351 /* bg_border_thumbnail_songs.png */,
+				FDFFB35A181B61EF004A8351 /* bg_cell_ft_f.png */,
+				FDFFB35B181B61EF004A8351 /* bg_cell_lastestnews.png */,
+				FDFFB35C181B61EF004A8351 /* bg_cell_songs.png */,
+				FDFFB35D181B61EF004A8351 /* bg_cell_youtube.png */,
+				FDFFB35E181B61EF004A8351 /* bg_inner_shadow.png */,
+				FDFFB35F181B61EF004A8351 /* bg_others.png */,
+				FDFFB360181B61EF004A8351 /* bg_page_tittle_ft.png */,
+				FDFFB361181B61EF004A8351 /* bg_page_tittle_insta.png */,
+				FDFFB362181B61EF004A8351 /* bg_page_tittle_news.png */,
+				FDFFB363181B61EF004A8351 /* bg_page_tittle_songs.png */,
+				FDFFB364181B61EF004A8351 /* bg_page_tittle_youtube.png */,
+				FDFFB365181B61EF004A8351 /* bg_thumbnail_insta.png */,
+				FDFFB366181B61EF004A8351 /* bg_thumbnail_youtube.png */,
+				FDFFB367181B61EF004A8351 /* bg_webviews.png */,
+				FDFFB368181B61EF004A8351 /* btn_comment.png */,
+				FDFFB369181B61EF004A8351 /* btn_play.png */,
+				FDFFB36A181B61EF004A8351 /* btn_readmore.png */,
+				FDFFB36B181B61EF004A8351 /* btn_share.png */,
+				FDFFB36D181B61EF004A8351 /* thumbnail_twitter.png */,
+				FDFFB36E181B61EF004A8351 /* thumbnail1.png */,
+				FDFFB36F181B61EF004A8351 /* thumbnail2.png */,
+				FDDD47FB181ACDFC004CB48E /* bg_menu.png */,
+				FDDD47FC181ACDFC004CB48E /* btn_menu_ft.png */,
+				FDDD47FD181ACDFC004CB48E /* btn_menu_insta.png */,
+				FDDD47FE181ACDFC004CB48E /* btn_menu_music.png */,
+				FDDD47FF181ACDFC004CB48E /* btn_menu_rss.png */,
+				FDDD4800181ACDFC004CB48E /* btn_menu_youtube.png */,
+				FDDD47E9181AC770004CB48E /* bg_home.png */,
+				FDDD47EA181AC770004CB48E /* btn_menu.png */,
+				FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */,
+				FDDD47EC181AC770004CB48E /* btn_social_fb.png */,
+				FDDD47ED181AC770004CB48E /* btn_social_insta.jpg */,
+				FDDD47EE181AC770004CB48E /* btn_social_insta.png */,
+				FDDD47EF181AC770004CB48E /* btn_social_tw.jpg */,
+				FDDD47F0181AC770004CB48E /* btn_social_tw.png */,
+				FDDD47F1181AC770004CB48E /* btn_social_youtube.png */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,17 +652,56 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFFB383181B61EF004A8351 /* btn_share.png in Resources */,
+				FDFFB380181B61EF004A8351 /* btn_comment.png in Resources */,
+				FDDD47FA181AC770004CB48E /* btn_social_youtube.png in Resources */,
+				FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */,
+				FDFFB37A181B61EF004A8351 /* bg_page_tittle_news.png in Resources */,
+				FDFFB37C181B61EF004A8351 /* bg_page_tittle_youtube.png in Resources */,
+				FDFFB37B181B61EF004A8351 /* bg_page_tittle_songs.png in Resources */,
+				FDFFB37F181B61EF004A8351 /* bg_webviews.png in Resources */,
+				FDDD4804181ACDFC004CB48E /* btn_menu_music.png in Resources */,
+				FDFFB377181B61EF004A8351 /* bg_others.png in Resources */,
 				FD01F7F41818FD4A00EBD3DB /* InfoPlist.strings in Resources */,
+				FDFFB373181B61EF004A8351 /* bg_cell_lastestnews.png in Resources */,
+				FDFFB370181B61EF004A8351 /* bg_border_thumbnail_news.png in Resources */,
+				FDDD4803181ACDFC004CB48E /* btn_menu_insta.png in Resources */,
+				FDDD4801181ACDFC004CB48E /* bg_menu.png in Resources */,
 				FD37144818196DAD00427858 /* YoutubeViewController.xib in Resources */,
 				FD3714711819726600427858 /* swipe_guide.psd in Resources */,
+				FDFFB385181B61EF004A8351 /* thumbnail_twitter.png in Resources */,
+				FDFFB378181B61EF004A8351 /* bg_page_tittle_ft.png in Resources */,
+				FDFFB382181B61EF004A8351 /* btn_readmore.png in Resources */,
 				FD37143918196D5B00427858 /* RssViewController.xib in Resources */,
+				FDDD47F8181AC770004CB48E /* btn_social_tw.jpg in Resources */,
+				FDFFB387181B61EF004A8351 /* thumbnail2.png in Resources */,
 				FD37143E18196D7200427858 /* MediaViewController.xib in Resources */,
 				FD37144D18196DC400427858 /* FacebookViewController.xib in Resources */,
+				FDDD47F9181AC770004CB48E /* btn_social_tw.png in Resources */,
 				FD37144318196D8E00427858 /* InstagramViewController.xib in Resources */,
+				FDDD47F2181AC770004CB48E /* bg_home.png in Resources */,
+				FDDD47F7181AC770004CB48E /* btn_social_insta.png in Resources */,
+				FDFFB381181B61EF004A8351 /* btn_play.png in Resources */,
+				FDDD4806181ACDFC004CB48E /* btn_menu_youtube.png in Resources */,
+				FDDD47F5181AC770004CB48E /* btn_social_fb.png in Resources */,
 				FD37147C181979A100427858 /* MenuViewController.xib in Resources */,
+				FDFFB379181B61EF004A8351 /* bg_page_tittle_insta.png in Resources */,
+				FDFFB374181B61EF004A8351 /* bg_cell_songs.png in Resources */,
 				FD3714721819726600427858 /* swipe_guide2.psd in Resources */,
 				FD37146E1819726600427858 /* PaperFoldResources.bundle in Resources */,
+				FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */,
 				FD37142F18196C8400427858 /* HomeViewController.xib in Resources */,
+				FDDD4805181ACDFC004CB48E /* btn_menu_rss.png in Resources */,
+				FDFFB386181B61EF004A8351 /* thumbnail1.png in Resources */,
+				FDFFB376181B61EF004A8351 /* bg_inner_shadow.png in Resources */,
+				FDFFB372181B61EF004A8351 /* bg_cell_ft_f.png in Resources */,
+				FDFFB371181B61EF004A8351 /* bg_border_thumbnail_songs.png in Resources */,
+				FDDD47F6181AC770004CB48E /* btn_social_insta.jpg in Resources */,
+				FDFFB37E181B61EF004A8351 /* bg_thumbnail_youtube.png in Resources */,
+				FD5C6474181E0F8700314C56 /* CellRssCustom.xib in Resources */,
+				FDDD4802181ACDFC004CB48E /* btn_menu_ft.png in Resources */,
+				FDFFB37D181B61EF004A8351 /* bg_thumbnail_insta.png in Resources */,
+				FDFFB375181B61EF004A8351 /* bg_cell_youtube.png in Resources */,
 				FD01F7FC1818FD4B00EBD3DB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,20 +722,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3714761819726600427858 /* PaperFoldMenuController.m in Sources */,
+				FD5C6493181E18FA00314C56 /* SBJsonStreamParserAdapter.m in Sources */,
+				FD5C6472181E0F6300314C56 /* CellRssCustom.m in Sources */,
+				FD5C6492181E18FA00314C56 /* SBJsonStreamParserAccumulator.m in Sources */,
 				FD01F7FA1818FD4B00EBD3DB /* AppDelegate.m in Sources */,
 				FD3714751819726600427858 /* UIView+Screenshot.m in Sources */,
 				FD37143D18196D7200427858 /* MediaViewController.m in Sources */,
 				FD37147B181979A100427858 /* MenuViewController.m in Sources */,
 				FD37144C18196DC400427858 /* FacebookViewController.m in Sources */,
+				FD5C6491181E18FA00314C56 /* SBJsonStreamParser.m in Sources */,
+				FD5C6496181E18FA00314C56 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				FD5C6498181E18FA00314C56 /* SBJsonTokeniser.m in Sources */,
+				FD5C6495181E18FA00314C56 /* SBJsonStreamWriter.m in Sources */,
 				FD3714731819726600427858 /* ShadowView.m in Sources */,
 				FD37143818196D5B00427858 /* RssViewController.m in Sources */,
 				FD37146C1819726600427858 /* MultiFoldView.m in Sources */,
 				FD37146F1819726600427858 /* PaperFoldSwipeHintView.m in Sources */,
+				FD5C6497181E18FA00314C56 /* SBJsonStreamWriterState.m in Sources */,
 				FD3714701819726600427858 /* PaperFoldView.m in Sources */,
+				FD5C6494181E18FA00314C56 /* SBJsonStreamParserState.m in Sources */,
 				FD37146A1819726600427858 /* FacingView.m in Sources */,
+				FD5C649A181E18FA00314C56 /* SBJsonWriter.m in Sources */,
+				FD5C648F181E18FA00314C56 /* NSObject+SBJson.m in Sources */,
 				FD01F7F61818FD4B00EBD3DB /* main.m in Sources */,
+				FD5C6490181E18FA00314C56 /* SBJsonParser.m in Sources */,
 				FD37142E18196C8400427858 /* HomeViewController.m in Sources */,
 				FD37146B1819726600427858 /* FoldView.m in Sources */,
+				FD5C6499181E18FA00314C56 /* SBJsonUTF8Stream.m in Sources */,
 				FD3714741819726600427858 /* TouchThroughUIView.m in Sources */,
 				FD37144718196DAD00427858 /* YoutubeViewController.m in Sources */,
 				FD37144218196D8E00427858 /* InstagramViewController.m in Sources */,
