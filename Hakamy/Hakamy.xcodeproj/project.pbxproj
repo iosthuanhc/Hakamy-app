@@ -65,6 +65,8 @@
 		FD5C64A3181E419300314C56 /* IntagramModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64A2181E419300314C56 /* IntagramModel.m */; };
 		FD5C64A6181E41AB00314C56 /* YoutubeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64A5181E41AB00314C56 /* YoutubeModel.m */; };
 		FD5C64AA181E428B00314C56 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64A9181E428B00314C56 /* DejalActivityView.m */; };
+		FD5C64AD181E4B4100314C56 /* CellMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64AC181E4B4100314C56 /* CellMedia.m */; };
+		FD5C64AF181E4B8800314C56 /* CellMedia.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD5C64AE181E4B8800314C56 /* CellMedia.xib */; };
 		FDDD47F2181AC770004CB48E /* bg_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47E9181AC770004CB48E /* bg_home.png */; };
 		FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EA181AC770004CB48E /* btn_menu.png */; };
 		FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */; };
@@ -217,6 +219,9 @@
 		FD5C64A5181E41AB00314C56 /* YoutubeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoutubeModel.m; sourceTree = "<group>"; };
 		FD5C64A8181E428B00314C56 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
 		FD5C64A9181E428B00314C56 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
+		FD5C64AB181E4B4100314C56 /* CellMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellMedia.h; path = Media/CellMedia.h; sourceTree = "<group>"; };
+		FD5C64AC181E4B4100314C56 /* CellMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellMedia.m; path = Media/CellMedia.m; sourceTree = "<group>"; };
+		FD5C64AE181E4B8800314C56 /* CellMedia.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellMedia.xib; sourceTree = "<group>"; };
 		FDDD47E9181AC770004CB48E /* bg_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_home.png; sourceTree = "<group>"; };
 		FDDD47EA181AC770004CB48E /* btn_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu.png; sourceTree = "<group>"; };
 		FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = btn_social_fb.jpg; sourceTree = "<group>"; };
@@ -449,6 +454,9 @@
 				FD37143B18196D7200427858 /* MediaViewController.m */,
 				FD37143A18196D7200427858 /* MediaViewController.h */,
 				FD37143C18196D7200427858 /* MediaViewController.xib */,
+				FD5C64AB181E4B4100314C56 /* CellMedia.h */,
+				FD5C64AC181E4B4100314C56 /* CellMedia.m */,
+				FD5C64AE181E4B8800314C56 /* CellMedia.xib */,
 			);
 			name = Media;
 			sourceTree = "<group>";
@@ -711,6 +719,7 @@
 				FD37143E18196D7200427858 /* MediaViewController.xib in Resources */,
 				FD37144D18196DC400427858 /* FacebookViewController.xib in Resources */,
 				FDDD47F9181AC770004CB48E /* btn_social_tw.png in Resources */,
+				FD5C64AF181E4B8800314C56 /* CellMedia.xib in Resources */,
 				FD37144318196D8E00427858 /* InstagramViewController.xib in Resources */,
 				FDDD47F2181AC770004CB48E /* bg_home.png in Resources */,
 				FDDD47F7181AC770004CB48E /* btn_social_insta.png in Resources */,
@@ -760,6 +769,7 @@
 				FD5C6472181E0F6300314C56 /* CellRssCustom.m in Sources */,
 				FD5C6492181E18FA00314C56 /* SBJsonStreamParserAccumulator.m in Sources */,
 				FD01F7FA1818FD4B00EBD3DB /* AppDelegate.m in Sources */,
+				FD5C64AD181E4B4100314C56 /* CellMedia.m in Sources */,
 				FD3714751819726600427858 /* UIView+Screenshot.m in Sources */,
 				FD37143D18196D7200427858 /* MediaViewController.m in Sources */,
 				FD37147B181979A100427858 /* MenuViewController.m in Sources */,

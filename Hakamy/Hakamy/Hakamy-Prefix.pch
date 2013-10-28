@@ -14,4 +14,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "Define.h"
+    #import "SBJson.h"
+    #import "DejalActivityView.h"
 #endif
