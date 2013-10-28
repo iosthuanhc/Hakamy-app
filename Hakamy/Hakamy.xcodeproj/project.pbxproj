@@ -64,6 +64,7 @@
 		FD5C64A0181E236300314C56 /* MediaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C649F181E236300314C56 /* MediaModel.m */; };
 		FD5C64A3181E419300314C56 /* IntagramModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64A2181E419300314C56 /* IntagramModel.m */; };
 		FD5C64A6181E41AB00314C56 /* YoutubeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64A5181E41AB00314C56 /* YoutubeModel.m */; };
+		FD5C64AA181E428B00314C56 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64A9181E428B00314C56 /* DejalActivityView.m */; };
 		FDDD47F2181AC770004CB48E /* bg_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47E9181AC770004CB48E /* bg_home.png */; };
 		FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EA181AC770004CB48E /* btn_menu.png */; };
 		FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */; };
@@ -214,6 +215,8 @@
 		FD5C64A2181E419300314C56 /* IntagramModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntagramModel.m; sourceTree = "<group>"; };
 		FD5C64A4181E41AB00314C56 /* YoutubeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoutubeModel.h; sourceTree = "<group>"; };
 		FD5C64A5181E41AB00314C56 /* YoutubeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoutubeModel.m; sourceTree = "<group>"; };
+		FD5C64A8181E428B00314C56 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		FD5C64A9181E428B00314C56 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		FDDD47E9181AC770004CB48E /* bg_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_home.png; sourceTree = "<group>"; };
 		FDDD47EA181AC770004CB48E /* btn_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu.png; sourceTree = "<group>"; };
 		FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = btn_social_fb.jpg; sourceTree = "<group>"; };
@@ -363,6 +366,7 @@
 		FD01F81918190F2700EBD3DB /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				FD5C64A7181E428B00314C56 /* Loading */,
 				FD5C6475181E18FA00314C56 /* Json */,
 				FD5C646F181E0CAB00314C56 /* Define.h */,
 				FD37144E1819726600427858 /* PaperFoldMenuController */,
@@ -550,6 +554,15 @@
 				FD5C648E181E18FA00314C56 /* SBJsonWriter.m */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		FD5C64A7181E428B00314C56 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				FD5C64A8181E428B00314C56 /* DejalActivityView.h */,
+				FD5C64A9181E428B00314C56 /* DejalActivityView.m */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		FDDD47E8181AC770004CB48E /* iOS */ = {
@@ -759,6 +772,7 @@
 				FD37143818196D5B00427858 /* RssViewController.m in Sources */,
 				FD37146C1819726600427858 /* MultiFoldView.m in Sources */,
 				FD37146F1819726600427858 /* PaperFoldSwipeHintView.m in Sources */,
+				FD5C64AA181E428B00314C56 /* DejalActivityView.m in Sources */,
 				FD5C6497181E18FA00314C56 /* SBJsonStreamWriterState.m in Sources */,
 				FD3714701819726600427858 /* PaperFoldView.m in Sources */,
 				FD5C6494181E18FA00314C56 /* SBJsonStreamParserState.m in Sources */,
