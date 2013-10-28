@@ -281,6 +281,7 @@
 //        imageview.image=[UIImage imageNamed:@"btn_menu_youtube.png"];
 //        [cell addSubview:imageview];
         cell.backgroundColor=[UIColor clearColor];
+        cell.textLabel.textColor=[UIColor whiteColor];
         [cell.textLabel setText:viewController.title];
 //        cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"btn_menu_youtube.png"]];
         if (indexPath.row==self.selectedIndex)

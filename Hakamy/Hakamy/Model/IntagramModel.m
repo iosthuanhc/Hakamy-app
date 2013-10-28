@@ -12,9 +12,12 @@
 @synthesize url,full_name,username;
 
 -(id)initWithJSON:(NSDictionary *)dic{
-    self.url=[dic objectForKey:@"url"];
-    self.username=[dic objectForKey:@"username"];
-    self.full_name=[dic objectForKey:@"full_name"];
+    NSDictionary *dicimage=[dic objectForKey:@"images"];
+    NSDictionary *detailImageDic=[dicimage objectForKey:@"standard_resolution"];
+    self.url=[detailImageDic objectForKey:@"url"];
+    NSDictionary *userDic=[dic objectForKey:@"user"];
+    self.username=[userDic objectForKey:@"username"];
+    self.full_name=[userDic objectForKey:@"full_name"];
     return self;
 }
 @end

@@ -30,5 +30,16 @@
 }
 -(void)loadDataCell{
     lblTitle.text=instagramModel.full_name;
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    dispatch_async(queue, ^(void) {
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:instagramModel.url]];
+        UIImage* image = [[UIImage alloc] initWithData:imageData];
+        if (image) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                imageview.image = image;
+            });
+        }
+    });
+
 }
 @end
