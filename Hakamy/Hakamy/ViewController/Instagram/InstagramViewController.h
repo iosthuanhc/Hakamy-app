@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "IntagramModel.h"
+#import "InstagramCell.h"
 @interface InstagramViewController : UIViewController{
-    NSMutableArray *listMedia;
+    NSMutableArray *lisInstagram;
     NSMutableData* responseData;
     NSURLRequest *request;
     NSURLConnection *connection;
 }
-
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
 @end
