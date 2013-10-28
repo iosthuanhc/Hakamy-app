@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InstagramViewController : UIViewController
+@interface InstagramViewController : UIViewController{
+    NSMutableArray *listMedia;
+    NSMutableData* responseData;
+    NSURLRequest *request;
+    NSURLConnection *connection;
+}
 
 @end

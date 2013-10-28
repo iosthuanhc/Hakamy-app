@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IntagramModel : NSObject
+@interface IntagramModel : NSObject{
+    NSString *url;
+    NSString *username;
+    NSString *full_name;
+}
+@property (nonatomic ,retain) NSString *url;
+@property (nonatomic ,retain) NSString *username;
+@property (nonatomic ,retain) NSString *full_name;
+
+-(id)initWithJSON:(NSDictionary *)dic;
 
 @end

@@ -74,6 +74,8 @@
 		FD5C64D6181E5C8000314C56 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5C64D5181E5C8000314C56 /* QuartzCore.framework */; };
 		FD5C64D8181E5C8800314C56 /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5C64D7181E5C8800314C56 /* MediaToolbox.framework */; };
 		FD5C64DA181E5CAB00314C56 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5C64D9181E5CAB00314C56 /* libz.dylib */; };
+		FD5C64DD181E6B9400314C56 /* InstagramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64DC181E6B9400314C56 /* InstagramCell.m */; };
+		FD5C64DF181E6BAC00314C56 /* InstagramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD5C64DE181E6BAC00314C56 /* InstagramCell.xib */; };
 		FDDD47F2181AC770004CB48E /* bg_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47E9181AC770004CB48E /* bg_home.png */; };
 		FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EA181AC770004CB48E /* btn_menu.png */; };
 		FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */; };
@@ -236,6 +238,9 @@
 		FD5C64D5181E5C8000314C56 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FD5C64D7181E5C8800314C56 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
 		FD5C64D9181E5CAB00314C56 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FD5C64DB181E6B9400314C56 /* InstagramCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramCell.h; path = Instagram/InstagramCell.h; sourceTree = "<group>"; };
+		FD5C64DC181E6B9400314C56 /* InstagramCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramCell.m; path = Instagram/InstagramCell.m; sourceTree = "<group>"; };
+		FD5C64DE181E6BAC00314C56 /* InstagramCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstagramCell.xib; path = Instagram/InstagramCell.xib; sourceTree = "<group>"; };
 		FDDD47E9181AC770004CB48E /* bg_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_home.png; sourceTree = "<group>"; };
 		FDDD47EA181AC770004CB48E /* btn_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu.png; sourceTree = "<group>"; };
 		FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = btn_social_fb.jpg; sourceTree = "<group>"; };
@@ -472,6 +477,9 @@
 				FD37143F18196D8E00427858 /* InstagramViewController.h */,
 				FD37144018196D8E00427858 /* InstagramViewController.m */,
 				FD37144118196D8E00427858 /* InstagramViewController.xib */,
+				FD5C64DB181E6B9400314C56 /* InstagramCell.h */,
+				FD5C64DC181E6B9400314C56 /* InstagramCell.m */,
+				FD5C64DE181E6BAC00314C56 /* InstagramCell.xib */,
 			);
 			name = Instagram;
 			sourceTree = "<group>";
@@ -724,6 +732,7 @@
 				FDFFB383181B61EF004A8351 /* btn_share.png in Resources */,
 				FDFFB380181B61EF004A8351 /* btn_comment.png in Resources */,
 				FDDD47FA181AC770004CB48E /* btn_social_youtube.png in Resources */,
+				FD5C64DF181E6BAC00314C56 /* InstagramCell.xib in Resources */,
 				FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */,
 				FDFFB37A181B61EF004A8351 /* bg_page_tittle_news.png in Resources */,
 				FDFFB37C181B61EF004A8351 /* bg_page_tittle_youtube.png in Resources */,
@@ -795,6 +804,7 @@
 				FD5C64A3181E419300314C56 /* IntagramModel.m in Sources */,
 				FD5C6493181E18FA00314C56 /* SBJsonStreamParserAdapter.m in Sources */,
 				FD5C6472181E0F6300314C56 /* CellRssCustom.m in Sources */,
+				FD5C64DD181E6B9400314C56 /* InstagramCell.m in Sources */,
 				FD5C6492181E18FA00314C56 /* SBJsonStreamParserAccumulator.m in Sources */,
 				FD01F7FA1818FD4B00EBD3DB /* AppDelegate.m in Sources */,
 				FD5C64AD181E4B4100314C56 /* CellMedia.m in Sources */,

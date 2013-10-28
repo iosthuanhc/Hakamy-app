@@ -9,5 +9,12 @@
 #import "IntagramModel.h"
 
 @implementation IntagramModel
+@synthesize url,full_name,username;
 
+-(id)initWithJSON:(NSDictionary *)dic{
+    self.url=[dic objectForKey:@"url"];
+    self.username=[dic objectForKey:@"username"];
+    self.full_name=[dic objectForKey:@"full_name"];
+    return self;
+}
 @end
