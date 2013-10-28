@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MediaModel : NSObject
+@interface MediaModel : NSObject{
+    NSString *_id;
+    NSString *title;
+    NSString *genre;
+}
+@property (nonatomic ,retain) NSString *_id;
+@property (nonatomic ,retain) NSString *title;
+@property (nonatomic ,retain) NSString *genre;
 
+-(id)initWithJSON:(NSDictionary *)dic;
 @end

@@ -9,6 +9,7 @@
 #import "CellMedia.h"
 
 @implementation CellMedia
+@synthesize mediaModel;
 @synthesize lblTitle,lblDescription,thumbnail;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -25,5 +26,8 @@
 
     // Configure the view for the selected state
 }
-
+-(void)loadDataCell{
+    lblTitle.text=mediaModel.title;
+    lblDescription.text=mediaModel.genre;
+}
 @end

@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CellMedia : UITableViewCell
-
+#import "MediaModel.h"
+@interface CellMedia : UITableViewCell{
+    MediaModel *mediaModel;
+}
+@property (nonatomic,retain) MediaModel *mediaModel;
 @property (strong, nonatomic) IBOutlet UIImageView *thumbnail;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
 @property (strong, nonatomic) IBOutlet UILabel *lblDescription;
+
+-(void)loadDataCell;
 @end

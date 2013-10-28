@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MediaViewController : UIViewController
+#import "MediaModel.h"
+#import "CellMedia.h"
+@interface MediaViewController : UIViewController{
+    NSMutableArray *listMedia;
+    NSMutableData* responseData;
+    NSURLRequest *request;
+    NSURLConnection *connection;
+}
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
 
 @end

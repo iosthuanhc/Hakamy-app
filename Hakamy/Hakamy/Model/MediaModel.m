@@ -9,5 +9,12 @@
 #import "MediaModel.h"
 
 @implementation MediaModel
+@synthesize _id,genre,title;
 
+-(id)initWithJSON:(NSDictionary *)dic{
+    self._id=[dic objectForKey:@"id"];
+    self.title=[dic objectForKey:@"title"];
+    self.genre=[dic objectForKey:@"genre"];
+    return self;
+}
 @end
