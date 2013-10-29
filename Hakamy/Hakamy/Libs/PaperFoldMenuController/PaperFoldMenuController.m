@@ -202,7 +202,7 @@
     [self.paperFoldView setCenterContentView:contentView];
     self.contentView = contentView;
     
-    UITableView *menuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.menuWidth, [self.view bounds].size.height)];
+    UITableView *menuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.menuWidth, [self.view bounds].size.height)];
     menuTableView.backgroundColor=[UIColor clearColor];
     menuTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.paperFoldView setLeftFoldContentView:menuTableView foldCount:self.numberOfFolds pullFactor:0.9];
@@ -276,13 +276,34 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         }
         
-        UIViewController *viewController = self.viewControllers[indexPath.row];
+        //UIViewController *viewController = self.viewControllers[indexPath.row];
 //        UIImageView *imageview=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, 35)];
 //        imageview.image=[UIImage imageNamed:@"btn_menu_youtube.png"];
 //        [cell addSubview:imageview];
+        UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
+        switch (indexPath.row) {
+            case 0:
+                img.image = [UIImage imageNamed:@"btn_menu_rss.png"];
+                break;
+            case 1:
+                img.image = [UIImage imageNamed:@"btn_menu_music.png"];
+                break;
+            case 2:
+                img.image = [UIImage imageNamed:@"btn_menu_insta.png"];
+                break;
+            case 3:
+                img.image = [UIImage imageNamed:@"btn_menu_youtube.png"];
+                break;
+            case 4:
+                img.image = [UIImage imageNamed:@"btn_menu_ft.png"];
+                break;
+            default:
+                break;
+        }
         cell.backgroundColor=[UIColor clearColor];
-        cell.textLabel.textColor=[UIColor whiteColor];
-        [cell.textLabel setText:viewController.title];
+        //cell.textLabel.textColor=[UIColor whiteColor];
+        //[cell.textLabel setText:viewController.title];
+        [cell addSubview:img];
 //        cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"btn_menu_youtube.png"]];
         if (indexPath.row==self.selectedIndex)
         {
