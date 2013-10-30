@@ -9,5 +9,12 @@
 #import "TwitterModel.h"
 
 @implementation TwitterModel
+@synthesize created_at,title;
 
+-(id)initWithJSON:(NSDictionary *)dic{
+    
+    self.title=[dic objectForKey:@"text"];
+    self.created_at=[dic objectForKey:@"created_at"];
+    return self;
+}
 @end

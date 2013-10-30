@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TwitterModel : NSObject
-
+@interface TwitterModel : NSObject{
+    NSString *created_at;
+    NSString *title;
+}
+@property (nonatomic ,retain) NSString *created_at;
+@property (nonatomic ,retain) NSString *title;
+-(id)initWithJSON:(NSDictionary *)dic;
 @end

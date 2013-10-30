@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface FacebookViewController : UIViewController
-
+#import "TwitterModel.h"
+#import "SosialCell.h"
+@interface FacebookViewController : UIViewController{
+    NSMutableArray *listSosial;
+    NSMutableData* responseData;
+    NSURLRequest *request;
+    NSURLConnection *connection;
+}
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
 @end
