@@ -16,7 +16,7 @@
     #import "Define.h"
     #import "SBJson.h"
     #import "DejalActivityView.h"
-
+    #import "AppDelegate.h"
 //    #import "AFNetworking.h"
 //    #import "AFJSONRequestOperation.h"
 #endif

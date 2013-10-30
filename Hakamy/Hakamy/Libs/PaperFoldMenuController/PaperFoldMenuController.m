@@ -201,8 +201,8 @@
     [contentView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
     [self.paperFoldView setCenterContentView:contentView];
     self.contentView = contentView;
-    
-    UITableView *menuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 150, self.menuWidth, [self.view bounds].size.height)];
+    [self setMenuButton];
+    UITableView *menuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, self.menuWidth, [self.view bounds].size.height)];
     menuTableView.backgroundColor=[UIColor clearColor];
     menuTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     menuTableView.scrollEnabled=NO;
@@ -225,6 +225,18 @@
         theBlock();
     }
     self.viewDidLoadBlocks = nil;
+}
+-(void)setMenuButton{
+    //Set Back button
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    [backButton setImage:[UIImage imageNamed:@"btn_menu.png"] forState:UIControlStateNormal];
+    //[backButton setTitle:@"Refresh" forState:UIControlStateNormal];
+    backButton.backgroundColor = [UIColor clearColor];
+    [backButton setShowsTouchWhenHighlighted:TRUE];
+    [backButton addTarget:self action:@selector(showMenu:animated:) forControlEvents:UIControlEventTouchDown];
+    UIBarButtonItem *barBackItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = barBackItem;
+    
 }
 - (void)leftButtonForCenterPanel {
     
