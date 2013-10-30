@@ -28,8 +28,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-
+NSInteger tapindex;
+- (IBAction)btnMenu:(id)sender {
+    if (tapindex == 0) {
+        tapindex = 1;
+        [((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController showMenu:YES animated:YES];
+    }else
+    {
+        tapindex = 0;
+        [((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController showMenu:NO animated:YES];
+    }
+}
 -(void)viewWillAppear:(BOOL)animated{
+    [[self navigationController] setNavigationBarHidden:YES animated:NO];
     [self getJSONValues];
 }
 #pragma mark JSON get

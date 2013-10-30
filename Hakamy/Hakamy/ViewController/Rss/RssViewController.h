@@ -13,4 +13,5 @@
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
+- (IBAction)btnMenu:(id)sender;
 @end

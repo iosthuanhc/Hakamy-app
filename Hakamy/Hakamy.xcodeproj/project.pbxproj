@@ -21,6 +21,8 @@
 		FD01F80F1818FD4B00EBD3DB /* HakamyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD01F80E1818FD4B00EBD3DB /* HakamyTests.m */; };
 		FD23568C182164D100887BFF /* SosialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23568B182164D100887BFF /* SosialCell.m */; };
 		FD23568E182164EA00887BFF /* SosialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD23568D182164EA00887BFF /* SosialCell.xib */; };
+		FD2356921821870800887BFF /* WebviewFollow.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2356901821870800887BFF /* WebviewFollow.m */; };
+		FD2356931821870800887BFF /* WebviewFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD2356911821870800887BFF /* WebviewFollow.xib */; };
 		FD37142E18196C8400427858 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37142C18196C8400427858 /* HomeViewController.m */; };
 		FD37142F18196C8400427858 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37142D18196C8400427858 /* HomeViewController.xib */; };
 		FD37143818196D5B00427858 /* RssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37143618196D5B00427858 /* RssViewController.m */; };
@@ -152,6 +154,9 @@
 		FD23568A182164D100887BFF /* SosialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SosialCell.h; sourceTree = "<group>"; };
 		FD23568B182164D100887BFF /* SosialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SosialCell.m; sourceTree = "<group>"; };
 		FD23568D182164EA00887BFF /* SosialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SosialCell.xib; sourceTree = "<group>"; };
+		FD23568F1821870800887BFF /* WebviewFollow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebviewFollow.h; path = Home/WebviewFollow.h; sourceTree = "<group>"; };
+		FD2356901821870800887BFF /* WebviewFollow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebviewFollow.m; path = Home/WebviewFollow.m; sourceTree = "<group>"; };
+		FD2356911821870800887BFF /* WebviewFollow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebviewFollow.xib; path = Home/WebviewFollow.xib; sourceTree = "<group>"; };
 		FD37142B18196C8400427858 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Home/HomeViewController.h; sourceTree = "<group>"; };
 		FD37142C18196C8400427858 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Home/HomeViewController.m; sourceTree = "<group>"; };
 		FD37142D18196C8400427858 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Home/HomeViewController.xib; sourceTree = "<group>"; };
@@ -467,6 +472,9 @@
 				FD37142B18196C8400427858 /* HomeViewController.h */,
 				FD37142C18196C8400427858 /* HomeViewController.m */,
 				FD37142D18196C8400427858 /* HomeViewController.xib */,
+				FD23568F1821870800887BFF /* WebviewFollow.h */,
+				FD2356901821870800887BFF /* WebviewFollow.m */,
+				FD2356911821870800887BFF /* WebviewFollow.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -793,6 +801,7 @@
 				FDDD47F5181AC770004CB48E /* btn_social_fb.png in Resources */,
 				FD37147C181979A100427858 /* MenuViewController.xib in Resources */,
 				FDFFB379181B61EF004A8351 /* bg_page_tittle_insta.png in Resources */,
+				FD2356931821870800887BFF /* WebviewFollow.xib in Resources */,
 				FDFFB374181B61EF004A8351 /* bg_cell_songs.png in Resources */,
 				FD3714721819726600427858 /* swipe_guide2.psd in Resources */,
 				FD37146E1819726600427858 /* PaperFoldResources.bundle in Resources */,
@@ -838,6 +847,7 @@
 				FD01F7FA1818FD4B00EBD3DB /* AppDelegate.m in Sources */,
 				FD5C64AD181E4B4100314C56 /* CellMedia.m in Sources */,
 				FD3714751819726600427858 /* UIView+Screenshot.m in Sources */,
+				FD2356921821870800887BFF /* WebviewFollow.m in Sources */,
 				FDF6CA901820C540007CF704 /* TwitterModel.m in Sources */,
 				FD37143D18196D7200427858 /* MediaViewController.m in Sources */,
 				FD37147B181979A100427858 /* MenuViewController.m in Sources */,

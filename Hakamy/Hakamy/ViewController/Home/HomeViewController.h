@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WebviewFollow.h"
 
 @interface HomeViewController : UIViewController
+- (IBAction)btnFacebook:(id)sender;
+- (IBAction)btnTwitter:(id)sender;
+- (IBAction)btnInstagram:(id)sender;
+- (IBAction)btnYoutube:(id)sender;
 
+- (IBAction)btnMenu:(id)sender;
 @end

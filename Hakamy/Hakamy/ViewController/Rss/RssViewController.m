@@ -29,11 +29,24 @@
     // Do any additional setup after loading the view from its nib.
     lisRss=[[NSMutableArray alloc]init];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [[self navigationController] setNavigationBarHidden:YES animated:NO];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+NSInteger tapindex;
+- (IBAction)btnMenu:(id)sender {
+    if (tapindex == 0) {
+        tapindex = 1;
+        [((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController showMenu:YES animated:YES];
+    }else
+    {
+        tapindex = 0;
+        [((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController showMenu:NO animated:YES];
+    }
 }
 #pragma mark - TableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
