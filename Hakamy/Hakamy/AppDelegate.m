@@ -19,7 +19,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    _menuController = [[MenuViewController alloc] initWithMenuWidth:250.0 numberOfFolds:3];
+    _menuController = [[MenuViewController alloc] initWithMenuWidth:210.0 numberOfFolds:3];
     [_menuController setDelegate:self];
     [self.window setRootViewController:_menuController];
     NSMutableArray *viewControllers = [[NSMutableArray alloc]init];

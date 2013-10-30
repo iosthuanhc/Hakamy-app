@@ -280,7 +280,7 @@
 //        imageview.image=[UIImage imageNamed:@"btn_menu_youtube.png"];
 //        [cell addSubview:imageview];
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
-        UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, 44)];
+        UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 206, 44)];
         switch (indexPath.row) {
             case 1:
                 img.image = [UIImage imageNamed:@"btn_menu_rss.png"];
