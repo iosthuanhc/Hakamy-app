@@ -93,6 +93,8 @@
 		FDDD4806181ACDFC004CB48E /* btn_menu_youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD4800181ACDFC004CB48E /* btn_menu_youtube.png */; };
 		FDF6CA8B1820AE14007CF704 /* YoutubeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF6CA8A1820AE14007CF704 /* YoutubeCell.m */; };
 		FDF6CA8D1820AE2D007CF704 /* YoutubeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF6CA8C1820AE2D007CF704 /* YoutubeCell.xib */; };
+		FDF6CA901820C540007CF704 /* TwitterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF6CA8F1820C540007CF704 /* TwitterModel.m */; };
+		FDF6CA931820C555007CF704 /* FacebookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF6CA921820C555007CF704 /* FacebookModel.m */; };
 		FDFFB370181B61EF004A8351 /* bg_border_thumbnail_news.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB358181B61EF004A8351 /* bg_border_thumbnail_news.png */; };
 		FDFFB371181B61EF004A8351 /* bg_border_thumbnail_songs.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB359181B61EF004A8351 /* bg_border_thumbnail_songs.png */; };
 		FDFFB372181B61EF004A8351 /* bg_cell_ft_f.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB35A181B61EF004A8351 /* bg_cell_ft_f.png */; };
@@ -261,6 +263,10 @@
 		FDF6CA891820AE14007CF704 /* YoutubeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YoutubeCell.h; path = Youtube/YoutubeCell.h; sourceTree = "<group>"; };
 		FDF6CA8A1820AE14007CF704 /* YoutubeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YoutubeCell.m; path = Youtube/YoutubeCell.m; sourceTree = "<group>"; };
 		FDF6CA8C1820AE2D007CF704 /* YoutubeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YoutubeCell.xib; path = Youtube/YoutubeCell.xib; sourceTree = "<group>"; };
+		FDF6CA8E1820C540007CF704 /* TwitterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterModel.h; sourceTree = "<group>"; };
+		FDF6CA8F1820C540007CF704 /* TwitterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterModel.m; sourceTree = "<group>"; };
+		FDF6CA911820C555007CF704 /* FacebookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookModel.h; sourceTree = "<group>"; };
+		FDF6CA921820C555007CF704 /* FacebookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookModel.m; sourceTree = "<group>"; };
 		FDFFB358181B61EF004A8351 /* bg_border_thumbnail_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_border_thumbnail_news.png; sourceTree = "<group>"; };
 		FDFFB359181B61EF004A8351 /* bg_border_thumbnail_songs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_border_thumbnail_songs.png; sourceTree = "<group>"; };
 		FDFFB35A181B61EF004A8351 /* bg_cell_ft_f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_cell_ft_f.png; sourceTree = "<group>"; };
@@ -428,6 +434,10 @@
 				FD5C64A2181E419300314C56 /* IntagramModel.m */,
 				FD5C64A4181E41AB00314C56 /* YoutubeModel.h */,
 				FD5C64A5181E41AB00314C56 /* YoutubeModel.m */,
+				FDF6CA8E1820C540007CF704 /* TwitterModel.h */,
+				FDF6CA8F1820C540007CF704 /* TwitterModel.m */,
+				FDF6CA911820C555007CF704 /* FacebookModel.h */,
+				FDF6CA921820C555007CF704 /* FacebookModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -819,6 +829,7 @@
 				FD01F7FA1818FD4B00EBD3DB /* AppDelegate.m in Sources */,
 				FD5C64AD181E4B4100314C56 /* CellMedia.m in Sources */,
 				FD3714751819726600427858 /* UIView+Screenshot.m in Sources */,
+				FDF6CA901820C540007CF704 /* TwitterModel.m in Sources */,
 				FD37143D18196D7200427858 /* MediaViewController.m in Sources */,
 				FD37147B181979A100427858 /* MenuViewController.m in Sources */,
 				FD37144C18196DC400427858 /* FacebookViewController.m in Sources */,
@@ -829,6 +840,7 @@
 				FD3714731819726600427858 /* ShadowView.m in Sources */,
 				FD37143818196D5B00427858 /* RssViewController.m in Sources */,
 				FD37146C1819726600427858 /* MultiFoldView.m in Sources */,
+				FDF6CA931820C555007CF704 /* FacebookModel.m in Sources */,
 				FD37146F1819726600427858 /* PaperFoldSwipeHintView.m in Sources */,
 				FD5C64AA181E428B00314C56 /* DejalActivityView.m in Sources */,
 				FD5C6497181E18FA00314C56 /* SBJsonStreamWriterState.m in Sources */,
