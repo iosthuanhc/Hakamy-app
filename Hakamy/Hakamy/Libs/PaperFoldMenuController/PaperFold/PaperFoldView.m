@@ -69,7 +69,7 @@
 {
     _useOptimizedScreenshot = YES;
     
-    [self setBackgroundColor:[UIColor darkGrayColor]];
+    [self setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_menu.png"]]];
     [self setAutoresizesSubviews:YES];
     [self setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
     

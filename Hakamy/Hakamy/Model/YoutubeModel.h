@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YoutubeModel : NSObject
+@interface YoutubeModel : NSObject{
+    NSString *src;
+    NSString *title;
+    NSString *imageurl;
+}
+@property (nonatomic ,retain) NSString *src;
+@property (nonatomic ,retain) NSString *title;
+@property (nonatomic ,retain) NSString *imageurl;
+-(id)initWithJSON:(NSDictionary *)dic;
 
 @end

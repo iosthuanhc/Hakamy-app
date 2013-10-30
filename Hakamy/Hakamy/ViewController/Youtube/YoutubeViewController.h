@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface YoutubeViewController : UIViewController
+#import "YoutubeModel.h"
+#import "YoutubeCell.h"
+@interface YoutubeViewController : UIViewController{
+    
+    NSMutableArray *lisYoutube;
+    NSMutableData* responseData;
+    NSURLRequest *request;
+    NSURLConnection *connection;
+}
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
 
 @end

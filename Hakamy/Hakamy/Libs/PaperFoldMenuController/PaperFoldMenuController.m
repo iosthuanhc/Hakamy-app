@@ -202,13 +202,14 @@
     [self.paperFoldView setCenterContentView:contentView];
     self.contentView = contentView;
     
-    UITableView *menuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.menuWidth, [self.view bounds].size.height)];
+    UITableView *menuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 150, self.menuWidth, [self.view bounds].size.height)];
     menuTableView.backgroundColor=[UIColor clearColor];
     menuTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    menuTableView.scrollEnabled=NO;
     [self.paperFoldView setLeftFoldContentView:menuTableView foldCount:self.numberOfFolds pullFactor:0.9];
     [menuTableView setDelegate:self];
     [menuTableView setDataSource:self];
-    menuTableView.scrollsToTop = !(self.paperFoldView.state == PaperFoldStateDefault);
+//    menuTableView.scrollsToTop = !(self.paperFoldView.state == PaperFoldStateDefault);
     self.menuTableView = menuTableView;
     
     ShadowView *menuTableViewSideShadowView = [[ShadowView alloc] initWithFrame:CGRectMake(_menuTableView.frame.size.width-2,0,2,[self.view bounds].size.height) foldDirection:FoldDirectionHorizontalLeftToRight];
@@ -217,8 +218,6 @@
      * added to the leftFoldView instead of leftFoldView.contentView bec
      * so that the shadow does not appear while folding
      */
-    
-    
     [self.paperFoldView.leftFoldView addSubview:menuTableViewSideShadowView];
     self.menuTableViewSideShadowView = menuTableViewSideShadowView;
     
@@ -280,21 +279,22 @@
 //        UIImageView *imageview=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, 35)];
 //        imageview.image=[UIImage imageNamed:@"btn_menu_youtube.png"];
 //        [cell addSubview:imageview];
-        UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, 35)];
         switch (indexPath.row) {
-            case 0:
+            case 1:
                 img.image = [UIImage imageNamed:@"btn_menu_rss.png"];
                 break;
-            case 1:
+            case 2:
                 img.image = [UIImage imageNamed:@"btn_menu_music.png"];
                 break;
-            case 2:
+            case 3:
                 img.image = [UIImage imageNamed:@"btn_menu_insta.png"];
                 break;
-            case 3:
+            case 4:
                 img.image = [UIImage imageNamed:@"btn_menu_youtube.png"];
                 break;
-            case 4:
+            case 5:
                 img.image = [UIImage imageNamed:@"btn_menu_ft.png"];
                 break;
             default:

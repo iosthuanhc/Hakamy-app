@@ -91,6 +91,8 @@
 		FDDD4804181ACDFC004CB48E /* btn_menu_music.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47FE181ACDFC004CB48E /* btn_menu_music.png */; };
 		FDDD4805181ACDFC004CB48E /* btn_menu_rss.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47FF181ACDFC004CB48E /* btn_menu_rss.png */; };
 		FDDD4806181ACDFC004CB48E /* btn_menu_youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD4800181ACDFC004CB48E /* btn_menu_youtube.png */; };
+		FDF6CA8B1820AE14007CF704 /* YoutubeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF6CA8A1820AE14007CF704 /* YoutubeCell.m */; };
+		FDF6CA8D1820AE2D007CF704 /* YoutubeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF6CA8C1820AE2D007CF704 /* YoutubeCell.xib */; };
 		FDFFB370181B61EF004A8351 /* bg_border_thumbnail_news.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB358181B61EF004A8351 /* bg_border_thumbnail_news.png */; };
 		FDFFB371181B61EF004A8351 /* bg_border_thumbnail_songs.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB359181B61EF004A8351 /* bg_border_thumbnail_songs.png */; };
 		FDFFB372181B61EF004A8351 /* bg_cell_ft_f.png in Resources */ = {isa = PBXBuildFile; fileRef = FDFFB35A181B61EF004A8351 /* bg_cell_ft_f.png */; };
@@ -256,6 +258,9 @@
 		FDDD47FE181ACDFC004CB48E /* btn_menu_music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_music.png; sourceTree = "<group>"; };
 		FDDD47FF181ACDFC004CB48E /* btn_menu_rss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_rss.png; sourceTree = "<group>"; };
 		FDDD4800181ACDFC004CB48E /* btn_menu_youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_youtube.png; sourceTree = "<group>"; };
+		FDF6CA891820AE14007CF704 /* YoutubeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YoutubeCell.h; path = Youtube/YoutubeCell.h; sourceTree = "<group>"; };
+		FDF6CA8A1820AE14007CF704 /* YoutubeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YoutubeCell.m; path = Youtube/YoutubeCell.m; sourceTree = "<group>"; };
+		FDF6CA8C1820AE2D007CF704 /* YoutubeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YoutubeCell.xib; path = Youtube/YoutubeCell.xib; sourceTree = "<group>"; };
 		FDFFB358181B61EF004A8351 /* bg_border_thumbnail_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_border_thumbnail_news.png; sourceTree = "<group>"; };
 		FDFFB359181B61EF004A8351 /* bg_border_thumbnail_songs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_border_thumbnail_songs.png; sourceTree = "<group>"; };
 		FDFFB35A181B61EF004A8351 /* bg_cell_ft_f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_cell_ft_f.png; sourceTree = "<group>"; };
@@ -467,6 +472,9 @@
 				FD37144418196DAD00427858 /* YoutubeViewController.h */,
 				FD37144518196DAD00427858 /* YoutubeViewController.m */,
 				FD37144618196DAD00427858 /* YoutubeViewController.xib */,
+				FDF6CA891820AE14007CF704 /* YoutubeCell.h */,
+				FDF6CA8A1820AE14007CF704 /* YoutubeCell.m */,
+				FDF6CA8C1820AE2D007CF704 /* YoutubeCell.xib */,
 			);
 			name = Youtube;
 			sourceTree = "<group>";
@@ -760,6 +768,7 @@
 				FD37144318196D8E00427858 /* InstagramViewController.xib in Resources */,
 				FDDD47F2181AC770004CB48E /* bg_home.png in Resources */,
 				FDDD47F7181AC770004CB48E /* btn_social_insta.png in Resources */,
+				FDF6CA8D1820AE2D007CF704 /* YoutubeCell.xib in Resources */,
 				FDFFB381181B61EF004A8351 /* btn_play.png in Resources */,
 				FDDD4806181ACDFC004CB48E /* btn_menu_youtube.png in Resources */,
 				FDDD47F5181AC770004CB48E /* btn_social_fb.png in Resources */,
@@ -805,6 +814,7 @@
 				FD5C6493181E18FA00314C56 /* SBJsonStreamParserAdapter.m in Sources */,
 				FD5C6472181E0F6300314C56 /* CellRssCustom.m in Sources */,
 				FD5C64DD181E6B9400314C56 /* InstagramCell.m in Sources */,
+				FDF6CA8B1820AE14007CF704 /* YoutubeCell.m in Sources */,
 				FD5C6492181E18FA00314C56 /* SBJsonStreamParserAccumulator.m in Sources */,
 				FD01F7FA1818FD4B00EBD3DB /* AppDelegate.m in Sources */,
 				FD5C64AD181E4B4100314C56 /* CellMedia.m in Sources */,
