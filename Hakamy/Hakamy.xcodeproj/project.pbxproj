@@ -23,6 +23,13 @@
 		FD23568E182164EA00887BFF /* SosialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD23568D182164EA00887BFF /* SosialCell.xib */; };
 		FD2356921821870800887BFF /* WebviewFollow.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2356901821870800887BFF /* WebviewFollow.m */; };
 		FD2356931821870800887BFF /* WebviewFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD2356911821870800887BFF /* WebviewFollow.xib */; };
+		FD2356A018218BF700887BFF /* AudioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23569618218BF700887BFF /* AudioButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FD2356A118218BF700887BFF /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23569818218BF700887BFF /* AudioPlayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FD2356A218218BF700887BFF /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23569A18218BF700887BFF /* AudioStreamer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FD2356A318218BF700887BFF /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = FD23569C18218BF700887BFF /* loading.png */; };
+		FD2356A418218BF700887BFF /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = FD23569D18218BF700887BFF /* play.png */; };
+		FD2356A518218BF700887BFF /* screenshots.png in Resources */ = {isa = PBXBuildFile; fileRef = FD23569E18218BF700887BFF /* screenshots.png */; };
+		FD2356A618218BF700887BFF /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = FD23569F18218BF700887BFF /* stop.png */; };
 		FD37142E18196C8400427858 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37142C18196C8400427858 /* HomeViewController.m */; };
 		FD37142F18196C8400427858 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37142D18196C8400427858 /* HomeViewController.xib */; };
 		FD37143818196D5B00427858 /* RssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37143618196D5B00427858 /* RssViewController.m */; };
@@ -36,7 +43,7 @@
 		FD37144C18196DC400427858 /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37144A18196DC400427858 /* FacebookViewController.m */; };
 		FD37144D18196DC400427858 /* FacebookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37144B18196DC400427858 /* FacebookViewController.xib */; };
 		FD37146A1819726600427858 /* FacingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714511819726600427858 /* FacingView.m */; };
-		FD37146B1819726600427858 /* FoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714531819726600427858 /* FoldView.m */; };
+		FD37146B1819726600427858 /* FoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714531819726600427858 /* FoldView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FD37146C1819726600427858 /* MultiFoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714551819726600427858 /* MultiFoldView.m */; };
 		FD37146D1819726600427858 /* PaperFoldNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3714581819726600427858 /* PaperFoldNavigationController.m */; };
 		FD37146E1819726600427858 /* PaperFoldResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FD3714591819726600427858 /* PaperFoldResources.bundle */; };
@@ -157,6 +164,16 @@
 		FD23568F1821870800887BFF /* WebviewFollow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebviewFollow.h; path = Home/WebviewFollow.h; sourceTree = "<group>"; };
 		FD2356901821870800887BFF /* WebviewFollow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebviewFollow.m; path = Home/WebviewFollow.m; sourceTree = "<group>"; };
 		FD2356911821870800887BFF /* WebviewFollow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebviewFollow.xib; path = Home/WebviewFollow.xib; sourceTree = "<group>"; };
+		FD23569518218BF700887BFF /* AudioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioButton.h; sourceTree = "<group>"; };
+		FD23569618218BF700887BFF /* AudioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioButton.m; sourceTree = "<group>"; };
+		FD23569718218BF700887BFF /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		FD23569818218BF700887BFF /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		FD23569918218BF700887BFF /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
+		FD23569A18218BF700887BFF /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		FD23569C18218BF700887BFF /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
+		FD23569D18218BF700887BFF /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		FD23569E18218BF700887BFF /* screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshots.png; sourceTree = "<group>"; };
+		FD23569F18218BF700887BFF /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		FD37142B18196C8400427858 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Home/HomeViewController.h; sourceTree = "<group>"; };
 		FD37142C18196C8400427858 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Home/HomeViewController.m; sourceTree = "<group>"; };
 		FD37142D18196C8400427858 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Home/HomeViewController.xib; sourceTree = "<group>"; };
@@ -425,6 +442,7 @@
 		FD01F81918190F2700EBD3DB /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				FD23569418218BF700887BFF /* AudioPlayer */,
 				FD5C64A7181E428B00314C56 /* Loading */,
 				FD5C6475181E18FA00314C56 /* Json */,
 				FD5C646F181E0CAB00314C56 /* Define.h */,
@@ -464,6 +482,31 @@
 				FD37143018196CEB00427858 /* Facebook */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FD23569418218BF700887BFF /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				FD23569518218BF700887BFF /* AudioButton.h */,
+				FD23569618218BF700887BFF /* AudioButton.m */,
+				FD23569718218BF700887BFF /* AudioPlayer.h */,
+				FD23569818218BF700887BFF /* AudioPlayer.m */,
+				FD23569918218BF700887BFF /* AudioStreamer.h */,
+				FD23569A18218BF700887BFF /* AudioStreamer.m */,
+				FD23569B18218BF700887BFF /* images */,
+			);
+			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
+		FD23569B18218BF700887BFF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FD23569C18218BF700887BFF /* loading.png */,
+				FD23569D18218BF700887BFF /* play.png */,
+				FD23569E18218BF700887BFF /* screenshots.png */,
+				FD23569F18218BF700887BFF /* stop.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		FD37142A18196C6400427858 /* Home */ = {
@@ -776,6 +819,7 @@
 				FDFFB377181B61EF004A8351 /* bg_others.png in Resources */,
 				FD01F7F41818FD4A00EBD3DB /* InfoPlist.strings in Resources */,
 				FDFFB373181B61EF004A8351 /* bg_cell_lastestnews.png in Resources */,
+				FD2356A518218BF700887BFF /* screenshots.png in Resources */,
 				FD23568E182164EA00887BFF /* SosialCell.xib in Resources */,
 				FDFFB370181B61EF004A8351 /* bg_border_thumbnail_news.png in Resources */,
 				FDDD4803181ACDFC004CB48E /* btn_menu_insta.png in Resources */,
@@ -793,6 +837,7 @@
 				FDDD47F9181AC770004CB48E /* btn_social_tw.png in Resources */,
 				FD5C64AF181E4B8800314C56 /* CellMedia.xib in Resources */,
 				FD37144318196D8E00427858 /* InstagramViewController.xib in Resources */,
+				FD2356A318218BF700887BFF /* loading.png in Resources */,
 				FDDD47F2181AC770004CB48E /* bg_home.png in Resources */,
 				FDDD47F7181AC770004CB48E /* btn_social_insta.png in Resources */,
 				FDF6CA8D1820AE2D007CF704 /* YoutubeCell.xib in Resources */,
@@ -802,9 +847,11 @@
 				FD37147C181979A100427858 /* MenuViewController.xib in Resources */,
 				FDFFB379181B61EF004A8351 /* bg_page_tittle_insta.png in Resources */,
 				FD2356931821870800887BFF /* WebviewFollow.xib in Resources */,
+				FD2356A618218BF700887BFF /* stop.png in Resources */,
 				FDFFB374181B61EF004A8351 /* bg_cell_songs.png in Resources */,
 				FD3714721819726600427858 /* swipe_guide2.psd in Resources */,
 				FD37146E1819726600427858 /* PaperFoldResources.bundle in Resources */,
+				FD2356A418218BF700887BFF /* play.png in Resources */,
 				FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */,
 				FD37142F18196C8400427858 /* HomeViewController.xib in Resources */,
 				FDDD4805181ACDFC004CB48E /* btn_menu_rss.png in Resources */,
@@ -848,6 +895,7 @@
 				FD5C64AD181E4B4100314C56 /* CellMedia.m in Sources */,
 				FD3714751819726600427858 /* UIView+Screenshot.m in Sources */,
 				FD2356921821870800887BFF /* WebviewFollow.m in Sources */,
+				FD2356A018218BF700887BFF /* AudioButton.m in Sources */,
 				FDF6CA901820C540007CF704 /* TwitterModel.m in Sources */,
 				FD37143D18196D7200427858 /* MediaViewController.m in Sources */,
 				FD37147B181979A100427858 /* MenuViewController.m in Sources */,
@@ -865,12 +913,14 @@
 				FD5C6497181E18FA00314C56 /* SBJsonStreamWriterState.m in Sources */,
 				FD3714701819726600427858 /* PaperFoldView.m in Sources */,
 				FD5C6494181E18FA00314C56 /* SBJsonStreamParserState.m in Sources */,
+				FD2356A218218BF700887BFF /* AudioStreamer.m in Sources */,
 				FD37146A1819726600427858 /* FacingView.m in Sources */,
 				FD5C649A181E18FA00314C56 /* SBJsonWriter.m in Sources */,
 				FD5C648F181E18FA00314C56 /* NSObject+SBJson.m in Sources */,
 				FD01F7F61818FD4B00EBD3DB /* main.m in Sources */,
 				FD5C649D181E233100314C56 /* RssModel.m in Sources */,
 				FD5C6490181E18FA00314C56 /* SBJsonParser.m in Sources */,
+				FD2356A118218BF700887BFF /* AudioPlayer.m in Sources */,
 				FD37142E18196C8400427858 /* HomeViewController.m in Sources */,
 				FD37146B1819726600427858 /* FoldView.m in Sources */,
 				FD5C6499181E18FA00314C56 /* SBJsonUTF8Stream.m in Sources */,

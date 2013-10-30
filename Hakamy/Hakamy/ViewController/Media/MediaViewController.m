@@ -7,7 +7,7 @@
 //
 
 #import "MediaViewController.h"
-
+#import "AudioPlayer.h"
 @interface MediaViewController ()
 
 @end
@@ -119,11 +119,21 @@ NSInteger tapindex;
         MediaModel *model=[listMedia objectAtIndex:indexPath.row];
         cell.mediaModel=model;
         [cell loadDataCell];
+        cell.delegate=self;
         return cell;
     }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+}
+-(void)playMediaclick:(NSString *)trackID{
+    NSString *stringRes=[NSString stringWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:TRACK_API,trackID]] encoding:NSUTF8StringEncoding error:nil];
+    if (_audioPlayer == nil) {
+        _audioPlayer = [[AudioPlayer alloc] init];
+    }
+        _audioPlayer.url = [NSURL URLWithString:stringRes];
+        [_audioPlayer play];
+
 }
 @end

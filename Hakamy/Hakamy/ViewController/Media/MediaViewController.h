@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "MediaModel.h"
 #import "CellMedia.h"
-@interface MediaViewController : UIViewController{
+@class AudioPlayer;
+@interface MediaViewController : UIViewController<CustomCellMediaDelegate>{
     NSMutableArray *listMedia;
     NSMutableData* responseData;
     NSURLRequest *request;
     NSURLConnection *connection;
+    AudioPlayer *_audioPlayer;
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 - (IBAction)btnMenu:(id)sender;

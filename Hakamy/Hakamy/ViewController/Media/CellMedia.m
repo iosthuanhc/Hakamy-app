@@ -11,6 +11,7 @@
 @implementation CellMedia
 @synthesize mediaModel;
 @synthesize lblTitle,lblDescription,thumbnail;
+@synthesize delegate;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -29,5 +30,9 @@
 -(void)loadDataCell{
     lblTitle.text=mediaModel.title;
     lblDescription.text=mediaModel.genre;
+}
+- (IBAction)btnPlay:(id)sender {
+    [delegate playMediaclick:mediaModel._id];
+    
 }
 @end
