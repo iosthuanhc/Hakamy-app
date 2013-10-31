@@ -69,8 +69,8 @@ NSInteger tapindex;
     NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     lisYoutube =[[NSMutableArray alloc]init];
     NSDictionary *result=[responseString JSONValue] ;
-    NSDictionary *feed=[result objectForKey:@"feed"] ;
-    NSArray *results=[feed objectForKey:@"entry"] ;
+    NSDictionary *feedjson=[result objectForKey:@"feed"] ;
+    NSArray *results=[feedjson objectForKey:@"entry"] ;
     for(NSDictionary *item in results)
     {
         YoutubeModel *prf = [[YoutubeModel alloc]initWithJSON:item];
@@ -129,7 +129,7 @@ NSInteger tapindex;
     
     Detailyoutube *secondDetailViewController = [[Detailyoutube alloc] initWithNibName:@"Detailyoutube" bundle:nil];
     YoutubeModel *model=[lisYoutube objectAtIndex:indexPath.row];
-    secondDetailViewController.instagramModel=model;
+    secondDetailViewController.youtubeModel=model;
     secondDetailViewController.delegate=self;
     secondDetailViewController.view.layer.cornerRadius=8;
     [self presentPopupViewController:secondDetailViewController animationType:MJPopupViewAnimationSlideBottomBottom];

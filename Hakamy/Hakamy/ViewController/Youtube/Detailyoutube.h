@@ -10,8 +10,11 @@
 #import "YoutubeModel.h"
 @protocol DetailYoutubeDelegate;
 
-@interface Detailyoutube : UIViewController
-@property (nonatomic,retain) YoutubeModel *instagramModel;
+@interface Detailyoutube : UIViewController{
+    IBOutlet UIWebView *webView;
+}@property (strong, nonatomic) IBOutlet UIWebView *webView;
+
+@property (nonatomic,retain) YoutubeModel *youtubeModel;
 @property (nonatomic, assign) id <DetailYoutubeDelegate> delegate;
 - (IBAction)viewClick:(id)sender;
 @end
@@ -20,3 +23,4 @@
 @optional
 -(void)backtoMainView;
 @end
+
