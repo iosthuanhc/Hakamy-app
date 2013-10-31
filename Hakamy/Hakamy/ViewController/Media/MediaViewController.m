@@ -115,11 +115,14 @@ NSInteger tapindex;
                     break;
                 }
             }
+            [cell configurePlayerButton];
         }
         MediaModel *model=[listMedia objectAtIndex:indexPath.row];
         cell.mediaModel=model;
         [cell loadDataCell];
-        cell.delegate=self;
+        [cell configurePlayerButton];
+        cell.audioButton.tag = indexPath.row;
+        [cell.audioButton addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
 }
@@ -127,13 +130,25 @@ NSInteger tapindex;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
--(void)playMediaclick:(NSString *)trackID{
-    NSString *stringRes=[NSString stringWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:TRACK_API,trackID]] encoding:NSUTF8StringEncoding error:nil];
+- (void)playAudio:(AudioButton *)button
+{
+    NSInteger index = button.tag;
+    MediaModel *model=[listMedia objectAtIndex:index];
+    
     if (_audioPlayer == nil) {
         _audioPlayer = [[AudioPlayer alloc] init];
     }
-        _audioPlayer.url = [NSURL URLWithString:stringRes];
+    
+    if ([_audioPlayer.button isEqual:button]) {
         [_audioPlayer play];
-
+    } else {
+        [_audioPlayer stop];
+        
+        _audioPlayer.button = button;
+        _audioPlayer.url = [NSURL URLWithString:[NSString stringWithFormat:PLAYMP3,model._id]];
+        
+        [_audioPlayer play];
+    }
 }
+
 @end

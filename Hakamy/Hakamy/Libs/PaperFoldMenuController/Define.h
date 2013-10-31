@@ -20,6 +20,7 @@
 #define INSTAGRAM_API           @"http://appzy.info/7akamy/index.php?task=instagram"
 #define MEDIA_API               @"http://appzy.info/7akamy/index.php?task=soundcloud"
 #define TRACK_API               @"http://appzy.info/7akamy/index.php?task=play&trackid=%@"
+#define PLAYMP3                 @"http://api.soundcloud.com/tracks/%@/stream?client_id=9f654d99409ccb8e14b8be32aa2067d0"
 #define A_API                   @"http://appzy.info/7akamy/index.php?task=facebook"
 #define TWITTER_API             @"http://appzy.info/7akamy/index.php?task=twitter"
 #define YOUTOBE_API             @"http://appzy.info/7akamy/index.php?task=youtube"

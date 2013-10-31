@@ -10,8 +10,7 @@
 
 @implementation CellMedia
 @synthesize mediaModel;
-@synthesize lblTitle,lblDescription,thumbnail;
-@synthesize delegate;
+@synthesize lblTitle,lblDescription,thumbnail,audioButton = _audioButton;;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -31,8 +30,9 @@
     lblTitle.text=mediaModel.title;
     lblDescription.text=mediaModel.genre;
 }
-- (IBAction)btnPlay:(id)sender {
-    [delegate playMediaclick:mediaModel._id];
-    
+- (void)configurePlayerButton
+{
+    self.audioButton = [[AudioButton alloc] initWithFrame:CGRectMake(284, 10, 25, 25)];
+    [self.contentView addSubview:self.audioButton];
 }
 @end
