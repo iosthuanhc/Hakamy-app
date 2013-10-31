@@ -30,6 +30,12 @@
 		FD2356A418218BF700887BFF /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = FD23569D18218BF700887BFF /* play.png */; };
 		FD2356A518218BF700887BFF /* screenshots.png in Resources */ = {isa = PBXBuildFile; fileRef = FD23569E18218BF700887BFF /* screenshots.png */; };
 		FD2356A618218BF700887BFF /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = FD23569F18218BF700887BFF /* stop.png */; };
+		FD2356AD1822AE5200887BFF /* Detailyoutube.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2356AB1822AE5200887BFF /* Detailyoutube.m */; };
+		FD2356AE1822AE5200887BFF /* Detailyoutube.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD2356AC1822AE5200887BFF /* Detailyoutube.xib */; };
+		FD2356B21822B2FE00887BFF /* DetailInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2356B01822B2FE00887BFF /* DetailInstagram.m */; };
+		FD2356B31822B2FE00887BFF /* DetailInstagram.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD2356B11822B2FE00887BFF /* DetailInstagram.xib */; };
+		FD2356B91822B81F00887BFF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2356B61822B81F00887BFF /* MJPopupBackgroundView.m */; };
+		FD2356BA1822B81F00887BFF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2356B81822B81F00887BFF /* UIViewController+MJPopupViewController.m */; };
 		FD37142E18196C8400427858 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37142C18196C8400427858 /* HomeViewController.m */; };
 		FD37142F18196C8400427858 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37142D18196C8400427858 /* HomeViewController.xib */; };
 		FD37143818196D5B00427858 /* RssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37143618196D5B00427858 /* RssViewController.m */; };
@@ -174,6 +180,16 @@
 		FD23569D18218BF700887BFF /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		FD23569E18218BF700887BFF /* screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshots.png; sourceTree = "<group>"; };
 		FD23569F18218BF700887BFF /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		FD2356AA1822AE5200887BFF /* Detailyoutube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Detailyoutube.h; path = Youtube/Detailyoutube.h; sourceTree = "<group>"; };
+		FD2356AB1822AE5200887BFF /* Detailyoutube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Detailyoutube.m; path = Youtube/Detailyoutube.m; sourceTree = "<group>"; };
+		FD2356AC1822AE5200887BFF /* Detailyoutube.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Detailyoutube.xib; path = Youtube/Detailyoutube.xib; sourceTree = "<group>"; };
+		FD2356AF1822B2FE00887BFF /* DetailInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailInstagram.h; path = Instagram/DetailInstagram.h; sourceTree = "<group>"; };
+		FD2356B01822B2FE00887BFF /* DetailInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailInstagram.m; path = Instagram/DetailInstagram.m; sourceTree = "<group>"; };
+		FD2356B11822B2FE00887BFF /* DetailInstagram.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailInstagram.xib; path = Instagram/DetailInstagram.xib; sourceTree = "<group>"; };
+		FD2356B51822B81F00887BFF /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
+		FD2356B61822B81F00887BFF /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
+		FD2356B71822B81F00887BFF /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		FD2356B81822B81F00887BFF /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		FD37142B18196C8400427858 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Home/HomeViewController.h; sourceTree = "<group>"; };
 		FD37142C18196C8400427858 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Home/HomeViewController.m; sourceTree = "<group>"; };
 		FD37142D18196C8400427858 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Home/HomeViewController.xib; sourceTree = "<group>"; };
@@ -442,6 +458,7 @@
 		FD01F81918190F2700EBD3DB /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				FD2356B41822B81F00887BFF /* popView */,
 				FD23569418218BF700887BFF /* AudioPlayer */,
 				FD5C64A7181E428B00314C56 /* Loading */,
 				FD5C6475181E18FA00314C56 /* Json */,
@@ -509,6 +526,17 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		FD2356B41822B81F00887BFF /* popView */ = {
+			isa = PBXGroup;
+			children = (
+				FD2356B51822B81F00887BFF /* MJPopupBackgroundView.h */,
+				FD2356B61822B81F00887BFF /* MJPopupBackgroundView.m */,
+				FD2356B71822B81F00887BFF /* UIViewController+MJPopupViewController.h */,
+				FD2356B81822B81F00887BFF /* UIViewController+MJPopupViewController.m */,
+			);
+			path = popView;
+			sourceTree = "<group>";
+		};
 		FD37142A18196C6400427858 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +569,9 @@
 				FD37144418196DAD00427858 /* YoutubeViewController.h */,
 				FD37144518196DAD00427858 /* YoutubeViewController.m */,
 				FD37144618196DAD00427858 /* YoutubeViewController.xib */,
+				FD2356AA1822AE5200887BFF /* Detailyoutube.h */,
+				FD2356AB1822AE5200887BFF /* Detailyoutube.m */,
+				FD2356AC1822AE5200887BFF /* Detailyoutube.xib */,
 				FDF6CA891820AE14007CF704 /* YoutubeCell.h */,
 				FDF6CA8A1820AE14007CF704 /* YoutubeCell.m */,
 				FDF6CA8C1820AE2D007CF704 /* YoutubeCell.xib */,
@@ -554,6 +585,9 @@
 				FD37143F18196D8E00427858 /* InstagramViewController.h */,
 				FD37144018196D8E00427858 /* InstagramViewController.m */,
 				FD37144118196D8E00427858 /* InstagramViewController.xib */,
+				FD2356AF1822B2FE00887BFF /* DetailInstagram.h */,
+				FD2356B01822B2FE00887BFF /* DetailInstagram.m */,
+				FD2356B11822B2FE00887BFF /* DetailInstagram.xib */,
 				FD5C64DB181E6B9400314C56 /* InstagramCell.h */,
 				FD5C64DC181E6B9400314C56 /* InstagramCell.m */,
 				FD5C64DE181E6BAC00314C56 /* InstagramCell.xib */,
@@ -812,6 +846,7 @@
 				FD5C64DF181E6BAC00314C56 /* InstagramCell.xib in Resources */,
 				FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */,
 				FDFFB37A181B61EF004A8351 /* bg_page_tittle_news.png in Resources */,
+				FD2356AE1822AE5200887BFF /* Detailyoutube.xib in Resources */,
 				FDFFB37C181B61EF004A8351 /* bg_page_tittle_youtube.png in Resources */,
 				FDFFB37B181B61EF004A8351 /* bg_page_tittle_songs.png in Resources */,
 				FDFFB37F181B61EF004A8351 /* bg_webviews.png in Resources */,
@@ -838,6 +873,7 @@
 				FD5C64AF181E4B8800314C56 /* CellMedia.xib in Resources */,
 				FD37144318196D8E00427858 /* InstagramViewController.xib in Resources */,
 				FD2356A318218BF700887BFF /* loading.png in Resources */,
+				FD2356B31822B2FE00887BFF /* DetailInstagram.xib in Resources */,
 				FDDD47F2181AC770004CB48E /* bg_home.png in Resources */,
 				FDDD47F7181AC770004CB48E /* btn_social_insta.png in Resources */,
 				FDF6CA8D1820AE2D007CF704 /* YoutubeCell.xib in Resources */,
@@ -904,12 +940,14 @@
 				FD5C6496181E18FA00314C56 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				FD5C6498181E18FA00314C56 /* SBJsonTokeniser.m in Sources */,
 				FD5C6495181E18FA00314C56 /* SBJsonStreamWriter.m in Sources */,
+				FD2356BA1822B81F00887BFF /* UIViewController+MJPopupViewController.m in Sources */,
 				FD3714731819726600427858 /* ShadowView.m in Sources */,
 				FD37143818196D5B00427858 /* RssViewController.m in Sources */,
 				FD37146C1819726600427858 /* MultiFoldView.m in Sources */,
 				FDF6CA931820C555007CF704 /* FacebookModel.m in Sources */,
 				FD37146F1819726600427858 /* PaperFoldSwipeHintView.m in Sources */,
 				FD5C64AA181E428B00314C56 /* DejalActivityView.m in Sources */,
+				FD2356AD1822AE5200887BFF /* Detailyoutube.m in Sources */,
 				FD5C6497181E18FA00314C56 /* SBJsonStreamWriterState.m in Sources */,
 				FD3714701819726600427858 /* PaperFoldView.m in Sources */,
 				FD5C6494181E18FA00314C56 /* SBJsonStreamParserState.m in Sources */,
@@ -927,6 +965,8 @@
 				FD3714741819726600427858 /* TouchThroughUIView.m in Sources */,
 				FD5C64A0181E236300314C56 /* MediaModel.m in Sources */,
 				FD37144718196DAD00427858 /* YoutubeViewController.m in Sources */,
+				FD2356B91822B81F00887BFF /* MJPopupBackgroundView.m in Sources */,
+				FD2356B21822B2FE00887BFF /* DetailInstagram.m in Sources */,
 				FD37144218196D8E00427858 /* InstagramViewController.m in Sources */,
 				FD37146D1819726600427858 /* PaperFoldNavigationController.m in Sources */,
 				FD5C64A6181E41AB00314C56 /* YoutubeModel.m in Sources */,

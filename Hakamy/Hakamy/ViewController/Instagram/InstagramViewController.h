@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "IntagramModel.h"
 #import "InstagramCell.h"
-@interface InstagramViewController : UIViewController{
+#import "DetailInstagram.h"
+@interface InstagramViewController : UIViewController<DetailInstagramDelegate>{
     NSMutableArray *lisInstagram;
     NSMutableData* responseData;
     NSURLRequest *request;

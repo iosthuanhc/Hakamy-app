@@ -7,7 +7,7 @@
 //
 
 #import "InstagramViewController.h"
-
+#import "UIViewController+MJPopupViewController.h"
 @interface InstagramViewController ()
 
 @end
@@ -124,6 +124,14 @@ NSInteger tapindex;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    DetailInstagram *secondDetailViewController = [[DetailInstagram alloc] initWithNibName:@"DetailInstagram" bundle:nil];
+    IntagramModel *model=[lisInstagram objectAtIndex:indexPath.row];
+    secondDetailViewController.instagramModel=model;
+    secondDetailViewController.delegate=self;
+    secondDetailViewController.view.layer.cornerRadius=8;
+    [self presentPopupViewController:secondDetailViewController animationType:MJPopupViewAnimationSlideBottomBottom];
+}
+-(void)backtoMainView{
+    [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];
 }
 @end

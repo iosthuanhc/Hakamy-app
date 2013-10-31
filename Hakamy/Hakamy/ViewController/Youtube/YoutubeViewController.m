@@ -7,7 +7,7 @@
 //
 
 #import "YoutubeViewController.h"
-
+#import "UIViewController+MJPopupViewController.h"
 @interface YoutubeViewController ()
 
 @end
@@ -127,6 +127,14 @@ NSInteger tapindex;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    Detailyoutube *secondDetailViewController = [[Detailyoutube alloc] initWithNibName:@"Detailyoutube" bundle:nil];
+    YoutubeModel *model=[lisYoutube objectAtIndex:indexPath.row];
+    secondDetailViewController.instagramModel=model;
+    secondDetailViewController.delegate=self;
+    secondDetailViewController.view.layer.cornerRadius=8;
+    [self presentPopupViewController:secondDetailViewController animationType:MJPopupViewAnimationSlideBottomBottom];
 }
-
+-(void)backtoMainView{
+    [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];
+}
 @end

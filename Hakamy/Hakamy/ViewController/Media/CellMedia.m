@@ -32,7 +32,7 @@
 }
 - (void)configurePlayerButton
 {
-    self.audioButton = [[AudioButton alloc] initWithFrame:CGRectMake(284, 10, 25, 25)];
+    self.audioButton = [[AudioButton alloc] initWithFrame:CGRectMake(275, 2, 40, 40)];
     [self.contentView addSubview:self.audioButton];
 }
 @end
