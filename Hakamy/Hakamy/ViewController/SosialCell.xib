@@ -35,13 +35,19 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                        <state key="normal" backgroundImage="btn_share.png">
+                        <state key="normal" backgroundImage="btn_comment.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
                             <action selector="btnShare:" destination="Iyb-Od-dU8" eventType="touchUpInside" id="TKr-TO-XAG"/>
                         </connections>
                     </button>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lsq-Wn-dGn">
+                        <rect key="frame" x="31" y="47" width="42" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
@@ -49,13 +55,14 @@
             <connections>
                 <outlet property="btnShare" destination="Lif-4Z-j65" id="kFU-b2-DxX"/>
                 <outlet property="imageAvata" destination="x6U-Y2-uiS" id="tt3-q3-yUt"/>
+                <outlet property="lblNumberComment" destination="Lsq-Wn-dGn" id="0jB-m1-hcJ"/>
                 <outlet property="lblText" destination="0Jr-Ny-k6I" id="GPH-Bn-XJn"/>
             </connections>
         </tableViewCell>
     </objects>
     <resources>
         <image name="bg_cell_ft_f.png" width="632" height="134"/>
-        <image name="btn_share.png" width="36" height="28"/>
+        <image name="btn_comment.png" width="20" height="20"/>
         <image name="thumbnail_twitter.png" width="75" height="76"/>
     </resources>
 </document>

@@ -12,6 +12,8 @@
 @property (strong, nonatomic) TwitterModel *twitterModel;
 @property (strong, nonatomic) IBOutlet UIImageView *imageAvata;
 @property (strong, nonatomic) IBOutlet UILabel *lblText;
+@property (strong, nonatomic) IBOutlet UILabel *lblNumberComment;
+
 @property (strong, nonatomic) IBOutlet UIButton *btnShare;
 - (IBAction)btnShare:(id)sender;
 -(void)loadDataCell;

@@ -9,7 +9,7 @@
 #import "SosialCell.h"
 
 @implementation SosialCell
-@synthesize twitterModel,lblText,imageAvata,btnShare;
+@synthesize twitterModel,lblText,imageAvata,btnShare,lblNumberComment;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -27,6 +27,7 @@
 }
 -(void)loadDataCell{
     lblText.text=twitterModel.title;
+    
 //    NSURL *url = [NSURL URLWithString:youtubeModel.imageurl];
 //    [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
 //        if (succeeded) {
