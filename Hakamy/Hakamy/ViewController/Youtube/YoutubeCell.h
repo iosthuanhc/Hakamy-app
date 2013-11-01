@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "YoutubeModel.h"
+@protocol YoutubeDelegate;
 @interface YoutubeCell : UITableViewCell
+@property (nonatomic ,assign) id<YoutubeDelegate> delegate;
 @property (nonatomic,retain) YoutubeModel *youtubeModel;
 @property (strong, nonatomic) IBOutlet UIImageView *imageview;
 @property (strong, nonatomic) IBOutlet UIButton *share;
@@ -16,4 +18,8 @@
 
 - (IBAction)share:(id)sender;
 -(void)loadDataCell;
+@end
+@protocol YoutubeDelegate <NSObject>
+@optional
+-(void)shareClick;
 @end

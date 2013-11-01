@@ -19,6 +19,9 @@
 		FD01F8051818FD4B00EBD3DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01F7ED1818FD4A00EBD3DB /* UIKit.framework */; };
 		FD01F80D1818FD4B00EBD3DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD01F80B1818FD4B00EBD3DB /* InfoPlist.strings */; };
 		FD01F80F1818FD4B00EBD3DB /* HakamyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD01F80E1818FD4B00EBD3DB /* HakamyTests.m */; };
+		FD0EDB0E18239C8E002B373D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0D18239C8E002B373D /* Social.framework */; };
+		FD0EDB1018239C99002B373D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0F18239C99002B373D /* Twitter.framework */; };
+		FD0EDB1218239CCE002B373D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB1118239CCE002B373D /* MessageUI.framework */; };
 		FD23568C182164D100887BFF /* SosialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23568B182164D100887BFF /* SosialCell.m */; };
 		FD23568E182164EA00887BFF /* SosialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD23568D182164EA00887BFF /* SosialCell.xib */; };
 		FD2356921821870800887BFF /* WebviewFollow.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2356901821870800887BFF /* WebviewFollow.m */; };
@@ -164,6 +167,9 @@
 		FD01F80A1818FD4B00EBD3DB /* HakamyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HakamyTests-Info.plist"; sourceTree = "<group>"; };
 		FD01F80C1818FD4B00EBD3DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FD01F80E1818FD4B00EBD3DB /* HakamyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HakamyTests.m; sourceTree = "<group>"; };
+		FD0EDB0D18239C8E002B373D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FD0EDB0F18239C99002B373D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		FD0EDB1118239CCE002B373D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FD23568A182164D100887BFF /* SosialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SosialCell.h; sourceTree = "<group>"; };
 		FD23568B182164D100887BFF /* SosialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SosialCell.m; sourceTree = "<group>"; };
 		FD23568D182164EA00887BFF /* SosialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SosialCell.xib; sourceTree = "<group>"; };
@@ -340,6 +346,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0EDB1218239CCE002B373D /* MessageUI.framework in Frameworks */,
+				FD0EDB1018239C99002B373D /* Twitter.framework in Frameworks */,
+				FD0EDB0E18239C8E002B373D /* Social.framework in Frameworks */,
 				FD5C64DA181E5CAB00314C56 /* libz.dylib in Frameworks */,
 				FD5C64D8181E5C8800314C56 /* MediaToolbox.framework in Frameworks */,
 				FD5C64D6181E5C8000314C56 /* QuartzCore.framework in Frameworks */,
@@ -388,6 +397,9 @@
 		FD01F7E81818FD4A00EBD3DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD0EDB1118239CCE002B373D /* MessageUI.framework */,
+				FD0EDB0F18239C99002B373D /* Twitter.framework */,
+				FD0EDB0D18239C8E002B373D /* Social.framework */,
 				FD5C64D9181E5CAB00314C56 /* libz.dylib */,
 				FD5C64D7181E5C8800314C56 /* MediaToolbox.framework */,
 				FD5C64D5181E5C8000314C56 /* QuartzCore.framework */,
@@ -1090,12 +1102,12 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hoai Nam (RUAGWWHKR2)";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hakamy/Hakamy-Prefix.pch";
 				INFOPLIST_FILE = "Hakamy/Hakamy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1FC960F4-1925-497B-A9B5-3F4E346E16D5";
+				PROVISIONING_PROFILE = "3E3DD5F1-F51D-4A8B-B079-4FB0750EDB65";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1106,12 +1118,12 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hoai Nam (RUAGWWHKR2)";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hakamy/Hakamy-Prefix.pch";
 				INFOPLIST_FILE = "Hakamy/Hakamy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1FC960F4-1925-497B-A9B5-3F4E346E16D5";
+				PROVISIONING_PROFILE = "3E3DD5F1-F51D-4A8B-B079-4FB0750EDB65";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

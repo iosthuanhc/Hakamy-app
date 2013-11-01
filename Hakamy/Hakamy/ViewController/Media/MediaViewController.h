@@ -10,7 +10,7 @@
 #import "MediaModel.h"
 #import "CellMedia.h"
 @class AudioPlayer;
-@interface MediaViewController : UIViewController{
+@interface MediaViewController : UIViewController<CellMediaDelegate,UIActionSheetDelegate>{
     NSMutableArray *listMedia;
     NSMutableData* responseData;
     NSURLRequest *request;

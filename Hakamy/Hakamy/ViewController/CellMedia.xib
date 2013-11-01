@@ -40,11 +40,15 @@
                         <state key="normal" backgroundImage="btn_share.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="btnShare:" destination="qbJ-Qk-vUE" eventType="touchUpInside" id="i1d-xR-gV2"/>
+                        </connections>
                     </button>
                 </subviews>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="btnShare" destination="SWb-xX-Gfk" id="JhA-dg-x0H"/>
                 <outlet property="lblDescription" destination="zZS-e7-8vZ" id="zGl-Yy-soW"/>
                 <outlet property="lblTitle" destination="11I-0F-Tbr" id="ghz-XI-M1l"/>
                 <outlet property="thumbnail" destination="kHY-B5-PBJ" id="34A-3Q-zdM"/>

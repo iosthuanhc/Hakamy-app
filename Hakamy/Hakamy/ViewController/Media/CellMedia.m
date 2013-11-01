@@ -10,7 +10,9 @@
 
 @implementation CellMedia
 @synthesize mediaModel;
-@synthesize lblTitle,lblDescription,thumbnail,audioButton = _audioButton;;
+@synthesize lblTitle,lblDescription,thumbnail,audioButton = _audioButton;
+@synthesize btnShare;
+@synthesize delegate;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -29,6 +31,10 @@
 -(void)loadDataCell{
     lblTitle.text=mediaModel.title;
     lblDescription.text=mediaModel.genre;
+}
+
+- (IBAction)btnShare:(id)sender {
+    [delegate shareClick];
 }
 - (void)configurePlayerButton
 {

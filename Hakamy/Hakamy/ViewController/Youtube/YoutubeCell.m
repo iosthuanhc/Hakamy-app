@@ -10,6 +10,7 @@
 
 @implementation YoutubeCell
 @synthesize imageview,lblTitle,share,youtubeModel;
+@synthesize delegate;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -27,6 +28,7 @@
 }
 
 - (IBAction)share:(id)sender {
+    [delegate shareClick];
 }
 -(void)loadDataCell{
     lblTitle.text=youtubeModel.title;

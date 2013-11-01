@@ -10,7 +10,7 @@
 #import "YoutubeModel.h"
 #import "YoutubeCell.h"
 #import "Detailyoutube.h"
-@interface YoutubeViewController : UIViewController<DetailYoutubeDelegate>{
+@interface YoutubeViewController : UIViewController<DetailYoutubeDelegate,YoutubeDelegate,UIActionSheetDelegate>{
     
     NSMutableArray *lisYoutube;
     NSMutableData* responseData;

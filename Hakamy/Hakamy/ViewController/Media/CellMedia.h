@@ -10,17 +10,23 @@
 #import "MediaModel.h"
 #import "AudioButton.h"
 
-@protocol CustomCellMediaDelegate;
+@protocol CellMediaDelegate;
 @interface CellMedia : UITableViewCell{
     MediaModel *mediaModel;
 }
+@property (nonatomic ,assign) id<CellMediaDelegate> delegate;
 @property (nonatomic,retain) MediaModel *mediaModel;
+@property (strong, nonatomic) IBOutlet UIButton *btnShare;
 @property (strong, nonatomic) IBOutlet UIImageView *thumbnail;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
 @property (strong, nonatomic) IBOutlet UILabel *lblDescription;
 @property (strong, nonatomic) IBOutlet AudioButton *audioButton;
 - (void)configurePlayerButton;
-
 -(void)loadDataCell;
+- (IBAction)btnShare:(id)sender;
 @end
 
+@protocol CellMediaDelegate <NSObject>
+@optional
+-(void)shareClick;
+@end

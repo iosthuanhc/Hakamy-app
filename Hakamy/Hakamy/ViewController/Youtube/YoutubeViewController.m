@@ -120,6 +120,7 @@ NSInteger tapindex;
         }
         YoutubeModel *model=[lisYoutube objectAtIndex:indexPath.row];
         cell.youtubeModel=model;
+        cell.delegate=self;
         [cell loadDataCell];
         return cell;
     }
@@ -136,5 +137,18 @@ NSInteger tapindex;
 }
 -(void)backtoMainView{
     [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];
+}
+-(void)shareClick{
+    if(NSClassFromString(@"SLComposeViewController") != nil) {
+        NSString *text = TEXT_DEFAULT;
+        UIImage *image = [UIImage imageNamed:@""];
+        NSArray *activityItems = [NSArray arrayWithObjects:text,image,TEXT_DEFAULT, nil];
+        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        activityController.excludedActivityTypes=@[UIActivityTypePostToWeibo];
+        [self presentViewController:activityController animated:YES completion:NULL];
+    }else{
+        UIActionSheet *asheet = [[UIActionSheet alloc] initWithTitle:@"Chose Option" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Mail",@"Facebook",@"Twiter", nil];
+        [asheet showInView:self.view];
+    }
 }
 @end

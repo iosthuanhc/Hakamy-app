@@ -10,7 +10,7 @@
 #import "IntagramModel.h"
 #import "InstagramCell.h"
 #import "DetailInstagram.h"
-@interface InstagramViewController : UIViewController<DetailInstagramDelegate>{
+@interface InstagramViewController : UIViewController<DetailInstagramDelegate,UIActionSheetDelegate,CellInstagramDelegate>{
     NSMutableArray *lisInstagram;
     NSMutableData* responseData;
     NSURLRequest *request;
