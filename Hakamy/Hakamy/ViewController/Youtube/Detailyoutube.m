@@ -50,7 +50,7 @@
 #pragma mark - Managing the detail item
 - (void) displayGoogleVideo:(NSString *)urlString frame:(CGRect)frame
 {
-    NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 212\"/></head><body style=\"background:#F00;margin-top:0px;margin-left:0px\"><div><param name=\"movie\" value=\"%@\"></param><param name=\"wmode\" value=\"transparent\"></param><embed src=\"%@\" type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"%0.0f\" height=\"%0.0f\"></embed></object></div></body></html>",urlString,urlString,frame.size.width,frame.size.height];
+    NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 212\"/></head><body style=\"margin-top:0px;margin-left:0px\"><div><param name=\"movie\" value=\"%@\"></param><param name=\"wmode\" value=\"transparent\"></param><embed src=\"%@\" type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"%0.0f\" height=\"%0.0f\"></embed></object></div></body></html>",urlString,urlString,frame.size.width,frame.size.height];
     
     [webView loadHTMLString:htmlString baseURL:nil];
     NSLog(@"HTML IS: %@", htmlString);
@@ -84,7 +84,7 @@
     // Update the user interface for the detail item.
     //NSLog(@"URL is:%@", videoString);
     //[self embedYouTube:videoString frame:CGRectMake(70, 100, 200, 200)];
-    [self displayGoogleVideo:youtubeModel.src frame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [self displayGoogleVideo:youtubeModel.src frame:CGRectMake(30, 0, self.view.frame.size.width, self.view.frame.size.height-100)];
     
 }
 
