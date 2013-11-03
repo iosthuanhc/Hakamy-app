@@ -11,7 +11,7 @@
 @interface RssViewController ()
 
 @end
-
+NSInteger btnIndex;
 @implementation RssViewController
 @synthesize tableview;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -91,4 +91,43 @@ NSInteger tapindex;
     
 }
 
+- (IBAction)btnFacebook:(id)sender {
+    btnIndex=0;
+    [self callWebview];
+}
+
+- (IBAction)btnTwitter:(id)sender {
+    btnIndex=1;
+    [self callWebview];
+}
+
+- (IBAction)btnInstagram:(id)sender {
+    btnIndex=2;
+    [self callWebview];
+}
+
+- (IBAction)btnYoutube:(id)sender {
+    btnIndex=3;
+    [self callWebview];
+}
+-(void)callWebview{
+    WebviewFollow *detailVC=[[WebviewFollow alloc]initWithNibName:@"WebviewFollow" bundle:nil];
+    switch (btnIndex) {
+        case 0:
+            detailVC.htmlLink=@"http://www.facebook.com/";
+            break;
+        case 1:
+            detailVC.htmlLink=@"https://twitter.com/";
+            break;
+        case 2:
+            detailVC.htmlLink=@"http://instagram.com/";
+            break;
+        case 3:
+            detailVC.htmlLink=@"http://www.youtube.com/";
+            break;
+        default:
+            break;
+    }
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
 @end

@@ -29,6 +29,8 @@
     // Configure the view for the selected state
 }
 -(void)loadDataCell{
+    
+   
     lblTitle.text=mediaModel.title;
     lblDescription.text=mediaModel.genre;
 }
@@ -38,6 +40,13 @@
 }
 - (void)configurePlayerButton
 {
+//    NSString *playImage = @"play.png";
+//    NSString *stopImage = @"stop.png";
+//    if (mediaModel.isplaying) {
+//        self.audioButton.image=[UIImage imageNamed:stopImage];
+//    }else{
+//        self.audioButton.image=[UIImage imageNamed:playImage];
+//    }
     self.audioButton = [[AudioButton alloc] initWithFrame:CGRectMake(275, 2, 40, 40)];
     [self.contentView addSubview:self.audioButton];
 }

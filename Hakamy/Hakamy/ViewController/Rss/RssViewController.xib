@@ -25,7 +25,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="LjW-qK-P8c">
-                    <rect key="frame" x="0.0" y="60" width="320" height="489"/>
+                    <rect key="frame" x="0.0" y="60" width="320" height="430"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -45,6 +45,50 @@
                         <action selector="btnMenu:" destination="-1" eventType="touchUpInside" id="KnS-Se-ogX"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_inner_shadow.png" id="Als-CA-fP3">
+                    <rect key="frame" x="0.0" y="471" width="320" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="c9G-O8-YzQ">
+                    <rect key="frame" x="105" y="514" width="25" height="24.00000000000006"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                    <state key="normal" backgroundImage="btn_social_youtube.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnYoutube:" destination="-1" eventType="touchUpInside" id="deD-EJ-dMt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k9k-ZI-3PH">
+                    <rect key="frame" x="72" y="514" width="25" height="24.00000000000006"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                    <state key="normal" backgroundImage="btn_social_insta.jpg">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnInstagram:" destination="-1" eventType="touchUpInside" id="gDL-nt-4vC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YIx-vJ-QDj">
+                    <rect key="frame" x="6" y="514.00000000000011" width="25" height="24"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                    <state key="normal" backgroundImage="btn_social_fb.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnFacebook:" destination="-1" eventType="touchUpInside" id="tsY-Xn-0kt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Md-Yx-fg6">
+                    <rect key="frame" x="39" y="514.00000000000011" width="24.999999991515352" height="24"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                    <state key="normal" backgroundImage="btn_social_tw.jpg">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTwitter:" destination="-1" eventType="touchUpInside" id="cbU-oN-SVu"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.88445868641714531" green="1" blue="0.93668708570443904" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -52,8 +96,13 @@
         </view>
     </objects>
     <resources>
+        <image name="bg_inner_shadow.png" width="640" height="41"/>
         <image name="bg_others.png" width="640" height="1136"/>
         <image name="bg_page_tittle_news.png" width="218" height="51"/>
         <image name="btn_menu.png" width="88" height="88"/>
+        <image name="btn_social_fb.png" width="49" height="49"/>
+        <image name="btn_social_insta.jpg" width="48" height="49"/>
+        <image name="btn_social_tw.jpg" width="48" height="49"/>
+        <image name="btn_social_youtube.png" width="49" height="49"/>
     </resources>
 </document>

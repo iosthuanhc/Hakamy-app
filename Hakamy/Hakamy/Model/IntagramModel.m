@@ -13,7 +13,7 @@
 
 -(id)initWithJSON:(NSDictionary *)dic{
     NSDictionary *dicimage=[dic objectForKey:@"images"];
-    NSDictionary *detailImageDic=[dicimage objectForKey:@"standard_resolution"];
+    NSDictionary *detailImageDic=[dicimage objectForKey:@"low_resolution"];
     self.url=[detailImageDic objectForKey:@"url"];
     NSDictionary *userDic=[dic objectForKey:@"user"];
     self.username=[userDic objectForKey:@"username"];

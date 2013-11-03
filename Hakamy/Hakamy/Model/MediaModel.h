@@ -12,7 +12,9 @@
     NSString *_id;
     NSString *title;
     NSString *genre;
+    BOOL isplaying;
 }
+@property (nonatomic ,assign) BOOL isplaying;
 @property (nonatomic ,retain) NSString *_id;
 @property (nonatomic ,retain) NSString *title;
 @property (nonatomic ,retain) NSString *genre;

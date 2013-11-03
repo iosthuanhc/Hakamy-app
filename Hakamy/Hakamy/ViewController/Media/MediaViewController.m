@@ -11,7 +11,7 @@
 @interface MediaViewController ()
 
 @end
-
+NSInteger btnIndex;
 @implementation MediaViewController
 @synthesize tableview;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -112,6 +112,7 @@ NSInteger tapindex;
             for (id currentObject in topLevelObjects) {
                 if ([currentObject isKindOfClass:[CellMedia class]]) {
                     cell = (CellMedia *) currentObject;
+                    [cell configurePlayerButton];
                     break;
                 }
             }
@@ -119,9 +120,8 @@ NSInteger tapindex;
         }
         MediaModel *model=[listMedia objectAtIndex:indexPath.row];
         cell.mediaModel=model;
-        [cell loadDataCell];
+//        [cell loadDataCell];
         cell.delegate=self;
-        [cell configurePlayerButton];
         cell.audioButton.tag = indexPath.row;
         [cell.audioButton addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
@@ -141,13 +141,14 @@ NSInteger tapindex;
     }
     
     if ([_audioPlayer.button isEqual:button]) {
+        model.isplaying=NO;
         [_audioPlayer play];
     } else {
         [_audioPlayer stop];
         
         _audioPlayer.button = button;
         _audioPlayer.url = [NSURL URLWithString:[NSString stringWithFormat:PLAYMP3,model._id]];
-        
+        model.isplaying=YES;
         [_audioPlayer play];
     }
 }
@@ -163,5 +164,44 @@ NSInteger tapindex;
         UIActionSheet *asheet = [[UIActionSheet alloc] initWithTitle:@"Chose Option" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Mail",@"Facebook",@"Twiter", nil];
         [asheet showInView:self.view];
     }
+}
+- (IBAction)btnFacebook:(id)sender {
+    btnIndex=0;
+    [self callWebview];
+}
+
+- (IBAction)btnTwitter:(id)sender {
+    btnIndex=1;
+    [self callWebview];
+}
+
+- (IBAction)btnInstagram:(id)sender {
+    btnIndex=2;
+    [self callWebview];
+}
+
+- (IBAction)btnYoutube:(id)sender {
+    btnIndex=3;
+    [self callWebview];
+}
+-(void)callWebview{
+    WebviewFollow *detailVC=[[WebviewFollow alloc]initWithNibName:@"WebviewFollow" bundle:nil];
+    switch (btnIndex) {
+        case 0:
+            detailVC.htmlLink=@"http://www.facebook.com/";
+            break;
+        case 1:
+            detailVC.htmlLink=@"https://twitter.com/";
+            break;
+        case 2:
+            detailVC.htmlLink=@"http://instagram.com/";
+            break;
+        case 3:
+            detailVC.htmlLink=@"http://www.youtube.com/";
+            break;
+        default:
+            break;
+    }
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 @end

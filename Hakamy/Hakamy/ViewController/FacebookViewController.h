@@ -17,4 +17,8 @@
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 - (IBAction)btnMenu:(id)sender;
+- (IBAction)btnFacebook:(id)sender;
+- (IBAction)btnTwitter:(id)sender;
+- (IBAction)btnInstagram:(id)sender;
+- (IBAction)btnYoutube:(id)sender;
 @end

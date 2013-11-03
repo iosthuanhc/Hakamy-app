@@ -11,7 +11,7 @@
 @interface InstagramViewController ()
 
 @end
-
+NSInteger btnIndex;
 @implementation InstagramViewController
 @synthesize tableview;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -125,12 +125,12 @@ NSInteger tapindex;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    DetailInstagram *secondDetailViewController = [[DetailInstagram alloc] initWithNibName:@"DetailInstagram" bundle:nil];
-    IntagramModel *model=[lisInstagram objectAtIndex:indexPath.row];
-    secondDetailViewController.instagramModel=model;
-    secondDetailViewController.delegate=self;
-    secondDetailViewController.view.layer.cornerRadius=8;
-    [self presentPopupViewController:secondDetailViewController animationType:MJPopupViewAnimationSlideBottomBottom];
+//    DetailInstagram *secondDetailViewController = [[DetailInstagram alloc] initWithNibName:@"DetailInstagram" bundle:nil];
+//    IntagramModel *model=[lisInstagram objectAtIndex:indexPath.row];
+//    secondDetailViewController.instagramModel=model;
+//    secondDetailViewController.delegate=self;
+//    secondDetailViewController.view.layer.cornerRadius=8;
+//    [self presentPopupViewController:secondDetailViewController animationType:MJPopupViewAnimationSlideBottomBottom];
 }
 -(void)backtoMainView{
     [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];
@@ -147,5 +147,44 @@ NSInteger tapindex;
         UIActionSheet *asheet = [[UIActionSheet alloc] initWithTitle:@"Chose Option" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Mail",@"Facebook",@"Twiter", nil];
         [asheet showInView:self.view];
     }
+}
+- (IBAction)btnFacebook:(id)sender {
+    btnIndex=0;
+    [self callWebview];
+}
+
+- (IBAction)btnTwitter:(id)sender {
+    btnIndex=1;
+    [self callWebview];
+}
+
+- (IBAction)btnInstagram:(id)sender {
+    btnIndex=2;
+    [self callWebview];
+}
+
+- (IBAction)btnYoutube:(id)sender {
+    btnIndex=3;
+    [self callWebview];
+}
+-(void)callWebview{
+    WebviewFollow *detailVC=[[WebviewFollow alloc]initWithNibName:@"WebviewFollow" bundle:nil];
+    switch (btnIndex) {
+        case 0:
+            detailVC.htmlLink=@"http://www.facebook.com/";
+            break;
+        case 1:
+            detailVC.htmlLink=@"https://twitter.com/";
+            break;
+        case 2:
+            detailVC.htmlLink=@"http://instagram.com/";
+            break;
+        case 3:
+            detailVC.htmlLink=@"http://www.youtube.com/";
+            break;
+        default:
+            break;
+    }
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 @end
