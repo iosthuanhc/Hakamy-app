@@ -81,9 +81,6 @@
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-    //NSLog(@"URL is:%@", videoString);
-    //[self embedYouTube:videoString frame:CGRectMake(70, 100, 200, 200)];
     [self displayGoogleVideo:youtubeModel.src frame:CGRectMake(30, 0, self.view.frame.size.width, self.view.frame.size.height-100)];
     
 }

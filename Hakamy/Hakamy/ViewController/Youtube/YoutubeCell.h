@@ -15,9 +15,11 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageview;
 @property (strong, nonatomic) IBOutlet UIButton *share;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
+@property (strong, nonatomic) IBOutlet UIWebView *webview;
 
 - (IBAction)share:(id)sender;
 -(void)loadDataCell;
+- (void)configureView;
 @end
 @protocol YoutubeDelegate <NSObject>
 @optional
