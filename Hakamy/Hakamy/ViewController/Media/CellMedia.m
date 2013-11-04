@@ -29,8 +29,6 @@
     // Configure the view for the selected state
 }
 -(void)loadDataCell{
-    
-   
     lblTitle.text=mediaModel.title;
     lblDescription.text=mediaModel.genre;
 }

@@ -13,7 +13,7 @@
 @end
 NSInteger btnIndex;
 @implementation MediaViewController
-@synthesize tableview;
+@synthesize tableView=_tableView;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -75,7 +75,7 @@ NSInteger tapindex;
         [listMedia addObject:prf];
     }
     [DejalBezelActivityView removeViewAnimated:YES];
-    [tableview reloadData];
+    [self.tableView reloadData];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -96,36 +96,27 @@ NSInteger tapindex;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *CellIdentifier = @"CellMedia";
-    if(listMedia.count == 0){
-        UITableViewCell *cell = (UITableViewCell*)[tableview dequeueReusableCellWithIdentifier:CellIdentifier];
-        if(cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-        }
-        cell.textLabel.text = @"You don't have any new messages!";
-        cell.backgroundColor = [UIColor darkGrayColor];
-        return  cell;
-    }
-    else {
-        CellMedia *cell = (CellMedia *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellMedia" owner:self options:nil];
-            for (id currentObject in topLevelObjects) {
-                if ([currentObject isKindOfClass:[CellMedia class]]) {
-                    cell = (CellMedia *) currentObject;
-                    [cell configurePlayerButton];
-                    break;
-                }
+    CellMedia *cell = (CellMedia *) [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+//    NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
+//    cell = (CellMedia *)[nibArray objectAtIndex:0];
+//    [cell configurePlayerButton];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellMedia" owner:self options:nil];
+        for (id currentObject in topLevelObjects) {
+            if ([currentObject isKindOfClass:[CellMedia class]]) {
+                cell = (CellMedia *) currentObject;
+                break;
             }
-            [cell configurePlayerButton];
         }
-        MediaModel *model=[listMedia objectAtIndex:indexPath.row];
-        cell.mediaModel=model;
-//        [cell loadDataCell];
-        cell.delegate=self;
-        cell.audioButton.tag = indexPath.row;
-        [cell.audioButton addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
-        return cell;
     }
+    MediaModel *model=[listMedia objectAtIndex:indexPath.row];
+    cell.mediaModel=model;
+    [cell loadDataCell];
+    [cell configurePlayerButton];
+    cell.delegate=self;
+    cell.audioButton.tag = indexPath.row;
+    [cell.audioButton addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -203,5 +194,12 @@ NSInteger tapindex;
             break;
     }
     [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    self.tableView = nil;
 }
 @end

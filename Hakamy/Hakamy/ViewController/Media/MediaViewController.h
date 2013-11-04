@@ -17,7 +17,7 @@
     NSURLConnection *connection;
     AudioPlayer *_audioPlayer;
 }
-@property (strong, nonatomic) IBOutlet UITableView *tableview;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)btnMenu:(id)sender;
 - (IBAction)btnFacebook:(id)sender;
 - (IBAction)btnTwitter:(id)sender;
