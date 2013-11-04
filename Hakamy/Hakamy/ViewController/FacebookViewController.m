@@ -67,20 +67,61 @@ NSInteger tapindex;
 #pragma mark Process loan data
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    listSosial =[[NSMutableArray alloc]init];
+    listWT =[[NSMutableArray alloc]init];
     NSArray *results=[responseString JSONValue] ;
     for(NSDictionary *item in results)
     {
         TwitterModel *prf = [[TwitterModel alloc]initWithJSON:item];
-        [listSosial addObject:prf];
+        [listWT addObject:prf];
     }
-    [DejalBezelActivityView removeViewAnimated:YES];
-    [tableview reloadData];
+    [self getFacebookData];
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)getFacebookData{
+    listFB=[[NSMutableArray alloc]init];
+    NSString *fbRespon=[NSString stringWithContentsOfURL:[NSURL URLWithString:FACEBOOK_API] encoding:NSUTF8StringEncoding error:Nil];
+    NSDictionary *fbDic=[fbRespon JSONValue];
+    //entries
+    NSArray *results=[fbDic objectForKey:@"entries"];
+    for(NSDictionary *item in results)
+    {
+        FacebookModel *prf = [[FacebookModel alloc]initWithJSON:item];
+        [listFB addObject:prf];
+    }
+    [self loadData];
+}
+-(void)loadData{
+    listSosial=[[NSMutableArray alloc]init];
+    for (int i=0; i<listWT.count; i++) {
+        //Thu Oct 24 05:46:50 +0000 2013  TW
+        SocialModel *socialModel=[[SocialModel alloc]init];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"EEE MMM dd HH:mm:ss ZZZ yyyy"];
+        NSDate *date = [dateFormat dateFromString:[[listWT objectAtIndex:i] created_at]];
+        socialModel.dateVL=date;
+        socialModel.textConten=[[listWT objectAtIndex:i] textTitle];
+        socialModel.isFacebook=NO;
+        [listSosial addObject:socialModel];
+    }
+    for (int i=0; i<listFB.count; i++) {
+        //2013-11-02T08:33:18-07:00  FB
+        SocialModel *socialModel=[[SocialModel alloc]init];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZ"];
+        NSDate *date = [dateFormat dateFromString:[[listFB objectAtIndex:i] updateDate]];
+        socialModel.dateVL=date;
+        socialModel.textConten=[[listFB objectAtIndex:i] textConten];
+        socialModel.isFacebook=YES;
+        [listSosial addObject:socialModel];
+    }
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dateVL" ascending:TRUE];
+    [listSosial sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    [DejalBezelActivityView removeViewAnimated:YES];
+    [tableview reloadData];
 }
 #pragma mark - TableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -116,7 +157,7 @@ NSInteger tapindex;
                 }
             }
         }
-        TwitterModel *model=[listSosial objectAtIndex:indexPath.row];
+        SocialModel *model=[listSosial objectAtIndex:indexPath.row];
         cell.twitterModel=model;
         [cell loadDataCell];
         return cell;

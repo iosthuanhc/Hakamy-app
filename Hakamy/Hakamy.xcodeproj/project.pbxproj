@@ -96,6 +96,7 @@
 		FD5C64DA181E5CAB00314C56 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5C64D9181E5CAB00314C56 /* libz.dylib */; };
 		FD5C64DD181E6B9400314C56 /* InstagramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64DC181E6B9400314C56 /* InstagramCell.m */; };
 		FD5C64DF181E6BAC00314C56 /* InstagramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD5C64DE181E6BAC00314C56 /* InstagramCell.xib */; };
+		FDB3B19918278B0000DB6F3F /* SocialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB3B19818278B0000DB6F3F /* SocialModel.m */; };
 		FDDD47F2181AC770004CB48E /* bg_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47E9181AC770004CB48E /* bg_home.png */; };
 		FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EA181AC770004CB48E /* btn_menu.png */; };
 		FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */; };
@@ -294,6 +295,8 @@
 		FD5C64DB181E6B9400314C56 /* InstagramCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramCell.h; path = Instagram/InstagramCell.h; sourceTree = "<group>"; };
 		FD5C64DC181E6B9400314C56 /* InstagramCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramCell.m; path = Instagram/InstagramCell.m; sourceTree = "<group>"; };
 		FD5C64DE181E6BAC00314C56 /* InstagramCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstagramCell.xib; path = Instagram/InstagramCell.xib; sourceTree = "<group>"; };
+		FDB3B19718278B0000DB6F3F /* SocialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialModel.h; sourceTree = "<group>"; };
+		FDB3B19818278B0000DB6F3F /* SocialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialModel.m; sourceTree = "<group>"; };
 		FDDD47E9181AC770004CB48E /* bg_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_home.png; sourceTree = "<group>"; };
 		FDDD47EA181AC770004CB48E /* btn_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu.png; sourceTree = "<group>"; };
 		FDDD47EB181AC770004CB48E /* btn_social_fb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = btn_social_fb.jpg; sourceTree = "<group>"; };
@@ -495,6 +498,8 @@
 				FDF6CA8F1820C540007CF704 /* TwitterModel.m */,
 				FDF6CA911820C555007CF704 /* FacebookModel.h */,
 				FDF6CA921820C555007CF704 /* FacebookModel.m */,
+				FDB3B19718278B0000DB6F3F /* SocialModel.h */,
+				FDB3B19818278B0000DB6F3F /* SocialModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -980,6 +985,7 @@
 				FD2356B91822B81F00887BFF /* MJPopupBackgroundView.m in Sources */,
 				FD2356B21822B2FE00887BFF /* DetailInstagram.m in Sources */,
 				FD37144218196D8E00427858 /* InstagramViewController.m in Sources */,
+				FDB3B19918278B0000DB6F3F /* SocialModel.m in Sources */,
 				FD37146D1819726600427858 /* PaperFoldNavigationController.m in Sources */,
 				FD5C64A6181E41AB00314C56 /* YoutubeModel.m in Sources */,
 				FD23568C182164D100887BFF /* SosialCell.m in Sources */,

@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "TwitterModel.h"
 #import "SosialCell.h"
+#import "FacebookModel.h"
+#import "SocialModel.h"
 @interface FacebookViewController : UIViewController{
     NSMutableArray *listSosial;
+    NSMutableArray *listFB;
+    NSMutableArray *listWT;
     NSMutableData* responseData;
     NSURLRequest *request;
     NSURLConnection *connection;

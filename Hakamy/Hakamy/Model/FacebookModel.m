@@ -9,5 +9,11 @@
 #import "FacebookModel.h"
 
 @implementation FacebookModel
+@synthesize textConten,updateDate;
 
+-(id)initWithJSON:(NSDictionary *)dic{
+    self.textConten=[dic objectForKey:@"content"];
+    self.updateDate=[dic objectForKey:@"updated"];
+    return self;
+}
 @end

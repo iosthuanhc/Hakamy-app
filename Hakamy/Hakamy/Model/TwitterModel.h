@@ -10,9 +10,9 @@
 
 @interface TwitterModel : NSObject{
     NSString *created_at;
-    NSString *title;
+    NSString *textTitle;
 }
 @property (nonatomic ,retain) NSString *created_at;
-@property (nonatomic ,retain) NSString *title;
+@property (nonatomic ,retain) NSString *textTitle;
 -(id)initWithJSON:(NSDictionary *)dic;
 @end
