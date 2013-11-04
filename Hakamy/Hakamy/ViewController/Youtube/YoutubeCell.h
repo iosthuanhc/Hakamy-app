@@ -23,5 +23,5 @@
 @end
 @protocol YoutubeDelegate <NSObject>
 @optional
--(void)shareClick;
+-(void)shareClick:(YoutubeModel *)model;
 @end

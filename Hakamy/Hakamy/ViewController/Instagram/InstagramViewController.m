@@ -135,10 +135,10 @@ NSInteger tapindex;
 -(void)backtoMainView{
     [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];
 }
--(void)shareClick{
+-(void)shareClick:(IntagramModel *)model{
     if(NSClassFromString(@"SLComposeViewController") != nil) {
-        NSString *text = TEXT_DEFAULT;
-        UIImage *image = [UIImage imageNamed:@""];
+        NSString *text = model.full_name;
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.url]]];
         NSArray *activityItems = [NSArray arrayWithObjects:text,image,TEXT_DEFAULT, nil];
         UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
         activityController.excludedActivityTypes=@[UIActivityTypePostToWeibo];

@@ -29,7 +29,7 @@
 }
 
 - (IBAction)share:(id)sender {
-    [delegate shareClick];
+    [delegate shareClick:youtubeModel];
 }
 -(void)loadDataCell{
     lblTitle.text=youtubeModel.title;

@@ -28,7 +28,7 @@
 }
 
 - (IBAction)share:(id)sender {
-    [delegate shareClick];
+    [delegate shareClick:instagramModel];
 }
 -(void)loadDataCell{
     lblTitle.text=instagramModel.full_name;

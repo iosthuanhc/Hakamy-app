@@ -21,5 +21,5 @@
 
 @protocol CellInstagramDelegate <NSObject>
 @optional
--(void)shareClick;
+-(void)shareClick:(IntagramModel *)model;
 @end

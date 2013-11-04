@@ -143,9 +143,9 @@ NSInteger tapindex;
         [_audioPlayer play];
     }
 }
--(void)shareClick{
+-(void)shareClick:(MediaModel *)model{
     if(NSClassFromString(@"SLComposeViewController") != nil) {
-        NSString *text = TEXT_DEFAULT;
+        NSString *text =[NSString stringWithFormat:PLAYMP3,model._id];
         UIImage *image = [UIImage imageNamed:@""];
         NSArray *activityItems = [NSArray arrayWithObjects:text,image,TEXT_DEFAULT, nil];
         UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];

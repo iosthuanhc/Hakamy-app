@@ -28,5 +28,5 @@
 
 @protocol CellMediaDelegate <NSObject>
 @optional
--(void)shareClick;
+-(void)shareClick:(MediaModel*)model;
 @end
