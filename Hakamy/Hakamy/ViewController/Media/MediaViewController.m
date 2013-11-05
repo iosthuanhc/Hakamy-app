@@ -102,19 +102,16 @@ NSInteger tapindex;
 {
    static NSString *CellIdentifier = @"CellMedia";
     CellMedia *cell = (CellMedia *) [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    NSLog(@"TAP : %d",tapp);
     if (cell == nil) {
-        NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
-        cell = (CellMedia *)[nibArray objectAtIndex:0];
-        
-            [cell configurePlayerButton];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellMedia" owner:self options:nil];
+        for (id currentObject in topLevelObjects) {
+            if ([currentObject isKindOfClass:[CellMedia class]]) {
+                cell = (CellMedia *) currentObject;
+                [cell configurePlayerButton];
+                break;
+            }
+        }
     }
-    
-    if(tapp == indexPath.row)
-    {
-        [cell showPlay];
-    }
-    //[cell showPlay];
     MediaModel *model=[listMedia objectAtIndex:indexPath.row];
     cell.mediaModel=model;
     [cell loadDataCell];
@@ -151,9 +148,9 @@ NSInteger tapindex;
         [_audioPlayer play];
     }
 }
--(void)shareClick{
+-(void)shareClick:(MediaModel *)mediaModel{
     if(NSClassFromString(@"SLComposeViewController") != nil) {
-        NSString *text = TEXT_DEFAULT;
+        NSString *text = [NSString stringWithFormat:PLAYMP3,mediaModel._id];
         UIImage *image = [UIImage imageNamed:@""];
         NSArray *activityItems = [NSArray arrayWithObjects:text,image,TEXT_DEFAULT, nil];
         UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];

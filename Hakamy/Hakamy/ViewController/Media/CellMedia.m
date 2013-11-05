@@ -34,7 +34,7 @@
 }
 
 - (IBAction)btnShare:(id)sender {
-    [delegate shareClick];
+    [delegate shareClick:mediaModel];
 }
 - (void)configurePlayerButton
 {
