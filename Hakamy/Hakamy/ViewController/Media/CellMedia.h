@@ -23,10 +23,12 @@
 @property (strong, nonatomic) IBOutlet AudioButton *audioButton;
 - (void)configurePlayerButton;
 -(void)loadDataCell;
+-(void) showPlay;
+
 - (IBAction)btnShare:(id)sender;
 @end
 
 @protocol CellMediaDelegate <NSObject>
 @optional
--(void)shareClick:(MediaModel*)model;
+-(void)shareClick;
 @end

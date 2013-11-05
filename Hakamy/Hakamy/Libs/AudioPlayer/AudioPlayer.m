@@ -78,7 +78,7 @@
 
     button.image = [UIImage imageNamed:playImage];
     button = nil; // 避免播放器的闪烁问题        
-    [button release];     
+    [button release];
     
     // release streamer
 	if (streamer)
@@ -126,7 +126,6 @@
 	} else {
         
     }
-    
     [button setNeedsLayout];    
     [button setNeedsDisplay];
 }

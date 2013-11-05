@@ -25,8 +25,13 @@ NSInteger btnIndex;
 
 - (void)viewDidLoad
 {
+    tapp = -1;
     [super viewDidLoad];
+
     // Do any additional setup after loading the view from its nib.
+}
+-(void)viewDidAppear:(BOOL)animated
+{
 }
 -(void)viewWillAppear:(BOOL)animated{
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
@@ -95,24 +100,24 @@ NSInteger tapindex;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier = @"CellMedia";
+   static NSString *CellIdentifier = @"CellMedia";
     CellMedia *cell = (CellMedia *) [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    NSLog(@"TAP : %d",tapp);
     if (cell == nil) {
-//    NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
-//    cell = (CellMedia *)[nibArray objectAtIndex:0];
-//    [cell configurePlayerButton];
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellMedia" owner:self options:nil];
-        for (id currentObject in topLevelObjects) {
-            if ([currentObject isKindOfClass:[CellMedia class]]) {
-                cell = (CellMedia *) currentObject;
-                break;
-            }
-        }
+        NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
+        cell = (CellMedia *)[nibArray objectAtIndex:0];
+        
+            [cell configurePlayerButton];
     }
+    
+    if(tapp == indexPath.row)
+    {
+        [cell showPlay];
+    }
+    //[cell showPlay];
     MediaModel *model=[listMedia objectAtIndex:indexPath.row];
     cell.mediaModel=model;
     [cell loadDataCell];
-    [cell configurePlayerButton];
     cell.delegate=self;
     cell.audioButton.tag = indexPath.row;
     [cell.audioButton addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
@@ -134,18 +139,21 @@ NSInteger tapindex;
     if ([_audioPlayer.button isEqual:button]) {
         model.isplaying=NO;
         [_audioPlayer play];
+        tapp = -1;
+
     } else {
         [_audioPlayer stop];
-        
+        tapp = button.tag;
+
         _audioPlayer.button = button;
         _audioPlayer.url = [NSURL URLWithString:[NSString stringWithFormat:PLAYMP3,model._id]];
         model.isplaying=YES;
         [_audioPlayer play];
     }
 }
--(void)shareClick:(MediaModel *)model{
+-(void)shareClick{
     if(NSClassFromString(@"SLComposeViewController") != nil) {
-        NSString *text =[NSString stringWithFormat:PLAYMP3,model._id];
+        NSString *text = TEXT_DEFAULT;
         UIImage *image = [UIImage imageNamed:@""];
         NSArray *activityItems = [NSArray arrayWithObjects:text,image,TEXT_DEFAULT, nil];
         UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];

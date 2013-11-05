@@ -43,7 +43,11 @@ NSString *stopImage = @"stop.png";
     
     return self;
 }
+-(void) showImage
+{
+    self.image = [UIImage imageNamed:stopImage];
 
+}
 #pragma mark -
 #pragma mark Setter & Getters:
 

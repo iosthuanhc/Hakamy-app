@@ -34,5 +34,6 @@ extern NSString *playImage, *stopImage;
 - (CGFloat)progress;
 - (void)setProgress:(CGFloat)newProgress;		
 - (void)setColourR:(CGFloat)r G:(CGFloat)g B:(CGFloat)b A:(CGFloat)a;	
+-(void) showImage;
 
 @end

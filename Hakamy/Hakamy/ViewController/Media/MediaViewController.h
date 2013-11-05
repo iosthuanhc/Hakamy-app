@@ -16,6 +16,7 @@
     NSURLRequest *request;
     NSURLConnection *connection;
     AudioPlayer *_audioPlayer;
+    NSInteger tapp;
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)btnMenu:(id)sender;

@@ -83,10 +83,10 @@ NSInteger tapindex;
 }
 -(void)getFacebookData{
     listFB=[[NSMutableArray alloc]init];
-    NSString *fbRespon=[NSString stringWithContentsOfURL:[NSURL URLWithString:FACEBOOK_API] encoding:NSUTF8StringEncoding error:Nil];
+    NSString *fbRespon=[NSString stringWithContentsOfURL:[NSURL URLWithString:A_API] encoding:NSUTF8StringEncoding error:Nil];
     NSDictionary *fbDic=[fbRespon JSONValue];
     //entries
-    NSArray *results=[fbDic objectForKey:@"entries"];
+    NSArray *results=[fbDic objectForKey:@"data"];
     for(NSDictionary *item in results)
     {
         FacebookModel *prf = [[FacebookModel alloc]initWithJSON:item];
@@ -112,13 +112,25 @@ NSInteger tapindex;
         SocialModel *socialModel=[[SocialModel alloc]init];
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZ"];
-        NSDate *date = [dateFormat dateFromString:[[listFB objectAtIndex:i] updateDate]];
+        NSDate *date = [dateFormat dateFromString:[[listFB objectAtIndex:i] created_time]];
         socialModel.dateVL=date;
-        socialModel.textConten=[[listFB objectAtIndex:i] textConten];
+        if ([[[listFB objectAtIndex:i] typeFB] isEqualToString:@"status"]) {
+          socialModel.textConten=[[listFB objectAtIndex:i] story ];
+        }
+        if ([[[listFB objectAtIndex:i] typeFB] isEqualToString:@"photo"]) {
+            socialModel.textConten=[[listFB objectAtIndex:i] picture ];
+        }
+        if ([[[listFB objectAtIndex:i] typeFB] isEqualToString:@"link"]) {
+            socialModel.textConten=[[listFB objectAtIndex:i] picture ];
+        }
+        if ([[[listFB objectAtIndex:i] typeFB] isEqualToString:@"video"]) {
+            socialModel.textConten=[[listFB objectAtIndex:i] messageFB ];
+        }
+        
         socialModel.isFacebook=YES;
         [listSosial addObject:socialModel];
     }
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dateVL" ascending:TRUE];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dateVL" ascending:NO];
     [listSosial sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     [DejalBezelActivityView removeViewAnimated:YES];
     [tableview reloadData];

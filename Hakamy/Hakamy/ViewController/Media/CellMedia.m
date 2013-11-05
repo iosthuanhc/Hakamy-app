@@ -34,7 +34,7 @@
 }
 
 - (IBAction)btnShare:(id)sender {
-    [delegate shareClick:mediaModel];
+    [delegate shareClick];
 }
 - (void)configurePlayerButton
 {
@@ -45,7 +45,13 @@
 //    }else{
 //        self.audioButton.image=[UIImage imageNamed:playImage];
 //    }
+    if(self.audioButton == nil){
     self.audioButton = [[AudioButton alloc] initWithFrame:CGRectMake(275, 2, 40, 40)];
     [self.contentView addSubview:self.audioButton];
+    }
+}
+-(void) showPlay
+{
+    [self.audioButton showImage];
 }
 @end
