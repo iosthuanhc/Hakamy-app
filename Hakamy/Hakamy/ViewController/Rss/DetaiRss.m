@@ -113,7 +113,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
 {
     
     CellDetail *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.backgroundColor=[UIColor clearColor];
+    cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_cell.png"]];
     [cell updateFonts];
     
     _detailModel = [listDetailRss objectAtIndex:indexPath.row];
@@ -129,7 +129,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
 {
     
     CellDetail *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.backgroundColor=[UIColor clearColor];
+    cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_cell.png"]];
     [cell updateFonts];
     _detailModel = [listDetailRss objectAtIndex:indexPath.row];
     cell.titleLabel.text = _detailModel.title;
@@ -143,12 +143,19 @@ static NSString *CellIdentifier = @"CellIdentifier";
     
     return height;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    CellDetail *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_cell.png"]];
+    [cell updateFonts];
+    _detailModel = [listDetailRss objectAtIndex:indexPath.row];
+    cell.titleLabel.text = _detailModel.title;
+    cell.bodyLabel.text = _detailModel.news_full;
+    [cell setNeedsUpdateConstraints];
+}
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 500.0f;
 }
-
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

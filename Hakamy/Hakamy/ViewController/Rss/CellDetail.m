@@ -29,7 +29,7 @@
         [self.bodyLabel setLineBreakMode:NSLineBreakByTruncatingTail];
         [self.bodyLabel setNumberOfLines:0];
         [self.bodyLabel setTextAlignment:NSTextAlignmentLeft];
-        [self.bodyLabel setTextColor:[UIColor darkGrayColor]];
+        [self.bodyLabel setTextColor:[UIColor blackColor]];
         [self.bodyLabel setBackgroundColor:[UIColor clearColor]];
         
         [self.contentView addSubview:self.titleLabel];

@@ -23,6 +23,7 @@
 		FD0D6EB1182E806C00C8D416 /* DetailRssModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0D6EB0182E806C00C8D416 /* DetailRssModel.m */; };
 		FD0D6EB5182E999500C8D416 /* DetaiRss.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0D6EB3182E999500C8D416 /* DetaiRss.m */; };
 		FD0D6EB6182E999500C8D416 /* DetaiRss.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0D6EB4182E999500C8D416 /* DetaiRss.xib */; };
+		FD0D6EB8182E9F9600C8D416 /* bg_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = FD0D6EB7182E9F9600C8D416 /* bg_cell.png */; };
 		FD0EDB0E18239C8E002B373D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0D18239C8E002B373D /* Social.framework */; };
 		FD0EDB1018239C99002B373D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0F18239C99002B373D /* Twitter.framework */; };
 		FD0EDB1218239CCE002B373D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB1118239CCE002B373D /* MessageUI.framework */; };
@@ -179,6 +180,7 @@
 		FD0D6EB2182E999500C8D416 /* DetaiRss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetaiRss.h; path = Rss/DetaiRss.h; sourceTree = "<group>"; };
 		FD0D6EB3182E999500C8D416 /* DetaiRss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetaiRss.m; path = Rss/DetaiRss.m; sourceTree = "<group>"; };
 		FD0D6EB4182E999500C8D416 /* DetaiRss.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetaiRss.xib; path = Rss/DetaiRss.xib; sourceTree = "<group>"; };
+		FD0D6EB7182E9F9600C8D416 /* bg_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_cell.png; sourceTree = "<group>"; };
 		FD0EDB0D18239C8E002B373D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FD0EDB0F18239C99002B373D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		FD0EDB1118239CCE002B373D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -758,6 +760,7 @@
 		FDDD47E8181AC770004CB48E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FD0D6EB7182E9F9600C8D416 /* bg_cell.png */,
 				FDFFB358181B61EF004A8351 /* bg_border_thumbnail_news.png */,
 				FDFFB359181B61EF004A8351 /* bg_border_thumbnail_songs.png */,
 				FDFFB35A181B61EF004A8351 /* bg_cell_ft_f.png */,
@@ -881,6 +884,7 @@
 				FD5C64DF181E6BAC00314C56 /* InstagramCell.xib in Resources */,
 				FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */,
 				FDFFB37A181B61EF004A8351 /* bg_page_tittle_news.png in Resources */,
+				FD0D6EB8182E9F9600C8D416 /* bg_cell.png in Resources */,
 				FD2356AE1822AE5200887BFF /* Detailyoutube.xib in Resources */,
 				FDFFB37C181B61EF004A8351 /* bg_page_tittle_youtube.png in Resources */,
 				FDFFB37B181B61EF004A8351 /* bg_page_tittle_songs.png in Resources */,
