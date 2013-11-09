@@ -19,6 +19,8 @@
 
 @property (nonatomic, assign) BOOL didSetupConstraints;
 @property (strong, nonatomic) IBOutlet UIButton *btnShare;
+@property (nonatomic,retain) SocialModel *socialModel;
+-(void)loadSocialCell;
 - (IBAction)btnShare:(id)sender;
 -(void)loadDataCell;
 @end

@@ -19,6 +19,10 @@
 		FD01F8051818FD4B00EBD3DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01F7ED1818FD4A00EBD3DB /* UIKit.framework */; };
 		FD01F80D1818FD4B00EBD3DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD01F80B1818FD4B00EBD3DB /* InfoPlist.strings */; };
 		FD01F80F1818FD4B00EBD3DB /* HakamyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD01F80E1818FD4B00EBD3DB /* HakamyTests.m */; };
+		FD0D6EAE182E7D2100C8D416 /* CellDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0D6EAD182E7D2100C8D416 /* CellDetail.m */; };
+		FD0D6EB1182E806C00C8D416 /* DetailRssModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0D6EB0182E806C00C8D416 /* DetailRssModel.m */; };
+		FD0D6EB5182E999500C8D416 /* DetaiRss.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0D6EB3182E999500C8D416 /* DetaiRss.m */; };
+		FD0D6EB6182E999500C8D416 /* DetaiRss.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0D6EB4182E999500C8D416 /* DetaiRss.xib */; };
 		FD0EDB0E18239C8E002B373D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0D18239C8E002B373D /* Social.framework */; };
 		FD0EDB1018239C99002B373D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0F18239C99002B373D /* Twitter.framework */; };
 		FD0EDB1218239CCE002B373D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB1118239CCE002B373D /* MessageUI.framework */; };
@@ -168,6 +172,13 @@
 		FD01F80A1818FD4B00EBD3DB /* HakamyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HakamyTests-Info.plist"; sourceTree = "<group>"; };
 		FD01F80C1818FD4B00EBD3DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FD01F80E1818FD4B00EBD3DB /* HakamyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HakamyTests.m; sourceTree = "<group>"; };
+		FD0D6EAC182E7D2100C8D416 /* CellDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellDetail.h; path = Rss/CellDetail.h; sourceTree = "<group>"; };
+		FD0D6EAD182E7D2100C8D416 /* CellDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellDetail.m; path = Rss/CellDetail.m; sourceTree = "<group>"; };
+		FD0D6EAF182E806C00C8D416 /* DetailRssModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailRssModel.h; sourceTree = "<group>"; };
+		FD0D6EB0182E806C00C8D416 /* DetailRssModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailRssModel.m; sourceTree = "<group>"; };
+		FD0D6EB2182E999500C8D416 /* DetaiRss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetaiRss.h; path = Rss/DetaiRss.h; sourceTree = "<group>"; };
+		FD0D6EB3182E999500C8D416 /* DetaiRss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetaiRss.m; path = Rss/DetaiRss.m; sourceTree = "<group>"; };
+		FD0D6EB4182E999500C8D416 /* DetaiRss.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetaiRss.xib; path = Rss/DetaiRss.xib; sourceTree = "<group>"; };
 		FD0EDB0D18239C8E002B373D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FD0EDB0F18239C99002B373D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		FD0EDB1118239CCE002B373D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -488,6 +499,8 @@
 			children = (
 				FD5C649B181E233100314C56 /* RssModel.h */,
 				FD5C649C181E233100314C56 /* RssModel.m */,
+				FD0D6EAF182E806C00C8D416 /* DetailRssModel.h */,
+				FD0D6EB0182E806C00C8D416 /* DetailRssModel.m */,
 				FD5C649E181E236300314C56 /* MediaModel.h */,
 				FD5C649F181E236300314C56 /* MediaModel.m */,
 				FD5C64A1181E419300314C56 /* IntagramModel.h */,
@@ -634,6 +647,11 @@
 				FD5C6470181E0F6300314C56 /* CellRssCustom.h */,
 				FD5C6471181E0F6300314C56 /* CellRssCustom.m */,
 				FD5C6473181E0F8700314C56 /* CellRssCustom.xib */,
+				FD0D6EAC182E7D2100C8D416 /* CellDetail.h */,
+				FD0D6EAD182E7D2100C8D416 /* CellDetail.m */,
+				FD0D6EB2182E999500C8D416 /* DetaiRss.h */,
+				FD0D6EB3182E999500C8D416 /* DetaiRss.m */,
+				FD0D6EB4182E999500C8D416 /* DetaiRss.xib */,
 			);
 			name = Rss;
 			sourceTree = "<group>";
@@ -903,6 +921,7 @@
 				FD2356A618218BF700887BFF /* stop.png in Resources */,
 				FDFFB374181B61EF004A8351 /* bg_cell_songs.png in Resources */,
 				FD3714721819726600427858 /* swipe_guide2.psd in Resources */,
+				FD0D6EB6182E999500C8D416 /* DetaiRss.xib in Resources */,
 				FD37146E1819726600427858 /* PaperFoldResources.bundle in Resources */,
 				FD2356A418218BF700887BFF /* play.png in Resources */,
 				FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */,
@@ -942,6 +961,7 @@
 				FD5C6493181E18FA00314C56 /* SBJsonStreamParserAdapter.m in Sources */,
 				FD5C6472181E0F6300314C56 /* CellRssCustom.m in Sources */,
 				FD5C64DD181E6B9400314C56 /* InstagramCell.m in Sources */,
+				FD0D6EB1182E806C00C8D416 /* DetailRssModel.m in Sources */,
 				FDF6CA8B1820AE14007CF704 /* YoutubeCell.m in Sources */,
 				FD5C6492181E18FA00314C56 /* SBJsonStreamParserAccumulator.m in Sources */,
 				FD01F7FA1818FD4B00EBD3DB /* AppDelegate.m in Sources */,
@@ -959,10 +979,12 @@
 				FD5C6495181E18FA00314C56 /* SBJsonStreamWriter.m in Sources */,
 				FD2356BA1822B81F00887BFF /* UIViewController+MJPopupViewController.m in Sources */,
 				FD3714731819726600427858 /* ShadowView.m in Sources */,
+				FD0D6EAE182E7D2100C8D416 /* CellDetail.m in Sources */,
 				FD37143818196D5B00427858 /* RssViewController.m in Sources */,
 				FD37146C1819726600427858 /* MultiFoldView.m in Sources */,
 				FDF6CA931820C555007CF704 /* FacebookModel.m in Sources */,
 				FD37146F1819726600427858 /* PaperFoldSwipeHintView.m in Sources */,
+				FD0D6EB5182E999500C8D416 /* DetaiRss.m in Sources */,
 				FD5C64AA181E428B00314C56 /* DejalActivityView.m in Sources */,
 				FD2356AD1822AE5200887BFF /* Detailyoutube.m in Sources */,
 				FD5C6497181E18FA00314C56 /* SBJsonStreamWriterState.m in Sources */,

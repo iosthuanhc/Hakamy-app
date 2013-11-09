@@ -9,5 +9,5 @@
 #import "SocialModel.h"
 
 @implementation SocialModel
-@synthesize dateVL,textConten,isFacebook;
+@synthesize dateVL,textConten,isFacebook,socialType;
 @end

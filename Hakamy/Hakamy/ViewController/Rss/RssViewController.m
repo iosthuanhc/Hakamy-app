@@ -28,14 +28,12 @@ NSInteger btnIndex;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     lisRss=[[NSMutableArray alloc]init];
+    
+    [self getJSONValues];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 NSInteger tapindex;
 - (IBAction)btnMenu:(id)sender {
@@ -48,6 +46,40 @@ NSInteger tapindex;
         [((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController showMenu:NO animated:YES];
     }
 }
+#pragma mark JSON get
+-(void)getJSONValues{
+    [DejalBezelActivityView activityViewForView:self.view];
+    responseData = [NSMutableData data];
+    NSString*url=RSS_API;
+    NSString *strConvert= [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    request = [NSURLRequest requestWithURL:[NSURL URLWithString:strConvert]];
+    connection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
+}
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    [responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	responseData = nil;
+}
+
+#pragma mark Process loan data
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    lisRss =[[NSMutableArray alloc]init];
+    NSArray *results=[responseString JSONValue] ;
+    for(NSDictionary *item in results)
+    {
+        RssModel *prf = [[RssModel alloc]initWithJSON:item];
+        [lisRss addObject:prf];
+    }
+    [DejalBezelActivityView removeViewAnimated:YES];
+    [tableview reloadData];
+}
 #pragma mark - TableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -57,37 +89,33 @@ NSInteger tapindex;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return lisRss.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *CellIdentifier = @"CellChat";
-    if(lisRss.count != 0){
-        UITableViewCell *cell = (UITableViewCell*)[tableview dequeueReusableCellWithIdentifier:CellIdentifier];
-        if(cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-        }
-        cell.textLabel.text = @"You don't have any new messages!";
-        cell.backgroundColor = [UIColor darkGrayColor];
-        return  cell;
-    }
-    else {
-        CellRssCustom *cell = (CellRssCustom *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellRssCustom" owner:self options:nil];
-            for (id currentObject in topLevelObjects) {
-                if ([currentObject isKindOfClass:[CellRssCustom class]]) {
-                    cell = (CellRssCustom *) currentObject;
-                    break;
-                }
+    CellRssCustom *cell = (CellRssCustom *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellRssCustom" owner:self options:nil];
+        for (id currentObject in topLevelObjects) {
+            if ([currentObject isKindOfClass:[CellRssCustom class]]) {
+                cell = (CellRssCustom *) currentObject;
+                break;
             }
         }
-        
-        return cell;
     }
+    RssModel *model=[lisRss objectAtIndex:indexPath.row];
+    cell.rssModel=model;
+//    cell.delegate=self;
+    [cell loadDataCell];
+    return cell;
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DetaiRss *detailVC=[[DetaiRss alloc]initWithNibName:@"DetaiRss" bundle:nil];
+    detailVC.rssModel=[lisRss objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:detailVC animated:YES];
     
 }
 

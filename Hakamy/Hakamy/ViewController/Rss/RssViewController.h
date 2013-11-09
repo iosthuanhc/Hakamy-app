@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "CellRssCustom.h"
+#import "RssModel.h"
+#import "DetailRssview.h"
+#import "DetaiRss.h"
 @interface RssViewController : UIViewController{
     NSMutableArray *lisRss;
+    NSMutableData* responseData;
+    NSURLRequest *request;
+    NSURLConnection *connection;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;

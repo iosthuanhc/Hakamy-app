@@ -18,6 +18,7 @@
     #import "DejalActivityView.h"
     #import "AppDelegate.h"
     #import "WebviewFollow.h"
+    #import "SocialModel.h"
 //    #import "AFNetworking.h"
 //    #import "AFJSONRequestOperation.h"
 #endif

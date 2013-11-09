@@ -11,8 +11,11 @@
 @interface SocialModel : NSObject{
     NSDate *dateVL;
     NSString *textConten;
+    NSString *socialType;
+    
     BOOL isFacebook;
 }
+@property (nonatomic ,retain) NSString *socialType;
 @property (nonatomic ,assign) BOOL isFacebook;
 @property (nonatomic ,retain) NSDate *dateVL;
 @property (nonatomic ,retain) NSString *textConten;

@@ -16,7 +16,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *share;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
 @property (strong, nonatomic) IBOutlet UIWebView *webview;
-
+@property (nonatomic,retain) SocialModel *socialModel;
+-(void)loadSocialCell;
 - (IBAction)share:(id)sender;
 -(void)loadDataCell;
 - (void)configureView;

@@ -11,6 +11,8 @@
 #import "SosialCell.h"
 #import "FacebookModel.h"
 #import "SocialModel.h"
+#import "InstagramCell.h"
+#import "YoutubeCell.h"
 @interface FacebookViewController : UIViewController{
     NSMutableArray *listSosial;
     NSMutableArray *listFB;

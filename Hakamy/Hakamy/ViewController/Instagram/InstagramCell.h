@@ -15,8 +15,11 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageview;
 @property (strong, nonatomic) IBOutlet UIButton *share;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
+@property (nonatomic,retain) SocialModel *socialModel;
+-(void)loadSocialCell;
 - (IBAction)share:(id)sender;
 -(void)loadDataCell;
+
 @end
 
 @protocol CellInstagramDelegate <NSObject>

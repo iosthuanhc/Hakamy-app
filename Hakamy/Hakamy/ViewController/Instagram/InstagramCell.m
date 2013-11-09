@@ -11,6 +11,7 @@
 @implementation InstagramCell
 @synthesize imageview,lblTitle,share,instagramModel;
 @synthesize delegate;
+@synthesize socialModel;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -29,6 +30,19 @@
 
 - (IBAction)share:(id)sender {
     [delegate shareClick:instagramModel];
+}
+-(void)loadSocialCell{
+//    lblTitle.text=socialModel.textConten;
+    NSURL *url = [NSURL URLWithString:socialModel.textConten];
+    [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
+        if (succeeded) {
+            // change the image in the cell
+            [imageview setImage:image];
+            
+            // cache the image for use later (when scrolling up)
+            //venue.image = image;
+        }
+    }];
 }
 -(void)loadDataCell{
     lblTitle.text=instagramModel.full_name;

@@ -25,6 +25,7 @@
 #define TWITTER_API             @"http://appzy.info/7akamy/index.php?task=twitter"
 #define YOUTOBE_API             @"http://appzy.info/7akamy/index.php?task=youtube"
 #define FACEBOOK_API            @"https://www.facebook.com/feeds/page.php?format=json&id=381541015300212"
-
+#define RSS_API                 @"http://appzy.info/7akamy/index.php?task=all_news"
+#define DETAIL_RSS_API          @"http://appzy.info/7akamy/index.php?task=anews&id=%@"
 #define TEXT_DEFAULT            @"Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
 #endif

@@ -105,6 +105,7 @@ NSInteger tapindex;
         socialModel.dateVL=date;
         socialModel.textConten=[[listWT objectAtIndex:i] textTitle];
         socialModel.isFacebook=NO;
+        socialModel.socialType=@"status";
         [listSosial addObject:socialModel];
     }
     for (int i=0; i<listFB.count; i++) {
@@ -114,16 +115,18 @@ NSInteger tapindex;
         [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZ"];
         NSDate *date = [dateFormat dateFromString:[[listFB objectAtIndex:i] created_time]];
         socialModel.dateVL=date;
-        if ([[[listFB objectAtIndex:i] typeFB] isEqualToString:@"status"]) {
+        socialModel.socialType=[[listFB objectAtIndex:i] typeFB];
+        
+        if ([socialModel.socialType isEqualToString:@"status"]) {
           socialModel.textConten=[[listFB objectAtIndex:i] story ];
         }
-        if ([[[listFB objectAtIndex:i] typeFB] isEqualToString:@"photo"]) {
+        if ([socialModel.socialType isEqualToString:@"photo"]) {
             socialModel.textConten=[[listFB objectAtIndex:i] picture ];
         }
-        if ([[[listFB objectAtIndex:i] typeFB] isEqualToString:@"link"]) {
+        if ([socialModel.socialType isEqualToString:@"link"]) {
             socialModel.textConten=[[listFB objectAtIndex:i] picture ];
         }
-        if ([[[listFB objectAtIndex:i] typeFB] isEqualToString:@"video"]) {
+        if ([socialModel.socialType isEqualToString:@"video"]) {
             socialModel.textConten=[[listFB objectAtIndex:i] messageFB ];
         }
         
@@ -149,16 +152,6 @@ NSInteger tapindex;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *CellIdentifier = @"SosialCell";
-    if(listSosial.count == 0){
-        UITableViewCell *cell = (UITableViewCell*)[tableview dequeueReusableCellWithIdentifier:CellIdentifier];
-        if(cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-        }
-        cell.textLabel.text = @"You don't have any new messages!";
-        cell.backgroundColor = [UIColor darkGrayColor];
-        return  cell;
-    }
-    else {
         SosialCell *cell = (SosialCell *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SosialCell" owner:self options:nil];
@@ -173,7 +166,6 @@ NSInteger tapindex;
         cell.twitterModel=model;
         [cell loadDataCell];
         return cell;
-    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

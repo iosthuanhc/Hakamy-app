@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "RssModel.h"
 @interface CellRssCustom : UITableViewCell
 
-
+@property (nonatomic,retain) RssModel *rssModel;
 @property (strong, nonatomic) IBOutlet UIImageView *thumbnail;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
 @property (strong, nonatomic) IBOutlet UILabel *lblDescription;
+
+-(void)loadDataCell;
 @end

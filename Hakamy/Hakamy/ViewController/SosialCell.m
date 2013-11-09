@@ -9,6 +9,7 @@
 #import "SosialCell.h"
 
 @implementation SosialCell
+@synthesize socialModel;
 @synthesize twitterModel,lblText,imageAvata,btnShare,lblNumberComment;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -27,6 +28,10 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+-(void)loadSocialCell{
+    lblText.text=twitterModel.textConten;
+    imageAvata.image=[UIImage imageNamed:@"thumbnail1.png"];
 }
 -(void)loadDataCell{
     lblText.text=twitterModel.textConten;
