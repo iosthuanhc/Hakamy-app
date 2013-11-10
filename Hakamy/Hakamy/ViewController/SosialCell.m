@@ -30,8 +30,8 @@
     // Configure the view for the selected state
 }
 -(void)loadSocialCell{
-    lblText.text=twitterModel.textConten;
-    imageAvata.image=[UIImage imageNamed:@"thumbnail1.png"];
+    lblText.text=twitterModel.messageFB;
+    imageAvata.image=[UIImage imageNamed:@"btn_social_fb.png"];
 }
 -(void)loadDataCell{
     if (twitterModel.isFacebook) {

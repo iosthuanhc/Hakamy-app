@@ -180,17 +180,37 @@ NSInteger tapindex;
         return cell;
     }
     if ([model.socialType isEqualToString:@"link"]) {
-        SosialCell *cell = (SosialCell *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SosialCell" owner:self options:nil];
-            for (id currentObject in topLevelObjects) {
-                if ([currentObject isKindOfClass:[SosialCell class]]) {
-                    cell = (SosialCell *) currentObject;
-                    break;
+        if (model.picture==NULL) {
+            SosialCell *cell = (SosialCell *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
+            if (cell == nil) {
+                NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SosialCell" owner:self options:nil];
+                for (id currentObject in topLevelObjects) {
+                    if ([currentObject isKindOfClass:[SosialCell class]]) {
+                        cell = (SosialCell *) currentObject;
+                        break;
+                    }
                 }
             }
+            cell.twitterModel=model;
+            cell.socialModel=model;
+            [cell loadSocialCell];
+            return cell;
+        }else{
+            CellImage *cell = (CellImage *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
+            if (cell == nil) {
+                NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellImage" owner:self options:nil];
+                for (id currentObject in topLevelObjects) {
+                    if ([currentObject isKindOfClass:[CellImage class]]) {
+                        cell = (CellImage *) currentObject;
+                        break;
+                    }
+                }
+            }
+            cell.socialModel=model;
+            [cell loadSocialCellLink];
+            return cell;
         }
-        return cell;
+        
     }
     if ([model.socialType isEqualToString:@"video"]) {
         CellVideo *cell = (CellVideo *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier2];
@@ -234,7 +254,11 @@ NSInteger tapindex;
         return 200.0f;
     }
     if ([model.socialType isEqualToString:@"link"]) {
-        return 70.0f;
+        if (model.picture==NULL) {
+            return 70.0f;
+        }else{
+            return 200.0f;
+        }
     }
     if ([model.socialType isEqualToString:@"video"]) {
         return 200.0f;

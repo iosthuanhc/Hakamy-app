@@ -14,5 +14,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
 @property (nonatomic,retain) SocialModel *socialModel;
 -(void)loadSocialCell;
-
+-(void)loadSocialCellLink;
 @end

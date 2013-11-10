@@ -25,6 +25,23 @@
 
     // Configure the view for the selected state
 }
+-(void)loadSocialCellLink{
+    if (socialModel.story==NULL) {
+        lblTitle.text=socialModel.messageFB;
+    }else{
+        lblTitle.text=socialModel.story;
+    }
+    NSURL *url = [NSURL URLWithString:socialModel.picture];
+    [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
+        if (succeeded) {
+            // change the image in the cell
+            [imagethub setImage:image];
+            
+            // cache the image for use later (when scrolling up)
+            //venue.image = image;
+        }
+    }];
+}
 -(void)loadSocialCell{
     lblTitle.text=socialModel.story;
     NSURL *url = [NSURL URLWithString:socialModel.picture];
