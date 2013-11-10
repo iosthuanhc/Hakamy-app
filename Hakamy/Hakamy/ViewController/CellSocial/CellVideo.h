@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SocialModel.h"
 @interface CellVideo : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *imagethub;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
+@property (nonatomic,retain) SocialModel *socialModel;
+-(void)loadSocialCell;
 @end

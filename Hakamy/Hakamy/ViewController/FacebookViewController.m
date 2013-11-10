@@ -203,7 +203,8 @@ NSInteger tapindex;
                 }
             }
         }
-        
+        cell.socialModel=model;
+        [cell loadSocialCell];
         return cell;
     }else{
         SosialCell *cell = (SosialCell *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];

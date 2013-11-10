@@ -35,7 +35,7 @@
 }
 -(void)loadDataCell{
     if (twitterModel.isFacebook) {
-        imageAvata.image=[UIImage imageNamed:@"thumbnail1.png"];
+        imageAvata.image=[UIImage imageNamed:@"btn_social_fb.png"];
         if (socialModel.story==NULL) {
             lblText.text=socialModel.messageFB;
         }else {
