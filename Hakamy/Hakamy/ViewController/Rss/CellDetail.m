@@ -19,7 +19,7 @@
         [self.titleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.titleLabel setLineBreakMode:NSLineBreakByTruncatingTail];
         [self.titleLabel setNumberOfLines:1];
-        [self.titleLabel setTextAlignment:NSTextAlignmentLeft];
+        [self.titleLabel setTextAlignment:NSTextAlignmentRight];
         [self.titleLabel setTextColor:[UIColor blackColor]];
         [self.titleLabel setBackgroundColor:[UIColor clearColor]];
         
@@ -28,7 +28,7 @@
         [self.bodyLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
         [self.bodyLabel setLineBreakMode:NSLineBreakByTruncatingTail];
         [self.bodyLabel setNumberOfLines:0];
-        [self.bodyLabel setTextAlignment:NSTextAlignmentLeft];
+        [self.bodyLabel setTextAlignment:NSTextAlignmentRight];
         [self.bodyLabel setTextColor:[UIColor blackColor]];
         [self.bodyLabel setBackgroundColor:[UIColor clearColor]];
         
