@@ -12,5 +12,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imagethub;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
 @property (nonatomic,retain) SocialModel *socialModel;
+
+@property (strong, nonatomic) IBOutlet UIWebView *webview;
 -(void)loadSocialCell;
 @end

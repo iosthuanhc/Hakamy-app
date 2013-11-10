@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="AmO-lb-dEl">
-                        <rect key="frame" x="11" y="9.0000000000000053" width="298" height="151"/>
+                        <rect key="frame" x="11" y="9" width="298" height="151"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1wC-Hj-DEk">
-                        <rect key="frame" x="20" y="171" width="251" height="17.000000000000028"/>
+                        <rect key="frame" x="20" y="171" width="251" height="17"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
@@ -32,6 +32,11 @@
                         <rect key="frame" x="287" y="171" width="20" height="19.000000000000007"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                     </imageView>
+                    <webView contentMode="scaleToFill" id="3YW-bR-wZx">
+                        <rect key="frame" x="12" y="11" width="296" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </webView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
@@ -39,6 +44,7 @@
             <connections>
                 <outlet property="imagethub" destination="AmO-lb-dEl" id="aCr-TX-wLj"/>
                 <outlet property="lblTitle" destination="1wC-Hj-DEk" id="12A-DR-Gws"/>
+                <outlet property="webview" destination="3YW-bR-wZx" id="saN-OR-IFf"/>
             </connections>
         </tableViewCell>
     </objects>
