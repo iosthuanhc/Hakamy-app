@@ -115,6 +115,10 @@ NSInteger tapindex;
     MediaModel *model=[listMedia objectAtIndex:indexPath.row];
     cell.mediaModel=model;
     [cell loadDataCell];
+    if(tapp == indexPath.row)
+    {
+        [cell showPlay];
+    }
     cell.delegate=self;
     cell.audioButton.tag = indexPath.row;
     [cell.audioButton addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
