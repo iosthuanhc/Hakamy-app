@@ -10,7 +10,7 @@
 
 @implementation FacebookModel
 //@synthesize textConten,updateDate;
-@synthesize created_time,full_picture,messageFB,picture,story,typeFB;
+@synthesize created_time,full_picture,messageFB,picture,story,typeFB,source;
 -(id)initWithJSON:(NSDictionary *)dic{
     
     self.typeFB=[dic objectForKey:@"type"];
@@ -19,7 +19,7 @@
     self.picture=[dic objectForKey:@"picture"];
     self.full_picture=[dic objectForKey:@"full_picture"];
     self.messageFB=[dic objectForKey:@"message"];
-    
+    self.source=[dic objectForKey:@"source"];
 //    self.textConten=[dic objectForKey:@"content"];
 //    self.updateDate=[dic objectForKey:@"updated"];
     return self;

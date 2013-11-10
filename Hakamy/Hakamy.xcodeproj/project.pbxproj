@@ -24,6 +24,10 @@
 		FD0D6EB5182E999500C8D416 /* DetaiRss.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0D6EB3182E999500C8D416 /* DetaiRss.m */; };
 		FD0D6EB6182E999500C8D416 /* DetaiRss.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0D6EB4182E999500C8D416 /* DetaiRss.xib */; };
 		FD0D6EB8182E9F9600C8D416 /* bg_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = FD0D6EB7182E9F9600C8D416 /* bg_cell.png */; };
+		FD0E795E182F4FB20043094D /* CellImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0E7959182F4FB20043094D /* CellImage.m */; };
+		FD0E795F182F4FB30043094D /* CellImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0E795A182F4FB20043094D /* CellImage.xib */; };
+		FD0E7960182F4FB30043094D /* CellVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0E795C182F4FB20043094D /* CellVideo.m */; };
+		FD0E7961182F4FB30043094D /* CellVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0E795D182F4FB20043094D /* CellVideo.xib */; };
 		FD0EDB0E18239C8E002B373D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0D18239C8E002B373D /* Social.framework */; };
 		FD0EDB1018239C99002B373D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0F18239C99002B373D /* Twitter.framework */; };
 		FD0EDB1218239CCE002B373D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB1118239CCE002B373D /* MessageUI.framework */; };
@@ -181,6 +185,12 @@
 		FD0D6EB3182E999500C8D416 /* DetaiRss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetaiRss.m; path = Rss/DetaiRss.m; sourceTree = "<group>"; };
 		FD0D6EB4182E999500C8D416 /* DetaiRss.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetaiRss.xib; path = Rss/DetaiRss.xib; sourceTree = "<group>"; };
 		FD0D6EB7182E9F9600C8D416 /* bg_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_cell.png; sourceTree = "<group>"; };
+		FD0E7958182F4FB20043094D /* CellImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellImage.h; sourceTree = "<group>"; };
+		FD0E7959182F4FB20043094D /* CellImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellImage.m; sourceTree = "<group>"; };
+		FD0E795A182F4FB20043094D /* CellImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellImage.xib; sourceTree = "<group>"; };
+		FD0E795B182F4FB20043094D /* CellVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellVideo.h; sourceTree = "<group>"; };
+		FD0E795C182F4FB20043094D /* CellVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellVideo.m; sourceTree = "<group>"; };
+		FD0E795D182F4FB20043094D /* CellVideo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellVideo.xib; sourceTree = "<group>"; };
 		FD0EDB0D18239C8E002B373D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FD0EDB0F18239C99002B373D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		FD0EDB1118239CCE002B373D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -533,6 +543,19 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		FD0E7957182F4FB20043094D /* CellSocial */ = {
+			isa = PBXGroup;
+			children = (
+				FD0E7958182F4FB20043094D /* CellImage.h */,
+				FD0E7959182F4FB20043094D /* CellImage.m */,
+				FD0E795A182F4FB20043094D /* CellImage.xib */,
+				FD0E795B182F4FB20043094D /* CellVideo.h */,
+				FD0E795C182F4FB20043094D /* CellVideo.m */,
+				FD0E795D182F4FB20043094D /* CellVideo.xib */,
+			);
+			path = CellSocial;
+			sourceTree = "<group>";
+		};
 		FD23569418218BF700887BFF /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,6 +614,7 @@
 				FD23568A182164D100887BFF /* SosialCell.h */,
 				FD23568B182164D100887BFF /* SosialCell.m */,
 				FD23568D182164EA00887BFF /* SosialCell.xib */,
+				FD0E7957182F4FB20043094D /* CellSocial */,
 			);
 			name = Facebook;
 			sourceTree = "<group>";
@@ -903,6 +927,7 @@
 				FDFFB385181B61EF004A8351 /* thumbnail_twitter.png in Resources */,
 				FDFFB378181B61EF004A8351 /* bg_page_tittle_ft.png in Resources */,
 				FDFFB382181B61EF004A8351 /* btn_readmore.png in Resources */,
+				FD0E795F182F4FB30043094D /* CellImage.xib in Resources */,
 				FD37143918196D5B00427858 /* RssViewController.xib in Resources */,
 				FDDD47F8181AC770004CB48E /* btn_social_tw.jpg in Resources */,
 				FDFFB387181B61EF004A8351 /* thumbnail2.png in Resources */,
@@ -935,6 +960,7 @@
 				FDFFB376181B61EF004A8351 /* bg_inner_shadow.png in Resources */,
 				FDFFB372181B61EF004A8351 /* bg_cell_ft_f.png in Resources */,
 				FDFFB371181B61EF004A8351 /* bg_border_thumbnail_songs.png in Resources */,
+				FD0E7961182F4FB30043094D /* CellVideo.xib in Resources */,
 				FDDD47F6181AC770004CB48E /* btn_social_insta.jpg in Resources */,
 				FDFFB37E181B61EF004A8351 /* bg_thumbnail_youtube.png in Resources */,
 				FD5C6474181E0F8700314C56 /* CellRssCustom.xib in Resources */,
@@ -1003,7 +1029,9 @@
 				FD5C6490181E18FA00314C56 /* SBJsonParser.m in Sources */,
 				FD2356A118218BF700887BFF /* AudioPlayer.m in Sources */,
 				FD37142E18196C8400427858 /* HomeViewController.m in Sources */,
+				FD0E795E182F4FB20043094D /* CellImage.m in Sources */,
 				FD37146B1819726600427858 /* FoldView.m in Sources */,
+				FD0E7960182F4FB30043094D /* CellVideo.m in Sources */,
 				FD5C6499181E18FA00314C56 /* SBJsonUTF8Stream.m in Sources */,
 				FD3714741819726600427858 /* TouchThroughUIView.m in Sources */,
 				FD5C64A0181E236300314C56 /* MediaModel.m in Sources */,

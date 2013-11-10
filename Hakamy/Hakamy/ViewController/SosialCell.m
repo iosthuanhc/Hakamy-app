@@ -34,11 +34,16 @@
     imageAvata.image=[UIImage imageNamed:@"thumbnail1.png"];
 }
 -(void)loadDataCell{
-    lblText.text=twitterModel.textConten;
     if (twitterModel.isFacebook) {
         imageAvata.image=[UIImage imageNamed:@"thumbnail1.png"];
+        if (socialModel.story==NULL) {
+            lblText.text=socialModel.messageFB;
+        }else {
+            lblText.text=socialModel.story;
+        }
     }else{
         imageAvata.image=[UIImage imageNamed:@"thumbnail_twitter.png"];
+        lblText.text=twitterModel.textConten;
     }
 //    lblText.text=[NSString stringWithFormat:@"%@",twitterModel.dateVL];
 //    NSURL *url = [NSURL URLWithString:youtubeModel.imageurl];

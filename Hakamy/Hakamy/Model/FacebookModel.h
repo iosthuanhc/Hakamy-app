@@ -14,11 +14,12 @@
     NSString *typeFB;
     NSString *story;
     NSString *messageFB;
+    NSString *source;
     NSString *created_time;
     NSString *picture;
     NSString *full_picture;
 }
-
+@property (nonatomic ,retain) NSString *source;
 @property (nonatomic ,retain) NSString *typeFB;
 @property (nonatomic ,retain) NSString *story;
 @property (nonatomic ,retain) NSString *messageFB;

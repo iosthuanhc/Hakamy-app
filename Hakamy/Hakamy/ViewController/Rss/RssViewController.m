@@ -93,7 +93,7 @@ NSInteger tapindex;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier = @"CellChat";
+    NSString *CellIdentifier = @"Cell";
     CellRssCustom *cell = (CellRssCustom *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellRssCustom" owner:self options:nil];

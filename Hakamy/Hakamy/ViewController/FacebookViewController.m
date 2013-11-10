@@ -116,20 +116,10 @@ NSInteger tapindex;
         NSDate *date = [dateFormat dateFromString:[[listFB objectAtIndex:i] created_time]];
         socialModel.dateVL=date;
         socialModel.socialType=[[listFB objectAtIndex:i] typeFB];
-        
-        if ([socialModel.socialType isEqualToString:@"status"]) {
-          socialModel.textConten=[[listFB objectAtIndex:i] story ];
-        }
-        if ([socialModel.socialType isEqualToString:@"photo"]) {
-            socialModel.textConten=[[listFB objectAtIndex:i] picture ];
-        }
-        if ([socialModel.socialType isEqualToString:@"link"]) {
-            socialModel.textConten=[[listFB objectAtIndex:i] picture ];
-        }
-        if ([socialModel.socialType isEqualToString:@"video"]) {
-            socialModel.textConten=[[listFB objectAtIndex:i] messageFB ];
-        }
-        
+        socialModel.story=[[listFB objectAtIndex:i] story];
+        socialModel.picture=[[listFB objectAtIndex:i] picture];
+        socialModel.source=[[listFB objectAtIndex:i] source];
+        socialModel.messageFB=[[listFB objectAtIndex:i] messageFB];
         socialModel.isFacebook=YES;
         [listSosial addObject:socialModel];
     }
@@ -151,7 +141,12 @@ NSInteger tapindex;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier = @"SosialCell";
+    static NSString *CellIdentifier = @"SosialCell";
+    static NSString *CellIdentifier1 = @"CellImage";
+    static NSString *CellIdentifier2 = @"CellVideo";
+    
+    SocialModel *model=[listSosial objectAtIndex:indexPath.row];
+    if ([model.socialType isEqualToString:@"status"]) {
         SosialCell *cell = (SosialCell *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SosialCell" owner:self options:nil];
@@ -162,12 +157,90 @@ NSInteger tapindex;
                 }
             }
         }
-        SocialModel *model=[listSosial objectAtIndex:indexPath.row];
+        
+        cell.twitterModel=model;
+        cell.socialModel=model;
+        [cell loadDataCell];
+        return cell;
+    }
+    if ([model.socialType isEqualToString:@"photo"]) {
+        CellImage *cell = (CellImage *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier1];
+        if (cell == nil) {
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellImage" owner:self options:nil];
+            for (id currentObject in topLevelObjects) {
+                if ([currentObject isKindOfClass:[CellImage class]]) {
+                    cell = (CellImage *) currentObject;
+                    break;
+                }
+            }
+        }
+        
+        cell.socialModel=model;
+        [cell loadSocialCell];
+        return cell;
+    }
+    if ([model.socialType isEqualToString:@"link"]) {
+        SosialCell *cell = (SosialCell *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SosialCell" owner:self options:nil];
+            for (id currentObject in topLevelObjects) {
+                if ([currentObject isKindOfClass:[SosialCell class]]) {
+                    cell = (SosialCell *) currentObject;
+                    break;
+                }
+            }
+        }
+        return cell;
+    }
+    if ([model.socialType isEqualToString:@"video"]) {
+        CellVideo *cell = (CellVideo *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier2];
+        if (cell == nil) {
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellVideo" owner:self options:nil];
+            for (id currentObject in topLevelObjects) {
+                if ([currentObject isKindOfClass:[CellVideo class]]) {
+                    cell = (CellVideo *) currentObject;
+                    break;
+                }
+            }
+        }
+        
+        return cell;
+    }else{
+        SosialCell *cell = (SosialCell *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SosialCell" owner:self options:nil];
+            for (id currentObject in topLevelObjects) {
+                if ([currentObject isKindOfClass:[SosialCell class]]) {
+                    cell = (SosialCell *) currentObject;
+                    break;
+                }
+            }
+        }
+        
         cell.twitterModel=model;
         [cell loadDataCell];
         return cell;
+    }
+    
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SocialModel *model=[listSosial objectAtIndex:indexPath.row];
+    if ([model.socialType isEqualToString:@"status"]) {
+        return 70.0f;
+    }
+    if ([model.socialType isEqualToString:@"photo"]) {
+        return 200.0f;
+    }
+    if ([model.socialType isEqualToString:@"link"]) {
+        return 70.0f;
+    }
+    if ([model.socialType isEqualToString:@"video"]) {
+        return 200.0f;
+    }else {
+        return 70.0f;
+    }
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }

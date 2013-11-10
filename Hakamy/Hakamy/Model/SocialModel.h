@@ -12,9 +12,16 @@
     NSDate *dateVL;
     NSString *textConten;
     NSString *socialType;
-    
+    NSString *story;
+    NSString *picture;
+    NSString *source;
+    NSString *messageFB;
     BOOL isFacebook;
 }
+@property (nonatomic ,retain) NSString *story;
+@property (nonatomic ,retain) NSString *picture;
+@property (nonatomic ,retain) NSString *source;
+@property (nonatomic ,retain) NSString *messageFB;
 @property (nonatomic ,retain) NSString *socialType;
 @property (nonatomic ,assign) BOOL isFacebook;
 @property (nonatomic ,retain) NSDate *dateVL;
