@@ -62,7 +62,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="50a-zM-D38">
-                    <rect key="frame" x="72" y="516" width="25" height="24"/>
+                    <rect key="frame" x="72" y="516" width="25" height="24.000000000000057"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <state key="normal" backgroundImage="btn_social_insta.jpg">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,7 +82,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w2n-CI-baR">
-                    <rect key="frame" x="39" y="516" width="24.999999992549419" height="24.000000000000057"/>
+                    <rect key="frame" x="39" y="516" width="24.999999992549419" height="24"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <state key="normal" backgroundImage="btn_social_tw.jpg">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

@@ -16,12 +16,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_webviews.png" id="4">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_others.png" id="4">
                     <rect key="frame" x="0.0" y="-6" width="320" height="574"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <webView contentMode="scaleToFill" id="7">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </webView>
@@ -42,7 +42,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bg_webviews.png" width="629" height="901"/>
+        <image name="bg_others.png" width="640" height="1136"/>
         <image name="btn_menu.png" width="88" height="88"/>
     </resources>
 </document>
