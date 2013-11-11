@@ -19,17 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="AmO-lb-dEl">
-                        <rect key="frame" x="11" y="9" width="298" height="151"/>
+                        <rect key="frame" x="11" y="9.0000000000000053" width="298" height="151"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1wC-Hj-DEk">
-                        <rect key="frame" x="20" y="171" width="251" height="17"/>
+                        <rect key="frame" x="20" y="171" width="251" height="17.000000000000028"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_social_fb.png" id="Mo5-1E-Ltc">
-                        <rect key="frame" x="287" y="171" width="20" height="19.000000000000007"/>
+                        <rect key="frame" x="287" y="171" width="20" height="19.000000000000004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                     </imageView>
                     <webView contentMode="scaleToFill" id="3YW-bR-wZx">

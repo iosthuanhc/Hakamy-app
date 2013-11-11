@@ -20,5 +20,13 @@
 @property (nonatomic,retain) RssModel *rssModel;
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 @property (strong, nonatomic) IBOutlet UIButton *backButtion;
+@property (strong, nonatomic) IBOutlet UILabel *lbltitle;
+@property (strong, nonatomic) IBOutlet UITextView *txtTextview;
+
 - (IBAction)backButtion:(id)sender;
+
+- (IBAction)btnFacebook:(id)sender;
+- (IBAction)btnTwitter:(id)sender;
+- (IBAction)btnInstagram:(id)sender;
+- (IBAction)btnYoutube:(id)sender;
 @end

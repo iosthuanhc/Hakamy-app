@@ -12,8 +12,11 @@ static NSString *CellIdentifier = @"CellIdentifier";
 
 @end
 
-@implementation DetaiRss
+@implementation DetaiRss{
+    NSInteger btnIndex;
+}
 @synthesize rssModel,tableview;
+@synthesize lbltitle,txtTextview;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -82,7 +85,12 @@ static NSString *CellIdentifier = @"CellIdentifier";
         [listDetailRss addObject:_detailModel];
     }
     [DejalBezelActivityView removeViewAnimated:YES];
-    [tableview reloadData];
+//    [tableview reloadData];
+    [self loadDatatoView];
+}
+-(void)loadDatatoView{
+    lbltitle.text=[[listDetailRss objectAtIndex:0] title];
+    txtTextview.text=[[listDetailRss objectAtIndex:0] news_full];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -156,58 +164,47 @@ static NSString *CellIdentifier = @"CellIdentifier";
 {
     return 500.0f;
 }
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a story board-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- 
- */
 
 - (IBAction)backButtion:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)btnFacebook:(id)sender {
+    btnIndex=0;
+    [self callWebview];
+}
+
+- (IBAction)btnTwitter:(id)sender {
+    btnIndex=1;
+    [self callWebview];
+}
+
+- (IBAction)btnInstagram:(id)sender {
+    btnIndex=2;
+    [self callWebview];
+}
+
+- (IBAction)btnYoutube:(id)sender {
+    btnIndex=3;
+    [self callWebview];
+}
+-(void)callWebview{
+    WebviewFollow *detailVC=[[WebviewFollow alloc]initWithNibName:@"WebviewFollow" bundle:nil];
+    switch (btnIndex) {
+        case 0:
+            detailVC.htmlLink=@"http://www.facebook.com/";
+            break;
+        case 1:
+            detailVC.htmlLink=@"https://twitter.com/";
+            break;
+        case 2:
+            detailVC.htmlLink=@"http://instagram.com/";
+            break;
+        case 3:
+            detailVC.htmlLink=@"http://www.youtube.com/";
+            break;
+        default:
+            break;
+    }
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 @end
