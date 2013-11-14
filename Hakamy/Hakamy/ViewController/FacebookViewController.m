@@ -74,19 +74,23 @@ NSInteger tapindex;
         TwitterModel *prf = [[TwitterModel alloc]initWithJSON:item];
         [listWT addObject:prf];
     }
-    [self getFacebookData];
+    [self getFacebookData:A_API];
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)getFacebookData{
+-(void)getFacebookData:(NSString*)link{
     listFB=[[NSMutableArray alloc]init];
-    NSString *fbRespon=[NSString stringWithContentsOfURL:[NSURL URLWithString:A_API] encoding:NSUTF8StringEncoding error:Nil];
+    NSString *temp=[link stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *fbRespon=[NSString stringWithContentsOfURL:[NSURL URLWithString:temp] encoding:NSUTF8StringEncoding error:Nil];
     NSDictionary *fbDic=[fbRespon JSONValue];
     //entries
     NSArray *results=[fbDic objectForKey:@"data"];
+    NSDictionary *pageDic=[fbDic objectForKey:@"paging"];
+    previous=[pageDic objectForKey:@"previous"];
+    next=[pageDic objectForKey:@"next"];
     for(NSDictionary *item in results)
     {
         FacebookModel *prf = [[FacebookModel alloc]initWithJSON:item];
@@ -128,6 +132,26 @@ NSInteger tapindex;
     [DejalBezelActivityView removeViewAnimated:YES];
     [tableview reloadData];
 }
+#pragma mark - Scroll Tableview
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    
+    CGPoint offset = scrollView.contentOffset;
+    CGRect bounds = scrollView.bounds;
+    CGSize size = scrollView.contentSize;
+    UIEdgeInsets inset = scrollView.contentInset;
+    float y = offset.y + bounds.size.height - inset.bottom;
+    float h = size.height;
+    
+    float reload_distance = 100;
+    if(y > h + reload_distance)
+    {
+        //Call the Method to load More Data...
+        [DejalBezelActivityView activityViewForView:self.view];
+        [self getFacebookData:next];
+    }
+}
+
 #pragma mark - TableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

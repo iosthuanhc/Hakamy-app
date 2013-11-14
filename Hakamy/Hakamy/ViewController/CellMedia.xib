@@ -44,10 +44,22 @@
                             <action selector="btnShare:" destination="qbJ-Qk-vUE" eventType="touchUpInside" id="i1d-xR-gV2"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Sy-vd-HyE">
+                        <rect key="frame" x="270" y="2" width="45" height="45"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" backgroundImage="play.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" backgroundImage="stop.png"/>
+                        <connections>
+                            <action selector="btnPlay:" destination="qbJ-Qk-vUE" eventType="touchUpInside" id="AGf-cU-xzJ"/>
+                        </connections>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="btnPlay" destination="6Sy-vd-HyE" id="L5T-6R-VpA"/>
                 <outlet property="btnShare" destination="SWb-xX-Gfk" id="JhA-dg-x0H"/>
                 <outlet property="lblDescription" destination="zZS-e7-8vZ" id="zGl-Yy-soW"/>
                 <outlet property="lblTitle" destination="11I-0F-Tbr" id="ghz-XI-M1l"/>
@@ -58,6 +70,8 @@
     <resources>
         <image name="bg_cell_songs.png" width="632" height="96"/>
         <image name="btn_share.png" width="36" height="28"/>
+        <image name="play.png" width="64" height="64"/>
+        <image name="stop.png" width="64" height="64"/>
         <image name="thumbnail2.png" width="109" height="109"/>
     </resources>
 </document>

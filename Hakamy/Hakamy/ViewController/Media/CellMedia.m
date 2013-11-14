@@ -13,6 +13,7 @@
 @synthesize lblTitle,lblDescription,thumbnail,audioButton = _audioButton;
 @synthesize btnShare;
 @synthesize delegate;
+@synthesize btnPlay;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -52,6 +53,17 @@
 }
 -(void) showPlay
 {
-    [self.audioButton showImage];
+    btnPlay.selected=YES;
+}
+-(void)showStop{
+    btnPlay.selected=NO;
+}
+- (IBAction)btnPlay:(id)sender {
+    if (btnPlay.isSelected) {
+        btnPlay.selected=NO;
+    }else{
+        btnPlay.selected=YES;
+    }
+    [delegate playButtonClick:btnPlay];
 }
 @end

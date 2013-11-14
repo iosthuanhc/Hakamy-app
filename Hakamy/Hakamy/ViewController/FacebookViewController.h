@@ -23,6 +23,8 @@
     NSMutableData* responseData;
     NSURLRequest *request;
     NSURLConnection *connection;
+    NSString *previous;
+    NSString *next;
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 - (IBAction)btnMenu:(id)sender;

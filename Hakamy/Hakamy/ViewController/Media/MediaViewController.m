@@ -107,7 +107,7 @@ NSInteger tapindex;
         for (id currentObject in topLevelObjects) {
             if ([currentObject isKindOfClass:[CellMedia class]]) {
                 cell = (CellMedia *) currentObject;
-                [cell configurePlayerButton];
+//                [cell configurePlayerButton];
                 break;
             }
         }
@@ -118,10 +118,13 @@ NSInteger tapindex;
     if(tapp == indexPath.row)
     {
         [cell showPlay];
+    }else{
+        [cell showStop];
     }
+    cell.btnPlay.tag=indexPath.row;
     cell.delegate=self;
-    cell.audioButton.tag = indexPath.row;
-    [cell.audioButton addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
+//    cell.audioButton.tag = indexPath.row;
+//    [cell.audioButton addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
@@ -145,12 +148,32 @@ NSInteger tapindex;
     } else {
         [_audioPlayer stop];
         tapp = button.tag;
-
         _audioPlayer.button = button;
         _audioPlayer.url = [NSURL URLWithString:[NSString stringWithFormat:PLAYMP3,model._id]];
         model.isplaying=YES;
         [_audioPlayer play];
     }
+}
+-(void)playButtonClick:(UIButton *)button{
+    NSInteger index = button.tag;
+    MediaModel *model=[listMedia objectAtIndex:index];
+    if (_audioPlayer == nil) {
+        _audioPlayer = [[AudioPlayer alloc] init];
+    }
+    if ([_audioPlayer.button isEqual:button]) {
+        [_audioPlayer play];
+        tapp = -1;
+//        model.isplaying=NO;
+    } else {
+        [_audioPlayer stop];
+//        model.isplaying=YES;
+        tapp = button.tag;
+//        _audioPlayer.button = button;
+        _audioPlayer.url = [NSURL URLWithString:[NSString stringWithFormat:PLAYMP3,model._id]];
+        [_audioPlayer play];
+    }
+    
+    [self.tableView reloadData];
 }
 -(void)shareClick:(MediaModel *)mediaModel{
     if(NSClassFromString(@"SLComposeViewController") != nil) {
