@@ -48,6 +48,9 @@
 		FD2356B31822B2FE00887BFF /* DetailInstagram.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD2356B11822B2FE00887BFF /* DetailInstagram.xib */; };
 		FD2356B91822B81F00887BFF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2356B61822B81F00887BFF /* MJPopupBackgroundView.m */; };
 		FD2356BA1822B81F00887BFF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2356B81822B81F00887BFF /* UIViewController+MJPopupViewController.m */; };
+		FD31F44B1835BC2000F8712F /* Icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FD31F4481835BC2000F8712F /* Icon_114x114.png */; };
+		FD31F44C1835BC2000F8712F /* Icon_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = FD31F4491835BC2000F8712F /* Icon_120x120.png */; };
+		FD31F44D1835BC2000F8712F /* Icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FD31F44A1835BC2000F8712F /* Icon_57x57.png */; };
 		FD37142E18196C8400427858 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37142C18196C8400427858 /* HomeViewController.m */; };
 		FD37142F18196C8400427858 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37142D18196C8400427858 /* HomeViewController.xib */; };
 		FD37143818196D5B00427858 /* RssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD37143618196D5B00427858 /* RssViewController.m */; };
@@ -105,6 +108,8 @@
 		FD5C64DA181E5CAB00314C56 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5C64D9181E5CAB00314C56 /* libz.dylib */; };
 		FD5C64DD181E6B9400314C56 /* InstagramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64DC181E6B9400314C56 /* InstagramCell.m */; };
 		FD5C64DF181E6BAC00314C56 /* InstagramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD5C64DE181E6BAC00314C56 /* InstagramCell.xib */; };
+		FDA1F7921837BF33008C8454 /* btn_Back.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA1F7901837BF33008C8454 /* btn_Back.png */; };
+		FDA1F7931837BF33008C8454 /* btn_play1.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA1F7911837BF33008C8454 /* btn_play1.png */; };
 		FDB3B19918278B0000DB6F3F /* SocialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB3B19818278B0000DB6F3F /* SocialModel.m */; };
 		FDDD47F2181AC770004CB48E /* bg_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47E9181AC770004CB48E /* bg_home.png */; };
 		FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47EA181AC770004CB48E /* btn_menu.png */; };
@@ -220,6 +225,9 @@
 		FD2356B61822B81F00887BFF /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
 		FD2356B71822B81F00887BFF /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		FD2356B81822B81F00887BFF /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		FD31F4481835BC2000F8712F /* Icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_114x114.png; sourceTree = "<group>"; };
+		FD31F4491835BC2000F8712F /* Icon_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_120x120.png; sourceTree = "<group>"; };
+		FD31F44A1835BC2000F8712F /* Icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_57x57.png; sourceTree = "<group>"; };
 		FD37142B18196C8400427858 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Home/HomeViewController.h; sourceTree = "<group>"; };
 		FD37142C18196C8400427858 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Home/HomeViewController.m; sourceTree = "<group>"; };
 		FD37142D18196C8400427858 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Home/HomeViewController.xib; sourceTree = "<group>"; };
@@ -318,6 +326,8 @@
 		FD5C64DB181E6B9400314C56 /* InstagramCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramCell.h; path = Instagram/InstagramCell.h; sourceTree = "<group>"; };
 		FD5C64DC181E6B9400314C56 /* InstagramCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramCell.m; path = Instagram/InstagramCell.m; sourceTree = "<group>"; };
 		FD5C64DE181E6BAC00314C56 /* InstagramCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstagramCell.xib; path = Instagram/InstagramCell.xib; sourceTree = "<group>"; };
+		FDA1F7901837BF33008C8454 /* btn_Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_Back.png; sourceTree = "<group>"; };
+		FDA1F7911837BF33008C8454 /* btn_play1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_play1.png; sourceTree = "<group>"; };
 		FDB3B19718278B0000DB6F3F /* SocialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialModel.h; sourceTree = "<group>"; };
 		FDB3B19818278B0000DB6F3F /* SocialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialModel.m; sourceTree = "<group>"; };
 		FDDD47E9181AC770004CB48E /* bg_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_home.png; sourceTree = "<group>"; };
@@ -488,6 +498,7 @@
 		FD01F81818190F2700EBD3DB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FD31F4471835BC2000F8712F /* icon */,
 				FDDD47E8181AC770004CB48E /* iOS */,
 			);
 			path = Images;
@@ -590,6 +601,17 @@
 				FD2356B81822B81F00887BFF /* UIViewController+MJPopupViewController.m */,
 			);
 			path = popView;
+			sourceTree = "<group>";
+		};
+		FD31F4471835BC2000F8712F /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				FD31F4481835BC2000F8712F /* Icon_114x114.png */,
+				FD31F4491835BC2000F8712F /* Icon_120x120.png */,
+				FD31F44A1835BC2000F8712F /* Icon_57x57.png */,
+			);
+			name = icon;
+			path = ../Libs/AudioPlayer/images/icon;
 			sourceTree = "<group>";
 		};
 		FD37142A18196C6400427858 /* Home */ = {
@@ -784,6 +806,8 @@
 		FDDD47E8181AC770004CB48E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FDA1F7901837BF33008C8454 /* btn_Back.png */,
+				FDA1F7911837BF33008C8454 /* btn_play1.png */,
 				FD0D6EB7182E9F9600C8D416 /* bg_cell.png */,
 				FDFFB358181B61EF004A8351 /* bg_border_thumbnail_news.png */,
 				FDFFB359181B61EF004A8351 /* bg_border_thumbnail_songs.png */,
@@ -919,8 +943,10 @@
 				FDFFB373181B61EF004A8351 /* bg_cell_lastestnews.png in Resources */,
 				FD2356A518218BF700887BFF /* screenshots.png in Resources */,
 				FD23568E182164EA00887BFF /* SosialCell.xib in Resources */,
+				FDA1F7921837BF33008C8454 /* btn_Back.png in Resources */,
 				FDFFB370181B61EF004A8351 /* bg_border_thumbnail_news.png in Resources */,
 				FDDD4803181ACDFC004CB48E /* btn_menu_insta.png in Resources */,
+				FD31F44D1835BC2000F8712F /* Icon_57x57.png in Resources */,
 				FDDD4801181ACDFC004CB48E /* bg_menu.png in Resources */,
 				FD37144818196DAD00427858 /* YoutubeViewController.xib in Resources */,
 				FD3714711819726600427858 /* swipe_guide.psd in Resources */,
@@ -957,13 +983,16 @@
 				FD37142F18196C8400427858 /* HomeViewController.xib in Resources */,
 				FDDD4805181ACDFC004CB48E /* btn_menu_rss.png in Resources */,
 				FDFFB386181B61EF004A8351 /* thumbnail1.png in Resources */,
+				FDA1F7931837BF33008C8454 /* btn_play1.png in Resources */,
 				FDFFB376181B61EF004A8351 /* bg_inner_shadow.png in Resources */,
 				FDFFB372181B61EF004A8351 /* bg_cell_ft_f.png in Resources */,
 				FDFFB371181B61EF004A8351 /* bg_border_thumbnail_songs.png in Resources */,
 				FD0E7961182F4FB30043094D /* CellVideo.xib in Resources */,
 				FDDD47F6181AC770004CB48E /* btn_social_insta.jpg in Resources */,
 				FDFFB37E181B61EF004A8351 /* bg_thumbnail_youtube.png in Resources */,
+				FD31F44C1835BC2000F8712F /* Icon_120x120.png in Resources */,
 				FD5C6474181E0F8700314C56 /* CellRssCustom.xib in Resources */,
+				FD31F44B1835BC2000F8712F /* Icon_114x114.png in Resources */,
 				FDDD4802181ACDFC004CB48E /* btn_menu_ft.png in Resources */,
 				FDFFB37D181B61EF004A8351 /* bg_thumbnail_insta.png in Resources */,
 				FDFFB375181B61EF004A8351 /* bg_cell_youtube.png in Resources */,
@@ -1162,12 +1191,12 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hoai Nam (RUAGWWHKR2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hakamy/Hakamy-Prefix.pch";
 				INFOPLIST_FILE = "Hakamy/Hakamy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3E3DD5F1-F51D-4A8B-B079-4FB0750EDB65";
+				PROVISIONING_PROFILE = "1FC960F4-1925-497B-A9B5-3F4E346E16D5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1178,13 +1207,13 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hoai Nam (RUAGWWHKR2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hoai Nam (RUAGWWHKR2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hakamy/Hakamy-Prefix.pch";
 				INFOPLIST_FILE = "Hakamy/Hakamy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3E3DD5F1-F51D-4A8B-B079-4FB0750EDB65";
+				PROVISIONING_PROFILE = "1FC960F4-1925-497B-A9B5-3F4E346E16D5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

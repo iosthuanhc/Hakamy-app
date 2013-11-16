@@ -10,7 +10,7 @@
 #import "CellDetail.h"
 #import "DetailRssModel.h"
 #import "RssModel.h"
-@interface DetaiRss : UIViewController{
+@interface DetaiRss : UIViewController<UIActionSheetDelegate>{
     NSMutableArray *listDetailRss;
     NSMutableData* responseData;
     NSURLRequest *request;
@@ -22,8 +22,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *backButtion;
 @property (strong, nonatomic) IBOutlet UILabel *lbltitle;
 @property (strong, nonatomic) IBOutlet UITextView *txtTextview;
+@property (strong, nonatomic) IBOutlet UIImageView *imgFull;
+@property (strong, nonatomic) IBOutlet UIButton *btnShare;
 
 - (IBAction)backButtion:(id)sender;
+- (IBAction)btnShare:(id)sender;
 
 - (IBAction)btnFacebook:(id)sender;
 - (IBAction)btnTwitter:(id)sender;

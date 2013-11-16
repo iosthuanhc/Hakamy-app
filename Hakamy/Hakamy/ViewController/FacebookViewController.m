@@ -83,6 +83,7 @@ NSInteger tapindex;
 }
 -(void)getFacebookData:(NSString*)link{
     listFB=[[NSMutableArray alloc]init];
+    
     NSString *temp=[link stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *fbRespon=[NSString stringWithContentsOfURL:[NSURL URLWithString:temp] encoding:NSUTF8StringEncoding error:Nil];
     NSDictionary *fbDic=[fbRespon JSONValue];
@@ -127,7 +128,7 @@ NSInteger tapindex;
         socialModel.isFacebook=YES;
         [listSosial addObject:socialModel];
     }
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dateVL" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dateVL" ascending:YES];
     [listSosial sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     [DejalBezelActivityView removeViewAnimated:YES];
     [tableview reloadData];
@@ -147,8 +148,8 @@ NSInteger tapindex;
     if(y > h + reload_distance)
     {
         //Call the Method to load More Data...
-        [DejalBezelActivityView activityViewForView:self.view];
-        [self getFacebookData:next];
+//        [DejalBezelActivityView activityViewForView:self.view];
+//        [self getFacebookData:next];
     }
 }
 

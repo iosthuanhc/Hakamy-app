@@ -48,6 +48,10 @@
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_border_thumbnail_songs.png" id="NI9-dl-sZd">
+                        <rect key="frame" x="263" y="4" width="54" height="62"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
@@ -61,6 +65,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="bg_border_thumbnail_songs.png" width="85" height="85"/>
         <image name="bg_cell_ft_f.png" width="632" height="134"/>
         <image name="btn_comment.png" width="20" height="20"/>
         <image name="thumbnail_twitter.png" width="75" height="76"/>

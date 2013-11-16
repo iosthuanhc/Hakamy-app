@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_social_fb.png" id="Mo5-1E-Ltc">
-                        <rect key="frame" x="287" y="171" width="20" height="19.000000000000004"/>
+                        <rect key="frame" x="287" y="171" width="20" height="19"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                     </imageView>
                     <webView contentMode="scaleToFill" id="3YW-bR-wZx">

@@ -22,10 +22,21 @@
                         <rect key="frame" x="246" y="5" width="66" height="71"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_border_thumbnail_news.png" id="Z0g-Mh-6ot">
+                        <rect key="frame" x="242" y="5" width="74" height="75"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EzC-ec-1Iz">
                         <rect key="frame" x="13" y="2" width="225" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FEv-7c-tQK">
+                        <rect key="frame" x="57" y="63" width="181" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -45,6 +56,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="lblDatetime" destination="FEv-7c-tQK" id="0Pe-i6-akj"/>
                 <outlet property="lblDescription" destination="acl-w2-q4e" id="ZcR-mI-xNu"/>
                 <outlet property="lblTitle" destination="EzC-ec-1Iz" id="NRH-aE-pgp"/>
                 <outlet property="thumbnail" destination="bI4-YS-IzA" id="344-Hp-hOm"/>
@@ -52,6 +64,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="bg_border_thumbnail_news.png" width="121" height="121"/>
         <image name="bg_cell_lastestnews.png" width="632" height="128"/>
         <image name="btn_readmore.png" width="36" height="13"/>
         <image name="thumbnail1.png" width="75" height="76"/>

@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *thumbnail;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
 @property (strong, nonatomic) IBOutlet UILabel *lblDescription;
+@property (strong, nonatomic) IBOutlet UILabel *lblDatetime;
 
 -(void)loadDataCell;
 @end

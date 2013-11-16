@@ -28,7 +28,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dZI-qN-Y9B">
                     <rect key="frame" x="6" y="15" width="44" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="btn_menu.png">
+                    <state key="normal" backgroundImage="btn_Back.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -43,6 +43,6 @@
     </objects>
     <resources>
         <image name="bg_others.png" width="640" height="1136"/>
-        <image name="btn_menu.png" width="88" height="88"/>
+        <image name="btn_Back.png" width="128" height="128"/>
     </resources>
 </document>

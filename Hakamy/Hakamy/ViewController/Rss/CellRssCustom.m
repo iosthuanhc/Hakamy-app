@@ -10,7 +10,7 @@
 
 @implementation CellRssCustom
 @synthesize thumbnail,lblDescription,lblTitle;
-@synthesize rssModel;
+@synthesize rssModel,lblDatetime;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -30,6 +30,7 @@
     
     lblTitle.text=rssModel.title;
     lblDescription.text=rssModel.news_summry;
+    lblDatetime.text=rssModel.timee;
     NSURL *url = [NSURL URLWithString:rssModel.news_thumb];
     [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
         if (succeeded) {

@@ -17,6 +17,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
 }
 @synthesize rssModel,tableview;
 @synthesize lbltitle,txtTextview;
+@synthesize imgFull,btnShare;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -85,12 +86,43 @@ static NSString *CellIdentifier = @"CellIdentifier";
         [listDetailRss addObject:_detailModel];
     }
     [DejalBezelActivityView removeViewAnimated:YES];
-//    [tableview reloadData];
+    //    [tableview reloadData];
     [self loadDatatoView];
 }
 -(void)loadDatatoView{
     lbltitle.text=[[listDetailRss objectAtIndex:0] title];
     txtTextview.text=[[listDetailRss objectAtIndex:0] news_full];
+    NSString *linktem=[[listDetailRss objectAtIndex:0] full_pic];
+//    NSString* linkImage =
+//    [[linktem componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]
+//     componentsJoinedByString:@"&w=425&h=325"];
+//    imgFull.image=[UIImage imageWithData:[NSData dataWithContentsOfFile:linkImage]];
+    
+    NSURL *url = [NSURL URLWithString:linktem];
+    [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
+        if (succeeded) {
+            // change the image in the cell
+            [imgFull setImage:image];
+            
+            // cache the image for use later (when scrolling up)
+            //venue.image = image;
+        }
+    }];
+}
+- (void)downloadImageWithURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock
+{
+    NSMutableURLRequest *request2 = [NSMutableURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request2
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               if ( !error )
+                               {
+                                   UIImage *image = [[UIImage alloc] initWithData:data];
+                                   completionBlock(YES,image);
+                               } else{
+                                   completionBlock(NO,nil);
+                               }
+                           }];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -167,6 +199,20 @@ static NSString *CellIdentifier = @"CellIdentifier";
 
 - (IBAction)backButtion:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)btnShare:(id)sender {
+    if(NSClassFromString(@"SLComposeViewController") != nil) {
+        NSString *text = _detailModel.news_full;
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_detailModel.full_pic]]];
+        NSArray *activityItems = [NSArray arrayWithObjects:text,image,TEXT_DEFAULT, nil];
+        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        activityController.excludedActivityTypes=@[UIActivityTypePostToWeibo];
+        [self presentViewController:activityController animated:YES completion:NULL];
+    }else{
+        UIActionSheet *asheet = [[UIActionSheet alloc] initWithTitle:@"Chose Option" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Mail",@"Facebook",@"Twiter", nil];
+        [asheet showInView:self.view];
+    }
 }
 - (IBAction)btnFacebook:(id)sender {
     btnIndex=0;
