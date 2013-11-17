@@ -20,7 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *thumbnail;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
 @property (strong, nonatomic) IBOutlet UILabel *lblDescription;
-@property (strong, nonatomic) IBOutlet UIButton *btnPlay;
+@property (strong, nonatomic) IBOutlet AudioButton *btnPlay;
 @property (strong, nonatomic) IBOutlet AudioButton *audioButton;
 - (void)configurePlayerButton;
 -(void)loadDataCell;
@@ -34,6 +34,6 @@
 @protocol CellMediaDelegate <NSObject>
 @optional
 -(void)shareClick:(MediaModel *)mediaModel;
--(void)playButtonClick:(UIButton *)button;
--(void)stopButtonClick:(UIButton *)button;
+-(void)playButtonClick:(AudioButton *)button;
+-(void)stopButtonClick:(AudioButton *)button;
 @end

@@ -141,7 +141,6 @@ NSInteger tapindex;
     }
     
     if ([_audioPlayer.button isEqual:button]) {
-        model.isplaying=NO;
         [_audioPlayer play];
         tapp = -1;
 
@@ -154,19 +153,25 @@ NSInteger tapindex;
         [_audioPlayer play];
     }
 }
--(void)playButtonClick:(UIButton *)button{
+-(void)playButtonClick:(AudioButton *)button{
     NSInteger index = button.tag;
+  //  BOOL aa = button.isSelected;
+    
     MediaModel *model=[listMedia objectAtIndex:index];
     if (_audioPlayer == nil) {
         _audioPlayer = [[AudioPlayer alloc] init];
     }
-    if ([_audioPlayer.button isEqual:button]) {
+    
+    if (button.isSelected) {
+        model.isplaying=NO;
         [_audioPlayer play];
         tapp = -1;
     } else {
+        
+        model.isplaying=NO;
         [_audioPlayer stop];
         tapp = button.tag;
-//        _audioPlayer.button = button;
+        _audioPlayer.button = button;
         _audioPlayer.url = [NSURL URLWithString:[NSString stringWithFormat:PLAYMP3,model._id]];
         [_audioPlayer play];
     }

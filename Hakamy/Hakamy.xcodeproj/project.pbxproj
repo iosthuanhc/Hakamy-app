@@ -100,7 +100,6 @@
 		FD5C64A6181E41AB00314C56 /* YoutubeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64A5181E41AB00314C56 /* YoutubeModel.m */; };
 		FD5C64AA181E428B00314C56 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64A9181E428B00314C56 /* DejalActivityView.m */; };
 		FD5C64AD181E4B4100314C56 /* CellMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C64AC181E4B4100314C56 /* CellMedia.m */; };
-		FD5C64AF181E4B8800314C56 /* CellMedia.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD5C64AE181E4B8800314C56 /* CellMedia.xib */; };
 		FD5C64CE181E5BB000314C56 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5C64CD181E5BB000314C56 /* CFNetwork.framework */; };
 		FD5C64D0181E5BCE00314C56 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5C64CF181E5BCE00314C56 /* SystemConfiguration.framework */; };
 		FD5C64D2181E5BEA00314C56 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5C64D1181E5BEA00314C56 /* StoreKit.framework */; };
@@ -128,6 +127,7 @@
 		FDDD4804181ACDFC004CB48E /* btn_menu_music.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47FE181ACDFC004CB48E /* btn_menu_music.png */; };
 		FDDD4805181ACDFC004CB48E /* btn_menu_rss.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD47FF181ACDFC004CB48E /* btn_menu_rss.png */; };
 		FDDD4806181ACDFC004CB48E /* btn_menu_youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = FDDD4800181ACDFC004CB48E /* btn_menu_youtube.png */; };
+		FDF38FF4183926E700E6262B /* CellMedia.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF38FF3183926E700E6262B /* CellMedia.xib */; };
 		FDF6CA8B1820AE14007CF704 /* YoutubeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF6CA8A1820AE14007CF704 /* YoutubeCell.m */; };
 		FDF6CA8D1820AE2D007CF704 /* YoutubeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF6CA8C1820AE2D007CF704 /* YoutubeCell.xib */; };
 		FDF6CA901820C540007CF704 /* TwitterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF6CA8F1820C540007CF704 /* TwitterModel.m */; };
@@ -319,7 +319,6 @@
 		FD5C64A9181E428B00314C56 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		FD5C64AB181E4B4100314C56 /* CellMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellMedia.h; path = Media/CellMedia.h; sourceTree = "<group>"; };
 		FD5C64AC181E4B4100314C56 /* CellMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellMedia.m; path = Media/CellMedia.m; sourceTree = "<group>"; };
-		FD5C64AE181E4B8800314C56 /* CellMedia.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellMedia.xib; sourceTree = "<group>"; };
 		FD5C64CD181E5BB000314C56 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		FD5C64CF181E5BCE00314C56 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FD5C64D1181E5BEA00314C56 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -349,6 +348,7 @@
 		FDDD47FE181ACDFC004CB48E /* btn_menu_music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_music.png; sourceTree = "<group>"; };
 		FDDD47FF181ACDFC004CB48E /* btn_menu_rss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_rss.png; sourceTree = "<group>"; };
 		FDDD4800181ACDFC004CB48E /* btn_menu_youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu_youtube.png; sourceTree = "<group>"; };
+		FDF38FF3183926E700E6262B /* CellMedia.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellMedia.xib; path = Media/CellMedia.xib; sourceTree = "<group>"; };
 		FDF6CA891820AE14007CF704 /* YoutubeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YoutubeCell.h; path = Youtube/YoutubeCell.h; sourceTree = "<group>"; };
 		FDF6CA8A1820AE14007CF704 /* YoutubeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YoutubeCell.m; path = Youtube/YoutubeCell.m; sourceTree = "<group>"; };
 		FDF6CA8C1820AE2D007CF704 /* YoutubeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YoutubeCell.xib; path = Youtube/YoutubeCell.xib; sourceTree = "<group>"; };
@@ -689,7 +689,7 @@
 				FD37143C18196D7200427858 /* MediaViewController.xib */,
 				FD5C64AB181E4B4100314C56 /* CellMedia.h */,
 				FD5C64AC181E4B4100314C56 /* CellMedia.m */,
-				FD5C64AE181E4B8800314C56 /* CellMedia.xib */,
+				FDF38FF3183926E700E6262B /* CellMedia.xib */,
 			);
 			name = Media;
 			sourceTree = "<group>";
@@ -939,6 +939,7 @@
 				FDDD47FA181AC770004CB48E /* btn_social_youtube.png in Resources */,
 				FD5C64DF181E6BAC00314C56 /* InstagramCell.xib in Resources */,
 				FDDD47F4181AC770004CB48E /* btn_social_fb.jpg in Resources */,
+				FDF38FF4183926E700E6262B /* CellMedia.xib in Resources */,
 				FDFFB37A181B61EF004A8351 /* bg_page_tittle_news.png in Resources */,
 				FD0D6EB8182E9F9600C8D416 /* bg_cell.png in Resources */,
 				FD2356AE1822AE5200887BFF /* Detailyoutube.xib in Resources */,
@@ -968,7 +969,6 @@
 				FD37143E18196D7200427858 /* MediaViewController.xib in Resources */,
 				FD37144D18196DC400427858 /* FacebookViewController.xib in Resources */,
 				FDDD47F9181AC770004CB48E /* btn_social_tw.png in Resources */,
-				FD5C64AF181E4B8800314C56 /* CellMedia.xib in Resources */,
 				FD37144318196D8E00427858 /* InstagramViewController.xib in Resources */,
 				FD2356A318218BF700887BFF /* loading.png in Resources */,
 				FD2356B31822B2FE00887BFF /* DetailInstagram.xib in Resources */,

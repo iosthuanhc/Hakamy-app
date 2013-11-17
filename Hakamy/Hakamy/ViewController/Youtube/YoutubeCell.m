@@ -42,7 +42,6 @@
         if (succeeded) {
             // change the image in the cell
             [imageview setImage:image];
-            
             // cache the image for use later (when scrolling up)
             //venue.image = image;
         }
