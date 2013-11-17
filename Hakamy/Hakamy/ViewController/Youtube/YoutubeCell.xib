@@ -37,7 +37,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FLv-qF-N7N">
-                        <rect key="frame" x="61" y="170" width="223" height="17"/>
+                        <rect key="frame" x="61" y="166" width="223" height="17"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
@@ -47,10 +47,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </webView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zyt-0S-pkR">
+                        <rect key="frame" x="136" y="54" width="50" height="50"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" backgroundImage="btn_play1.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="btn_playYoutube:" destination="G5p-6z-sRX" eventType="touchUpInside" id="3uH-9A-ZEh"/>
+                        </connections>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="btn_playYoutube" destination="zyt-0S-pkR" id="qtK-WZ-0zn"/>
                 <outlet property="imageview" destination="hna-Tz-k6z" id="IHf-T9-gXf"/>
                 <outlet property="lblTitle" destination="FLv-qF-N7N" id="DCF-OM-J45"/>
                 <outlet property="share" destination="5pB-GO-BY8" id="Hrz-qF-pdF"/>
@@ -61,6 +73,7 @@
     <resources>
         <image name="bg_cell_youtube.png" width="629" height="391"/>
         <image name="bg_thumbnail_youtube.png" width="45" height="45"/>
+        <image name="btn_play1.png" width="128" height="128"/>
         <image name="btn_share.png" width="36" height="28"/>
     </resources>
 </document>

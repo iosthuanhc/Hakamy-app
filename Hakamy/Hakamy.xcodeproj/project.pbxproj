@@ -31,6 +31,8 @@
 		FD0EDB0E18239C8E002B373D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0D18239C8E002B373D /* Social.framework */; };
 		FD0EDB1018239C99002B373D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0F18239C99002B373D /* Twitter.framework */; };
 		FD0EDB1218239CCE002B373D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB1118239CCE002B373D /* MessageUI.framework */; };
+		FD1B5ADC1838B67B00692A55 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B5ADA1838B67B00692A55 /* CoreMedia.framework */; };
+		FD1B5ADD1838B67B00692A55 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B5ADB1838B67B00692A55 /* MediaPlayer.framework */; };
 		FD23568C182164D100887BFF /* SosialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23568B182164D100887BFF /* SosialCell.m */; };
 		FD23568E182164EA00887BFF /* SosialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD23568D182164EA00887BFF /* SosialCell.xib */; };
 		FD2356921821870800887BFF /* WebviewFollow.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2356901821870800887BFF /* WebviewFollow.m */; };
@@ -199,6 +201,8 @@
 		FD0EDB0D18239C8E002B373D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FD0EDB0F18239C99002B373D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		FD0EDB1118239CCE002B373D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		FD1B5ADA1838B67B00692A55 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FD1B5ADB1838B67B00692A55 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		FD23568A182164D100887BFF /* SosialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SosialCell.h; sourceTree = "<group>"; };
 		FD23568B182164D100887BFF /* SosialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SosialCell.m; sourceTree = "<group>"; };
 		FD23568D182164EA00887BFF /* SosialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SosialCell.xib; sourceTree = "<group>"; };
@@ -382,11 +386,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD1B5ADC1838B67B00692A55 /* CoreMedia.framework in Frameworks */,
+				FD1B5ADD1838B67B00692A55 /* MediaPlayer.framework in Frameworks */,
+				FD5C64D8181E5C8800314C56 /* MediaToolbox.framework in Frameworks */,
 				FD0EDB1218239CCE002B373D /* MessageUI.framework in Frameworks */,
 				FD0EDB1018239C99002B373D /* Twitter.framework in Frameworks */,
 				FD0EDB0E18239C8E002B373D /* Social.framework in Frameworks */,
 				FD5C64DA181E5CAB00314C56 /* libz.dylib in Frameworks */,
-				FD5C64D8181E5C8800314C56 /* MediaToolbox.framework in Frameworks */,
 				FD5C64D6181E5C8000314C56 /* QuartzCore.framework in Frameworks */,
 				FD5C64D4181E5C7700314C56 /* Security.framework in Frameworks */,
 				FD5C64D2181E5BEA00314C56 /* StoreKit.framework in Frameworks */,
@@ -433,6 +439,8 @@
 		FD01F7E81818FD4A00EBD3DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD1B5ADA1838B67B00692A55 /* CoreMedia.framework */,
+				FD1B5ADB1838B67B00692A55 /* MediaPlayer.framework */,
 				FD0EDB1118239CCE002B373D /* MessageUI.framework */,
 				FD0EDB0F18239C99002B373D /* Twitter.framework */,
 				FD0EDB0D18239C8E002B373D /* Social.framework */,

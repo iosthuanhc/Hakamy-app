@@ -7,7 +7,6 @@
 //
 
 #import "YoutubeCell.h"
-
 @implementation YoutubeCell
 @synthesize imageview,lblTitle,share,youtubeModel;
 @synthesize delegate;
@@ -67,6 +66,10 @@
 - (void)configureView
 {
     [self displayGoogleVideo:youtubeModel.src frame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    
+}
+
+- (IBAction)btn_playYoutube:(id)sender {
     
 }
 - (void) displayGoogleVideo:(NSString *)urlString frame:(CGRect)frame
