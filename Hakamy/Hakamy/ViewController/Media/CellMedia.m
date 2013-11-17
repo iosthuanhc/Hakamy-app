@@ -59,11 +59,13 @@
     btnPlay.selected=NO;
 }
 - (IBAction)btnPlay:(id)sender {
-    if (btnPlay.isSelected) {
-        btnPlay.selected=NO;
-    }else{
-        btnPlay.selected=YES;
-    }
+//    if (btnPlay.isSelected) {
+//        btnPlay.selected=NO;
+////        [delegate stopButtonClick:btnPlay];
+//    }else{
+//        btnPlay.selected=YES;
+//        
+//    }
     [delegate playButtonClick:btnPlay];
 }
 @end

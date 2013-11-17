@@ -35,4 +35,5 @@
 @optional
 -(void)shareClick:(MediaModel *)mediaModel;
 -(void)playButtonClick:(UIButton *)button;
+-(void)stopButtonClick:(UIButton *)button;
 @end

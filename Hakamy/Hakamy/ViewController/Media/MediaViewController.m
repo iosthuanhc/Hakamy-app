@@ -163,16 +163,33 @@ NSInteger tapindex;
     if ([_audioPlayer.button isEqual:button]) {
         [_audioPlayer play];
         tapp = -1;
-//        model.isplaying=NO;
     } else {
         [_audioPlayer stop];
-//        model.isplaying=YES;
         tapp = button.tag;
 //        _audioPlayer.button = button;
         _audioPlayer.url = [NSURL URLWithString:[NSString stringWithFormat:PLAYMP3,model._id]];
         [_audioPlayer play];
     }
-    
+    [self.tableView reloadData];
+}
+-(void)stopButtonClick:(UIButton *)button{
+    NSInteger index = button.tag;
+    [_audioPlayer stop];
+    tapp = index;
+//    MediaModel *model=[listMedia objectAtIndex:index];
+//    if (_audioPlayer == nil) {
+//        _audioPlayer = [[AudioPlayer alloc] init];
+//    }
+//    if ([_audioPlayer.button isEqual:button]) {
+//        [_audioPlayer play];
+//        tapp = -1;
+//    } else {
+//        [_audioPlayer stop];
+//        tapp = button.tag;
+//        //        _audioPlayer.button = button;
+//        _audioPlayer.url = [NSURL URLWithString:[NSString stringWithFormat:PLAYMP3,model._id]];
+//        [_audioPlayer play];
+//    }
     [self.tableView reloadData];
 }
 -(void)shareClick:(MediaModel *)mediaModel{
