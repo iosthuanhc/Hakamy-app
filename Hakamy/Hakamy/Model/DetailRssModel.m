@@ -9,13 +9,14 @@
 #import "DetailRssModel.h"
 
 @implementation DetailRssModel
-@synthesize news_full,title,_id,full_pic;
+@synthesize news_full,title,_id,full_pic,timeDetai;
 
 -(id)initWithJSON:(NSDictionary *)dic{
     self._id=[dic objectForKey:@"id"];
     self.title=[dic objectForKey:@"title"];
     self.news_full=[dic objectForKey:@"news_full"];
     self.full_pic=[dic objectForKey:@"full_pic"];
+    self.timeDetai=[dic objectForKey:@"timee"];
     return self;
 }
 @end

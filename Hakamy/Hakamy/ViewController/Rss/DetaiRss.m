@@ -16,7 +16,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
     NSInteger btnIndex;
 }
 @synthesize rssModel,tableview;
-@synthesize lbltitle,txtTextview;
+@synthesize lbltitle,txtTextview,lblTime;
 @synthesize imgFull,btnShare;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -93,6 +93,13 @@ static NSString *CellIdentifier = @"CellIdentifier";
     lbltitle.text=[[listDetailRss objectAtIndex:0] title];
     txtTextview.text=[[listDetailRss objectAtIndex:0] news_full];
     NSString *linktem=[[listDetailRss objectAtIndex:0] full_pic];
+    NSString *actDate = [NSString stringWithFormat:@"/Date(%@)/",[[listDetailRss objectAtIndex:0] timeDetai]];
+    NSString *nDate = [[[[actDate componentsSeparatedByString:@"("] objectAtIndex:1] componentsSeparatedByString:@")"] objectAtIndex:0];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:([nDate doubleValue] / 1000)];
+    NSDateFormatter *dtfrm = [[NSDateFormatter alloc] init];
+    [dtfrm setDateFormat:@"MM/dd/yyyy"];
+    NSString *dateText= [dtfrm stringFromDate:date];
+    lblTime.text=dateText;
 //    NSString* linkImage =
 //    [[linktem componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]
 //     componentsJoinedByString:@"&w=425&h=325"];

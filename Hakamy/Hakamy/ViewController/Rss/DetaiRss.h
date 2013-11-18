@@ -16,6 +16,7 @@
     NSURLRequest *request;
     NSURLConnection *connection;
 }
+@property (strong, nonatomic) IBOutlet UILabel *lblTime;
 @property (strong, nonatomic) DetailRssModel *detailModel;
 @property (nonatomic,retain) RssModel *rssModel;
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
