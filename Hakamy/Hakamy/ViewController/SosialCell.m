@@ -33,6 +33,13 @@
     lblText.text=twitterModel.messageFB;
     imageAvata.image=[UIImage imageNamed:@"btn_social_fb.png"];
 }
+-(void)loadDataCellLink{
+    if (socialModel.messageFB==NULL) {
+        lblText.text=socialModel.messageFB;
+    }
+    lblText.text=socialModel.messageFB;
+    imageAvata.image=[UIImage imageNamed:@"btn_social_fb.png"];
+}
 -(void)loadDataCell{
     if (twitterModel.isFacebook) {
         imageAvata.image=[UIImage imageNamed:@"btn_social_fb.png"];
@@ -45,6 +52,7 @@
         imageAvata.image=[UIImage imageNamed:@"thumbnail_twitter.png"];
         lblText.text=twitterModel.textConten;
     }
+    
 //    lblText.text=[NSString stringWithFormat:@"%@",twitterModel.dateVL];
 //    NSURL *url = [NSURL URLWithString:youtubeModel.imageurl];
 //    [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {

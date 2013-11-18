@@ -218,7 +218,7 @@ NSInteger tapindex;
             }
             cell.twitterModel=model;
             cell.socialModel=model;
-            [cell loadSocialCell];
+            [cell loadDataCellLink];
             return cell;
         }else{
             CellImage *cell = (CellImage *) [tableview dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -276,17 +276,17 @@ NSInteger tapindex;
         return 70.0f;
     }
     if ([model.socialType isEqualToString:@"photo"]) {
-        return 200.0f;
+        return 250.0f;
     }
     if ([model.socialType isEqualToString:@"link"]) {
         if (model.picture==NULL) {
             return 70.0f;
         }else{
-            return 200.0f;
+            return 250.0f;
         }
     }
     if ([model.socialType isEqualToString:@"video"]) {
-        return 200.0f;
+        return 250.0f;
     }else {
         return 70.0f;
     }

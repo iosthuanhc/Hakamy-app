@@ -15,9 +15,15 @@
     NSDictionary *dicimage=[dic objectForKey:@"images"];
     NSDictionary *detailImageDic=[dicimage objectForKey:@"low_resolution"];
     self.url=[detailImageDic objectForKey:@"url"];
+    
     NSDictionary *userDic=[dic objectForKey:@"user"];
     self.username=[userDic objectForKey:@"username"];
-    self.full_name=[userDic objectForKey:@"full_name"];
+    
+    NSDictionary *camTion=[dic objectForKey:@"caption"];
+    if (camTion!=(id)[NSNull null]) {
+        
+        self.full_name=[camTion objectForKey:@"text"];
+    }
     return self;
 }
 @end

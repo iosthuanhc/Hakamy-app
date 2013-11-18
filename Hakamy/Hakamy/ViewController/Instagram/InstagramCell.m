@@ -45,6 +45,7 @@
     }];
 }
 -(void)loadDataCell{
+    
     lblTitle.text=instagramModel.full_name;
     NSURL *url = [NSURL URLWithString:instagramModel.url];
     [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {

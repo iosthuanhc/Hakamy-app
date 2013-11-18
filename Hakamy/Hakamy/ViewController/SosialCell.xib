@@ -49,7 +49,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_border_thumbnail_songs.png" id="NI9-dl-sZd">
-                        <rect key="frame" x="263" y="4" width="54" height="62"/>
+                        <rect key="frame" x="263" y="4" width="54" height="57"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
                 </subviews>

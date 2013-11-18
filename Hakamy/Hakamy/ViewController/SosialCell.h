@@ -23,4 +23,5 @@
 -(void)loadSocialCell;
 - (IBAction)btnShare:(id)sender;
 -(void)loadDataCell;
+-(void)loadDataCellLink;
 @end

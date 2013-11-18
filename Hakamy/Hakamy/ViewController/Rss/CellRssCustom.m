@@ -30,7 +30,13 @@
     
     lblTitle.text=rssModel.title;
     lblDescription.text=rssModel.news_summry;
-    lblDatetime.text=rssModel.timee;
+    NSString *actDate = [NSString stringWithFormat:@"/Date(%@)/",rssModel.timee];
+    NSString *nDate = [[[[actDate componentsSeparatedByString:@"("] objectAtIndex:1] componentsSeparatedByString:@")"] objectAtIndex:0];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:([nDate doubleValue] / 1000)];
+    NSDateFormatter *dtfrm = [[NSDateFormatter alloc] init];
+    [dtfrm setDateFormat:@"MM/dd/yyyy"];
+    NSString *dateText= [dtfrm stringFromDate:date];
+    lblDatetime.text=dateText;
     NSURL *url = [NSURL URLWithString:rssModel.news_thumb];
     [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
         if (succeeded) {
