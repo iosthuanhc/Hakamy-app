@@ -13,6 +13,7 @@
 #import "InstagramViewController.h"
 #import "YoutubeViewController.h"
 #import "FacebookViewController.h"
+#import "NewInstagramController.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -39,7 +40,7 @@
     UINavigationController *mediaNav = [[UINavigationController alloc] initWithRootViewController:mediaVC];
     [viewControllers addObject:mediaNav];
     //------
-    InstagramViewController *instagramVC = [[InstagramViewController alloc] initWithNibName:@"InstagramViewController" bundle:nil];
+    NewInstagramController *instagramVC = [[NewInstagramController alloc] initWithNibName:@"NewInstagramController" bundle:nil];
     [instagramVC setTitle:@"Instagram ViewController"];
     UINavigationController *instagramNav = [[UINavigationController alloc] initWithRootViewController:instagramVC];
     [viewControllers addObject:instagramNav];
