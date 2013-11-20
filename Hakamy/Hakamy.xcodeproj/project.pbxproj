@@ -31,6 +31,10 @@
 		FD0EDB0E18239C8E002B373D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0D18239C8E002B373D /* Social.framework */; };
 		FD0EDB1018239C99002B373D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0F18239C99002B373D /* Twitter.framework */; };
 		FD0EDB1218239CCE002B373D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB1118239CCE002B373D /* MessageUI.framework */; };
+		FD1AD272183D05A600A2891A /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AD271183D05A500A2891A /* splashscreen.png */; };
+		FD1AD27E183D1AA500A2891A /* LBYouTubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD278183D1AA500A2891A /* LBYouTubeExtractor.m */; };
+		FD1AD27F183D1AA500A2891A /* LBYouTubePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD27A183D1AA500A2891A /* LBYouTubePlayerController.m */; };
+		FD1AD280183D1AA500A2891A /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD27C183D1AA500A2891A /* LBYouTubePlayerViewController.m */; };
 		FD1B5ADC1838B67B00692A55 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B5ADA1838B67B00692A55 /* CoreMedia.framework */; };
 		FD1B5ADD1838B67B00692A55 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B5ADB1838B67B00692A55 /* MediaPlayer.framework */; };
 		FD23568C182164D100887BFF /* SosialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23568B182164D100887BFF /* SosialCell.m */; };
@@ -201,6 +205,14 @@
 		FD0EDB0D18239C8E002B373D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FD0EDB0F18239C99002B373D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		FD0EDB1118239CCE002B373D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		FD1AD271183D05A500A2891A /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashscreen.png; sourceTree = "<group>"; };
+		FD1AD276183D1AA500A2891A /* LBYouTube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTube.h; sourceTree = "<group>"; };
+		FD1AD277183D1AA500A2891A /* LBYouTubeExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubeExtractor.h; sourceTree = "<group>"; };
+		FD1AD278183D1AA500A2891A /* LBYouTubeExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubeExtractor.m; sourceTree = "<group>"; };
+		FD1AD279183D1AA500A2891A /* LBYouTubePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubePlayerController.h; sourceTree = "<group>"; };
+		FD1AD27A183D1AA500A2891A /* LBYouTubePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubePlayerController.m; sourceTree = "<group>"; };
+		FD1AD27B183D1AA500A2891A /* LBYouTubePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubePlayerViewController.h; sourceTree = "<group>"; };
+		FD1AD27C183D1AA500A2891A /* LBYouTubePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubePlayerViewController.m; sourceTree = "<group>"; };
 		FD1B5ADA1838B67B00692A55 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		FD1B5ADB1838B67B00692A55 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		FD23568A182164D100887BFF /* SosialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SosialCell.h; sourceTree = "<group>"; };
@@ -386,6 +398,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD01F7EA1818FD4A00EBD3DB /* Foundation.framework in Frameworks */,
 				FD1B5ADC1838B67B00692A55 /* CoreMedia.framework in Frameworks */,
 				FD1B5ADD1838B67B00692A55 /* MediaPlayer.framework in Frameworks */,
 				FD5C64D8181E5C8800314C56 /* MediaToolbox.framework in Frameworks */,
@@ -400,7 +413,6 @@
 				FD5C64CE181E5BB000314C56 /* CFNetwork.framework in Frameworks */,
 				FD01F7EC1818FD4A00EBD3DB /* CoreGraphics.framework in Frameworks */,
 				FD01F7EE1818FD4A00EBD3DB /* UIKit.framework in Frameworks */,
-				FD01F7EA1818FD4A00EBD3DB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +527,7 @@
 		FD01F81918190F2700EBD3DB /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				FD1AD273183D1AA500A2891A /* Youtube */,
 				FD2356B41822B81F00887BFF /* popView */,
 				FD23569418218BF700887BFF /* AudioPlayer */,
 				FD5C64A7181E428B00314C56 /* Loading */,
@@ -575,6 +588,20 @@
 			path = CellSocial;
 			sourceTree = "<group>";
 		};
+		FD1AD273183D1AA500A2891A /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				FD1AD276183D1AA500A2891A /* LBYouTube.h */,
+				FD1AD277183D1AA500A2891A /* LBYouTubeExtractor.h */,
+				FD1AD278183D1AA500A2891A /* LBYouTubeExtractor.m */,
+				FD1AD279183D1AA500A2891A /* LBYouTubePlayerController.h */,
+				FD1AD27A183D1AA500A2891A /* LBYouTubePlayerController.m */,
+				FD1AD27B183D1AA500A2891A /* LBYouTubePlayerViewController.h */,
+				FD1AD27C183D1AA500A2891A /* LBYouTubePlayerViewController.m */,
+			);
+			path = Youtube;
+			sourceTree = "<group>";
+		};
 		FD23569418218BF700887BFF /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +644,7 @@
 				FD31F4481835BC2000F8712F /* Icon_114x114.png */,
 				FD31F4491835BC2000F8712F /* Icon_120x120.png */,
 				FD31F44A1835BC2000F8712F /* Icon_57x57.png */,
+				FD1AD271183D05A500A2891A /* splashscreen.png */,
 			);
 			name = icon;
 			path = ../Libs/AudioPlayer/images/icon;
@@ -988,6 +1016,7 @@
 				FD37146E1819726600427858 /* PaperFoldResources.bundle in Resources */,
 				FD2356A418218BF700887BFF /* play.png in Resources */,
 				FDDD47F3181AC770004CB48E /* btn_menu.png in Resources */,
+				FD1AD272183D05A600A2891A /* splashscreen.png in Resources */,
 				FD37142F18196C8400427858 /* HomeViewController.xib in Resources */,
 				FDDD4805181ACDFC004CB48E /* btn_menu_rss.png in Resources */,
 				FDFFB386181B61EF004A8351 /* thumbnail1.png in Resources */,
@@ -1040,6 +1069,7 @@
 				FD37143D18196D7200427858 /* MediaViewController.m in Sources */,
 				FD37147B181979A100427858 /* MenuViewController.m in Sources */,
 				FD37144C18196DC400427858 /* FacebookViewController.m in Sources */,
+				FD1AD280183D1AA500A2891A /* LBYouTubePlayerViewController.m in Sources */,
 				FD5C6491181E18FA00314C56 /* SBJsonStreamParser.m in Sources */,
 				FD5C6496181E18FA00314C56 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				FD5C6498181E18FA00314C56 /* SBJsonTokeniser.m in Sources */,
@@ -1052,12 +1082,14 @@
 				FDF6CA931820C555007CF704 /* FacebookModel.m in Sources */,
 				FD37146F1819726600427858 /* PaperFoldSwipeHintView.m in Sources */,
 				FD0D6EB5182E999500C8D416 /* DetaiRss.m in Sources */,
+				FD1AD27F183D1AA500A2891A /* LBYouTubePlayerController.m in Sources */,
 				FD5C64AA181E428B00314C56 /* DejalActivityView.m in Sources */,
 				FD2356AD1822AE5200887BFF /* Detailyoutube.m in Sources */,
 				FD5C6497181E18FA00314C56 /* SBJsonStreamWriterState.m in Sources */,
 				FD3714701819726600427858 /* PaperFoldView.m in Sources */,
 				FD5C6494181E18FA00314C56 /* SBJsonStreamParserState.m in Sources */,
 				FD2356A218218BF700887BFF /* AudioStreamer.m in Sources */,
+				FD1AD27E183D1AA500A2891A /* LBYouTubeExtractor.m in Sources */,
 				FD37146A1819726600427858 /* FacingView.m in Sources */,
 				FD5C649A181E18FA00314C56 /* SBJsonWriter.m in Sources */,
 				FD5C648F181E18FA00314C56 /* NSObject+SBJson.m in Sources */,

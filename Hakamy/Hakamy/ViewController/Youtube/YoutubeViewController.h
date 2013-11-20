@@ -10,8 +10,9 @@
 #import "YoutubeModel.h"
 #import "YoutubeCell.h"
 #import "Detailyoutube.h"
-@interface YoutubeViewController : UIViewController<DetailYoutubeDelegate,YoutubeDelegate,UIActionSheetDelegate>{
-    
+#import "LBYouTubePlayerViewController.h"
+@interface YoutubeViewController : UIViewController<DetailYoutubeDelegate,YoutubeDelegate,UIActionSheetDelegate,LBYouTubePlayerControllerDelegate>{
+    LBYouTubePlayerViewController *lbYoutubePlayerVC;
     NSMutableArray *lisYoutube;
     NSMutableData* responseData;
     NSURLRequest *request;

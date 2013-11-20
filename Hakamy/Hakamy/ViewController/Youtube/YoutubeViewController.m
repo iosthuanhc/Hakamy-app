@@ -8,11 +8,15 @@
 
 #import "YoutubeViewController.h"
 #import "UIViewController+MJPopupViewController.h"
+
+#import "LBYouTubePlayerViewController.h"
 @interface YoutubeViewController ()
 
 @end
 NSInteger btnIndex;
-@implementation YoutubeViewController
+@implementation YoutubeViewController{
+    MPMoviePlayerViewController *moviePlayer;
+}
 @synthesize tableview;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -145,13 +149,41 @@ NSInteger tapindex;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *URLString =@"http://www.youtube.com/v/C-RofZtaSfQ";
+//    NSURL *urlToLoad = [NSURL URLWithString:URLString];
+//    moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:urlToLoad];
+//
+//    [[NSNotificationCenter defaultCenter] removeObserver:moviePlayer  name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer.moviePlayer];
+//    [self presentModalViewController:moviePlayer animated:YES];
+//    [moviePlayer.moviePlayer play];
     
-    //    Detailyoutube *secondDetailViewController = [[Detailyoutube alloc] initWithNibName:@"Detailyoutube" bundle:nil];
-    //    YoutubeModel *model=[lisYoutube objectAtIndex:indexPath.row];
-    //    secondDetailViewController.youtubeModel=model;
-    //    secondDetailViewController.delegate=self;
-    //    secondDetailViewController.view.layer.cornerRadius=8;
-    //    [self presentPopupViewController:secondDetailViewController animationType:MJPopupViewAnimationSlideBottomBottom];
+    
+    
+    
+//    Detailyoutube *secondDetailViewController = [[Detailyoutube alloc] initWithNibName:@"Detailyoutube" bundle:nil];
+//    YoutubeModel *model=[lisYoutube objectAtIndex:indexPath.row];
+//    secondDetailViewController.youtubeModel=model;
+//    secondDetailViewController.delegate=self;
+//    secondDetailViewController.view.layer.cornerRadius=8;
+//    [self presentPopupViewController:secondDetailViewController animationType:MJPopupViewAnimationSlideBottomBottom];
+    lbYoutubePlayerVC = [[LBYouTubePlayerViewController alloc]initWithYouTubeURL:[NSURL URLWithString:URLString] quality:LBYouTubeVideoQualityLarge];
+    lbYoutubePlayerVC.delegate=self;
+}
+#pragma mark - LBYouTubePlayerControllerDelegate methods
+
+-(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller didSuccessfullyExtractYouTubeURL:(NSURL *)videoURL
+{
+    moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:videoURL];
+    [moviePlayer.moviePlayer prepareToPlay];
+    [moviePlayer.moviePlayer play];
+    [self presentModalViewController:moviePlayer animated:YES];
+}
+
+-(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller failedExtractingYouTubeURLWithError:(NSError *)error
+{
+    NSLog(@"URL extracting failed with error: %@", error);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"failed" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 -(void)backtoMainView{
     [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];

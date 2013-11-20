@@ -96,7 +96,10 @@ NSInteger tapindex;
     for(NSDictionary *item in results)
     {
         FacebookModel *prf = [[FacebookModel alloc]initWithJSON:item];
-        [listFB addObject:prf];
+        if (prf.messageFB!=nil) {
+            [listFB addObject:prf];
+        }
+        
     }
     [self loadData];
 }

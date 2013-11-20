@@ -7,7 +7,7 @@
 //
 
 #import "Detailyoutube.h"
-
+#import <MediaPlayer/MediaPlayer.h>
 @interface Detailyoutube ()
 - (void)configureView;
 @end
@@ -31,7 +31,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     
-    [self configureView];
+//    [self configureView];
 }
 - (void)didReceiveMemoryWarning
 {
