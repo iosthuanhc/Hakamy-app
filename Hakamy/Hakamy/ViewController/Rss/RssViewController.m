@@ -28,7 +28,6 @@ NSInteger btnIndex;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     lisRss=[[NSMutableArray alloc]init];
-    
     [self getJSONValues];
 }
 -(void)viewWillAppear:(BOOL)animated{

@@ -14,16 +14,23 @@
 @property (nonatomic ,assign) id<YoutubeDelegate> delegate;
 @property (nonatomic,retain) YoutubeModel *youtubeModel;
 @property (strong, nonatomic) IBOutlet UIImageView *imageview;
+@property (strong, nonatomic) IBOutlet UIImageView *imgBackground;
+@property (strong, nonatomic) IBOutlet UIImageView *imgThumb;
+
+
 @property (strong, nonatomic) IBOutlet UIButton *share;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
 @property (strong, nonatomic) IBOutlet UIWebView *webview;
 @property (strong, nonatomic) IBOutlet UIButton *btn_playYoutube;
+
 @property (nonatomic,retain) SocialModel *socialModel;
 -(void)loadSocialCell;
 - (IBAction)share:(id)sender;
 -(void)loadDataCell;
 - (void)configureView;
 - (IBAction)btn_playYoutube:(id)sender;
+-(void) addCellAutoSize:(float)h size:(float) si;
+-(void) addCellNormal;
 @end
 @protocol YoutubeDelegate <NSObject>
 @optional

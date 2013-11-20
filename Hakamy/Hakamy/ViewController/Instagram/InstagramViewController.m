@@ -26,6 +26,7 @@ NSInteger btnIndex;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self getJSONValues];
     // Do any additional setup after loading the view from its nib.
 }
 NSInteger tapindex;
@@ -41,7 +42,6 @@ NSInteger tapindex;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
-    [self getJSONValues];
 }
 #pragma mark JSON get
 -(void)getJSONValues{

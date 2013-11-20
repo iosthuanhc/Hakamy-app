@@ -26,6 +26,8 @@ NSInteger btnIndex;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self getJSONValues];
     // Do any additional setup after loading the view from its nib.
 }
 NSInteger tapindex;
@@ -41,7 +43,6 @@ NSInteger tapindex;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
-    [self getJSONValues];
 }
 #pragma mark JSON get
 -(void)getJSONValues{
@@ -90,6 +91,17 @@ NSInteger tapindex;
     // Return the number of sections.
     return 1;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YoutubeModel *model=[lisYoutube objectAtIndex:indexPath.row];
+    if (model.title.length > 39) {
+        NSInteger abc = model.title.length/39;
+        return 250+(5*abc);
+    }else
+    {
+        return 250;
+    }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -120,20 +132,26 @@ NSInteger tapindex;
         }
         YoutubeModel *model=[lisYoutube objectAtIndex:indexPath.row];
         cell.youtubeModel=model;
+
+        if (model.title.length > 39) {
+                NSInteger abc = model.title.length/39;
+                [cell addCellAutoSize:32+(5+abc) size:(abc+5)];
+            }else
+                [cell addCellNormal];
+        
         cell.delegate=self;
-        [cell loadDataCell];
         return cell;
     }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    Detailyoutube *secondDetailViewController = [[Detailyoutube alloc] initWithNibName:@"Detailyoutube" bundle:nil];
-//    YoutubeModel *model=[lisYoutube objectAtIndex:indexPath.row];
-//    secondDetailViewController.youtubeModel=model;
-//    secondDetailViewController.delegate=self;
-//    secondDetailViewController.view.layer.cornerRadius=8;
-//    [self presentPopupViewController:secondDetailViewController animationType:MJPopupViewAnimationSlideBottomBottom];
+    //    Detailyoutube *secondDetailViewController = [[Detailyoutube alloc] initWithNibName:@"Detailyoutube" bundle:nil];
+    //    YoutubeModel *model=[lisYoutube objectAtIndex:indexPath.row];
+    //    secondDetailViewController.youtubeModel=model;
+    //    secondDetailViewController.delegate=self;
+    //    secondDetailViewController.view.layer.cornerRadius=8;
+    //    [self presentPopupViewController:secondDetailViewController animationType:MJPopupViewAnimationSlideBottomBottom];
 }
 -(void)backtoMainView{
     [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];

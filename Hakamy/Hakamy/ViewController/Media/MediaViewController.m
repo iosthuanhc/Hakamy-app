@@ -27,7 +27,8 @@ NSInteger btnIndex;
 {
     tapp = -1;
     [super viewDidLoad];
-
+    
+    [self getJSONValues];
     // Do any additional setup after loading the view from its nib.
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -35,7 +36,6 @@ NSInteger btnIndex;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
-    [self getJSONValues];
 }
 NSInteger tapindex;
 - (IBAction)btnMenu:(id)sender {
