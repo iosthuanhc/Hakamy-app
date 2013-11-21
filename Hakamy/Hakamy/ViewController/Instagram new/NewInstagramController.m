@@ -118,7 +118,7 @@
     IntagramModel *model=[lisInstagram objectAtIndex:(rowIndex*2)+rowIndex+colIndex];
 
     dic.lblDmm.text=model.full_name;
-
+    dic.inModel=[lisInstagram objectAtIndex:rowIndex];
     [dic loadImageDetail:(rowIndex*2)+rowIndex+colIndex];
    
     

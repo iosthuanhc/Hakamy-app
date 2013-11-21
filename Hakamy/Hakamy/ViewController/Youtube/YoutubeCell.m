@@ -108,7 +108,7 @@
 }
 
 - (IBAction)btn_playYoutube:(id)sender {
-    
+    [delegate playYoutube:youtubeModel.youtubeID];
 }
 - (void) displayGoogleVideo:(NSString *)urlString frame:(CGRect)frame
 {

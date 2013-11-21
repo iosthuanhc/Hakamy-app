@@ -13,6 +13,7 @@
 
 @implementation DetailInstagramController
 @synthesize imageView,listIntag,lblDmm,lblNumber;
+@synthesize inModel;
 NSInteger indexNow;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,16 +26,17 @@ NSInteger indexNow;
 
 - (void)viewDidLoad
 {
-    
-
     [super viewDidLoad];
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)] ;
+    tapRecognizer.numberOfTapsRequired = 1;
+    tapRecognizer.numberOfTouchesRequired = 1;
+    [imageView addGestureRecognizer:tapRecognizer];
     // Do any additional setup after loading the view from its nib.
 }
 -(void)viewDidAppear:(BOOL)animated
 {
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
     [self loadImageDetail:indexNow];
-
    
 }
 - (void)didReceiveMemoryWarning
@@ -42,15 +44,30 @@ NSInteger indexNow;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)tapAction:(UITapGestureRecognizer*)sender{
+    //touch
+    CGPoint touchPoint = [sender locationInView:imageView];
+    CGPoint tapPointInView = [imageView convertPoint:touchPoint toView:self.view];
+    if (tapPointInView.x < 100) {
+        //touch left
+        [self previout:sender];
+    }
+    if (tapPointInView.x > 200) {
+        //touch right
+        [self next:sender];
+    }
+}
+
 -(void)loadImageDetail:(NSInteger)index
 {
     IntagramModel *im = [listIntag objectAtIndex:index];
     indexNow = index;
+    lblDmm.text=[[listIntag objectAtIndex:index] full_name];
     lblNumber.text = [NSString stringWithFormat:@"%d/%d",index+1,listIntag.count];
     [self loadImage:im];
 }
 -(void)loadImage:(IntagramModel*)instagramModel{
-    lblDmm.text=instagramModel.full_name;
+//    lblDmm.text=inModel.full_name;
     NSURL *url = [NSURL URLWithString:instagramModel.url];
     [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
         if (succeeded) {

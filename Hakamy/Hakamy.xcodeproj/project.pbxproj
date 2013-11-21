@@ -19,6 +19,7 @@
 		FD01F8051818FD4B00EBD3DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01F7ED1818FD4A00EBD3DB /* UIKit.framework */; };
 		FD01F80D1818FD4B00EBD3DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD01F80B1818FD4B00EBD3DB /* InfoPlist.strings */; };
 		FD01F80F1818FD4B00EBD3DB /* HakamyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD01F80E1818FD4B00EBD3DB /* HakamyTests.m */; };
+		FD0C6C2B183E5A9100E7799E /* XCDYouTubeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0C6C2A183E5A9100E7799E /* XCDYouTubeVideoPlayerViewController.m */; };
 		FD0D6EAE182E7D2100C8D416 /* CellDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0D6EAD182E7D2100C8D416 /* CellDetail.m */; };
 		FD0D6EB1182E806C00C8D416 /* DetailRssModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0D6EB0182E806C00C8D416 /* DetailRssModel.m */; };
 		FD0D6EB5182E999500C8D416 /* DetaiRss.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0D6EB3182E999500C8D416 /* DetaiRss.m */; };
@@ -32,9 +33,6 @@
 		FD0EDB1018239C99002B373D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB0F18239C99002B373D /* Twitter.framework */; };
 		FD0EDB1218239CCE002B373D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0EDB1118239CCE002B373D /* MessageUI.framework */; };
 		FD1AD272183D05A600A2891A /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AD271183D05A500A2891A /* splashscreen.png */; };
-		FD1AD27E183D1AA500A2891A /* LBYouTubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD278183D1AA500A2891A /* LBYouTubeExtractor.m */; };
-		FD1AD27F183D1AA500A2891A /* LBYouTubePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD27A183D1AA500A2891A /* LBYouTubePlayerController.m */; };
-		FD1AD280183D1AA500A2891A /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD27C183D1AA500A2891A /* LBYouTubePlayerViewController.m */; };
 		FD1AD294183D245A00A2891A /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD283183D245A00A2891A /* Cell.m */; };
 		FD1AD295183D245A00A2891A /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1AD284183D245A00A2891A /* Cell.xib */; };
 		FD1AD296183D245A00A2891A /* DetailInstagramController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD286183D245A00A2891A /* DetailInstagramController.m */; };
@@ -46,6 +44,7 @@
 		FD1AD29C183D245A00A2891A /* NewInstagramController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1AD293183D245A00A2891A /* NewInstagramController.xib */; };
 		FD1AD29F183D265600A2891A /* btn_next.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AD29D183D265600A2891A /* btn_next.png */; };
 		FD1AD2A0183D265600A2891A /* btn_pre.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AD29E183D265600A2891A /* btn_pre.png */; };
+		FD1AD31D183D4BF600A2891A /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1AD31C183D4BF600A2891A /* line.png */; };
 		FD1B5ADC1838B67B00692A55 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B5ADA1838B67B00692A55 /* CoreMedia.framework */; };
 		FD1B5ADD1838B67B00692A55 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B5ADB1838B67B00692A55 /* MediaPlayer.framework */; };
 		FD23568C182164D100887BFF /* SosialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23568B182164D100887BFF /* SosialCell.m */; };
@@ -199,6 +198,8 @@
 		FD01F80A1818FD4B00EBD3DB /* HakamyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HakamyTests-Info.plist"; sourceTree = "<group>"; };
 		FD01F80C1818FD4B00EBD3DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FD01F80E1818FD4B00EBD3DB /* HakamyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HakamyTests.m; sourceTree = "<group>"; };
+		FD0C6C29183E5A9100E7799E /* XCDYouTubeVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideoPlayerViewController.h; path = Youtube/XCDYouTubeVideoPlayerViewController.h; sourceTree = "<group>"; };
+		FD0C6C2A183E5A9100E7799E /* XCDYouTubeVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideoPlayerViewController.m; path = Youtube/XCDYouTubeVideoPlayerViewController.m; sourceTree = "<group>"; };
 		FD0D6EAC182E7D2100C8D416 /* CellDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellDetail.h; path = Rss/CellDetail.h; sourceTree = "<group>"; };
 		FD0D6EAD182E7D2100C8D416 /* CellDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellDetail.m; path = Rss/CellDetail.m; sourceTree = "<group>"; };
 		FD0D6EAF182E806C00C8D416 /* DetailRssModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailRssModel.h; sourceTree = "<group>"; };
@@ -217,13 +218,6 @@
 		FD0EDB0F18239C99002B373D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		FD0EDB1118239CCE002B373D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FD1AD271183D05A500A2891A /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashscreen.png; sourceTree = "<group>"; };
-		FD1AD276183D1AA500A2891A /* LBYouTube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTube.h; sourceTree = "<group>"; };
-		FD1AD277183D1AA500A2891A /* LBYouTubeExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubeExtractor.h; sourceTree = "<group>"; };
-		FD1AD278183D1AA500A2891A /* LBYouTubeExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubeExtractor.m; sourceTree = "<group>"; };
-		FD1AD279183D1AA500A2891A /* LBYouTubePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubePlayerController.h; sourceTree = "<group>"; };
-		FD1AD27A183D1AA500A2891A /* LBYouTubePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubePlayerController.m; sourceTree = "<group>"; };
-		FD1AD27B183D1AA500A2891A /* LBYouTubePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubePlayerViewController.h; sourceTree = "<group>"; };
-		FD1AD27C183D1AA500A2891A /* LBYouTubePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubePlayerViewController.m; sourceTree = "<group>"; };
 		FD1AD282183D245900A2891A /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		FD1AD283183D245A00A2891A /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 		FD1AD284183D245A00A2891A /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
@@ -242,6 +236,7 @@
 		FD1AD293183D245A00A2891A /* NewInstagramController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewInstagramController.xib; sourceTree = "<group>"; };
 		FD1AD29D183D265600A2891A /* btn_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_next.png; sourceTree = "<group>"; };
 		FD1AD29E183D265600A2891A /* btn_pre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_pre.png; sourceTree = "<group>"; };
+		FD1AD31C183D4BF600A2891A /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 		FD1B5ADA1838B67B00692A55 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		FD1B5ADB1838B67B00692A55 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		FD23568A182164D100887BFF /* SosialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SosialCell.h; sourceTree = "<group>"; };
@@ -556,7 +551,8 @@
 		FD01F81918190F2700EBD3DB /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				FD1AD273183D1AA500A2891A /* Youtube */,
+				FD0C6C29183E5A9100E7799E /* XCDYouTubeVideoPlayerViewController.h */,
+				FD0C6C2A183E5A9100E7799E /* XCDYouTubeVideoPlayerViewController.m */,
 				FD2356B41822B81F00887BFF /* popView */,
 				FD23569418218BF700887BFF /* AudioPlayer */,
 				FD5C64A7181E428B00314C56 /* Loading */,
@@ -616,20 +612,6 @@
 				FD0E795D182F4FB20043094D /* CellVideo.xib */,
 			);
 			path = CellSocial;
-			sourceTree = "<group>";
-		};
-		FD1AD273183D1AA500A2891A /* Youtube */ = {
-			isa = PBXGroup;
-			children = (
-				FD1AD276183D1AA500A2891A /* LBYouTube.h */,
-				FD1AD277183D1AA500A2891A /* LBYouTubeExtractor.h */,
-				FD1AD278183D1AA500A2891A /* LBYouTubeExtractor.m */,
-				FD1AD279183D1AA500A2891A /* LBYouTubePlayerController.h */,
-				FD1AD27A183D1AA500A2891A /* LBYouTubePlayerController.m */,
-				FD1AD27B183D1AA500A2891A /* LBYouTubePlayerViewController.h */,
-				FD1AD27C183D1AA500A2891A /* LBYouTubePlayerViewController.m */,
-			);
-			path = Youtube;
 			sourceTree = "<group>";
 		};
 		FD1AD281183D245900A2891A /* Instagram new */ = {
@@ -944,6 +926,7 @@
 				FDDD47FD181ACDFC004CB48E /* btn_menu_insta.png */,
 				FDDD47FE181ACDFC004CB48E /* btn_menu_music.png */,
 				FDDD47FF181ACDFC004CB48E /* btn_menu_rss.png */,
+				FD1AD31C183D4BF600A2891A /* line.png */,
 				FDDD4800181ACDFC004CB48E /* btn_menu_youtube.png */,
 				FDDD47E9181AC770004CB48E /* bg_home.png */,
 				FDDD47EA181AC770004CB48E /* btn_menu.png */,
@@ -1050,6 +1033,7 @@
 				FDDD4804181ACDFC004CB48E /* btn_menu_music.png in Resources */,
 				FDFFB377181B61EF004A8351 /* bg_others.png in Resources */,
 				FD01F7F41818FD4A00EBD3DB /* InfoPlist.strings in Resources */,
+				FD1AD31D183D4BF600A2891A /* line.png in Resources */,
 				FDFFB373181B61EF004A8351 /* bg_cell_lastestnews.png in Resources */,
 				FD2356A518218BF700887BFF /* screenshots.png in Resources */,
 				FD23568E182164EA00887BFF /* SosialCell.xib in Resources */,
@@ -1147,7 +1131,6 @@
 				FD1AD294183D245A00A2891A /* Cell.m in Sources */,
 				FD37147B181979A100427858 /* MenuViewController.m in Sources */,
 				FD37144C18196DC400427858 /* FacebookViewController.m in Sources */,
-				FD1AD280183D1AA500A2891A /* LBYouTubePlayerViewController.m in Sources */,
 				FD5C6491181E18FA00314C56 /* SBJsonStreamParser.m in Sources */,
 				FD5C6496181E18FA00314C56 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				FD5C6498181E18FA00314C56 /* SBJsonTokeniser.m in Sources */,
@@ -1161,14 +1144,12 @@
 				FDF6CA931820C555007CF704 /* FacebookModel.m in Sources */,
 				FD37146F1819726600427858 /* PaperFoldSwipeHintView.m in Sources */,
 				FD0D6EB5182E999500C8D416 /* DetaiRss.m in Sources */,
-				FD1AD27F183D1AA500A2891A /* LBYouTubePlayerController.m in Sources */,
 				FD5C64AA181E428B00314C56 /* DejalActivityView.m in Sources */,
 				FD2356AD1822AE5200887BFF /* Detailyoutube.m in Sources */,
 				FD5C6497181E18FA00314C56 /* SBJsonStreamWriterState.m in Sources */,
 				FD3714701819726600427858 /* PaperFoldView.m in Sources */,
 				FD5C6494181E18FA00314C56 /* SBJsonStreamParserState.m in Sources */,
 				FD2356A218218BF700887BFF /* AudioStreamer.m in Sources */,
-				FD1AD27E183D1AA500A2891A /* LBYouTubeExtractor.m in Sources */,
 				FD37146A1819726600427858 /* FacingView.m in Sources */,
 				FD5C649A181E18FA00314C56 /* SBJsonWriter.m in Sources */,
 				FD1AD299183D245A00A2891A /* UIGridViewCell.m in Sources */,
@@ -1178,6 +1159,7 @@
 				FD5C649D181E233100314C56 /* RssModel.m in Sources */,
 				FD5C6490181E18FA00314C56 /* SBJsonParser.m in Sources */,
 				FD2356A118218BF700887BFF /* AudioPlayer.m in Sources */,
+				FD0C6C2B183E5A9100E7799E /* XCDYouTubeVideoPlayerViewController.m in Sources */,
 				FD37142E18196C8400427858 /* HomeViewController.m in Sources */,
 				FD0E795E182F4FB20043094D /* CellImage.m in Sources */,
 				FD37146B1819726600427858 /* FoldView.m in Sources */,

@@ -8,8 +8,8 @@
 
 #import "YoutubeViewController.h"
 #import "UIViewController+MJPopupViewController.h"
-
-#import "LBYouTubePlayerViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
+//#import "LBYouTubePlayerViewController.h"
 @interface YoutubeViewController ()
 
 @end
@@ -149,41 +149,49 @@ NSInteger tapindex;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *URLString =@"http://www.youtube.com/v/C-RofZtaSfQ";
-//    NSURL *urlToLoad = [NSURL URLWithString:URLString];
-//    moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:urlToLoad];
-//
-//    [[NSNotificationCenter defaultCenter] removeObserver:moviePlayer  name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer.moviePlayer];
-//    [self presentModalViewController:moviePlayer animated:YES];
-//    [moviePlayer.moviePlayer play];
-    
-    
-    
-    
 //    Detailyoutube *secondDetailViewController = [[Detailyoutube alloc] initWithNibName:@"Detailyoutube" bundle:nil];
 //    YoutubeModel *model=[lisYoutube objectAtIndex:indexPath.row];
 //    secondDetailViewController.youtubeModel=model;
 //    secondDetailViewController.delegate=self;
 //    secondDetailViewController.view.layer.cornerRadius=8;
 //    [self presentPopupViewController:secondDetailViewController animationType:MJPopupViewAnimationSlideBottomBottom];
-    lbYoutubePlayerVC = [[LBYouTubePlayerViewController alloc]initWithYouTubeURL:[NSURL URLWithString:URLString] quality:LBYouTubeVideoQualityLarge];
-    lbYoutubePlayerVC.delegate=self;
+//    lbYoutubePlayerVC = [[LBYouTubePlayerViewController alloc]initWithYouTubeURL:[NSURL URLWithString:URLString] quality:LBYouTubeVideoQualityLarge];
+//    lbYoutubePlayerVC.delegate=self;
+    
 }
-#pragma mark - LBYouTubePlayerControllerDelegate methods
+#pragma mark - Notifications
 
--(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller didSuccessfullyExtractYouTubeURL:(NSURL *)videoURL
+- (void) videoPlayerViewControllerDidReceiveMetadata:(NSNotification *)notification
 {
-    moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:videoURL];
-    [moviePlayer.moviePlayer prepareToPlay];
-    [moviePlayer.moviePlayer play];
-    [self presentModalViewController:moviePlayer animated:YES];
+	NSURL *thumbnailURL = notification.userInfo[XCDMetadataKeyMediumThumbnailURL] ?: notification.userInfo[XCDMetadataKeySmallThumbnailURL];
+	[NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:thumbnailURL] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+	}];
+    [self dismissMoviePlayerViewControllerAnimated];
 }
-
--(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller failedExtractingYouTubeURLWithError:(NSError *)error
+// this is for play
+- (void)playYoutube:(id)sender
 {
-    NSLog(@"URL extracting failed with error: %@", error);
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"failed" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
+    NSString *youtubeID=(NSString *)sender;
+    self.videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:youtubeID];
+//    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    
+//    [defaultCenter addObserver:self selector:@selector(videoPlayerViewControllerDidReceiveMetadata:) name:XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification object:self.videoPlayerViewController];
+    
+//    [defaultCenter addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.videoPlayerViewController.moviePlayer];
+    
+//    [defaultCenter removeObserver:self.videoPlayerViewController  name:XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification object:self.videoPlayerViewController.moviePlayer];
+    
+    [self presentModalViewController:self.videoPlayerViewController animated:YES];
+	[self.videoPlayerViewController.moviePlayer play];
+}
+- (void) moviePlayerPlaybackDidFinish:(NSNotification *)notification
+{
+	NSError *error = notification.userInfo[XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey];
+	if (error)
+	{
+		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+		[alertView show];
+	}
 }
 -(void)backtoMainView{
     [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];

@@ -10,14 +10,18 @@
 #import "YoutubeModel.h"
 #import "YoutubeCell.h"
 #import "Detailyoutube.h"
-#import "LBYouTubePlayerViewController.h"
-@interface YoutubeViewController : UIViewController<DetailYoutubeDelegate,YoutubeDelegate,UIActionSheetDelegate,LBYouTubePlayerControllerDelegate>{
-    LBYouTubePlayerViewController *lbYoutubePlayerVC;
+#import "XCDYouTubeVideoPlayerViewController.h"
+//#import "LBYouTubePlayerViewController.h"
+@interface YoutubeViewController : UIViewController<DetailYoutubeDelegate,YoutubeDelegate,UIActionSheetDelegate>{
+//    LBYouTubePlayerViewController *lbYoutubePlayerVC;
     NSMutableArray *lisYoutube;
     NSMutableData* responseData;
     NSURLRequest *request;
     NSURLConnection *connection;
+    
 }
+@property (nonatomic, strong) XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
+@property (nonatomic, strong) UIView *videoView;
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 - (IBAction)btnMenu:(id)sender;
 - (IBAction)btnFacebook:(id)sender;

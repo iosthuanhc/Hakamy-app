@@ -35,4 +35,5 @@
 @protocol YoutubeDelegate <NSObject>
 @optional
 -(void)shareClick:(YoutubeModel *)model;
+- (void)playYoutube:(id)sender;
 @end

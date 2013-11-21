@@ -9,22 +9,26 @@
 #import "YoutubeModel.h"
 
 @implementation YoutubeModel
-@synthesize src,imageurl,title;
+@synthesize src,imageurl,title,youtubeID;
 
 -(id)initWithJSON:(NSDictionary *)dic{
-    
-    NSDictionary *titleDic=[dic objectForKey:@"title"];
-    self.title=[titleDic objectForKey:@"$t"];
-    NSDictionary *contentDic=[dic objectForKey:@"content"];
-    self.src=[contentDic objectForKey:@"src"];
-    
-    NSDictionary *media$groupDic=[dic objectForKey:@"media$group"];
-    NSArray *media$thumbnail=[media$groupDic objectForKey:@"media$thumbnail"];
-    
-    for (NSDictionary *tem in media$thumbnail) {
-        self.imageurl=[tem objectForKey:@"url"];
+    self=[super init];
+    if (self) {
+        NSDictionary *titleDic=[dic objectForKey:@"title"];
+        self.title=[titleDic objectForKey:@"$t"];
+        NSDictionary *contentDic=[dic objectForKey:@"content"];
+        self.src=[contentDic objectForKey:@"src"];
+        NSDictionary *idyotube=[dic objectForKey:@"id"];
+        NSString *temID=[idyotube objectForKey:@"$t"];
+        NSArray *arrayPath = [[NSArray alloc] initWithArray:[temID componentsSeparatedByString:@":"]];
+        self.youtubeID=[arrayPath objectAtIndex:arrayPath.count-1];
+        NSDictionary *media$groupDic=[dic objectForKey:@"media$group"];
+        NSArray *media$thumbnail=[media$groupDic objectForKey:@"media$thumbnail"];
+        
+        for (NSDictionary *tem in media$thumbnail) {
+            self.imageurl=[tem objectForKey:@"url"];
+        }
     }
-    
     return self;
 }
 @end

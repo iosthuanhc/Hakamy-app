@@ -31,7 +31,7 @@
                         <rect key="frame" x="14" y="4" width="298" height="192"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <webView contentMode="scaleToFill" scalesPageToFit="YES" id="U7V-SI-XTQ">
+                    <webView hidden="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="U7V-SI-XTQ">
                         <rect key="frame" x="13" y="4" width="296" height="192"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -47,7 +47,7 @@
                             <action selector="share:" destination="G5p-6z-sRX" eventType="touchUpInside" id="g7y-Ih-IAM"/>
                         </connections>
                     </button>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zyt-0S-pkR">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zyt-0S-pkR">
                         <rect key="frame" x="136" y="75" width="50" height="50"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>

@@ -10,9 +10,11 @@
 
 @interface YoutubeModel : NSObject{
     NSString *src;
+    NSString *youtubeID;
     NSString *title;
     NSString *imageurl;
 }
+@property (nonatomic ,retain) NSString *youtubeID;
 @property (nonatomic ,retain) NSString *src;
 @property (nonatomic ,retain) NSString *title;
 @property (nonatomic ,retain) NSString *imageurl;

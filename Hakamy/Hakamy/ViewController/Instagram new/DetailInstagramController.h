@@ -16,7 +16,7 @@
 @property (strong,nonatomic) NSMutableArray *listIntag;
 @property (strong,nonatomic) IBOutlet UILabel *lblDmm;
 @property (strong,nonatomic) IBOutlet UILabel *lblNumber;
-
+@property (strong,nonatomic) IntagramModel *inModel;
 @property (strong,nonatomic) IBOutlet UIImageView *imageView;
 -(IBAction)shareImage:(id)sender;
 -(IBAction)backButton:(id)sender;
